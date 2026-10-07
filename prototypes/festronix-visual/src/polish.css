@@ -1,0 +1,167 @@
+/* Focused UX review: preserve the theme vocabulary and all scene/timeline ownership. */
+@layer polish {
+  [data-theme] {
+    --control-border: #717a85;
+    --feedback-duration: 160ms;
+  }
+  [data-theme="panel"] { --control-border: #756f62; }
+  [data-theme="flux"] { --control-border: #7c8b9c; }
+
+  h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  button, summary, .button { touch-action: manipulation; }
+  button:enabled, .button, summary {
+    transition: background-color var(--feedback-duration), border-color var(--feedback-duration), color var(--feedback-duration);
+  }
+  button:enabled:active, .button:active { filter: brightness(.86); }
+  button:disabled { opacity: .5; }
+  .button { line-height: 1.4; }
+  .button > span { line-height: 1; }
+  .comparison-toggle { display: none; }
+  main a, main button, main summary { scroll-margin-block: 108px; }
+
+  .nav a { position: relative; }
+  .nav a[aria-current="location"] { color: var(--accent); }
+  .nav a[aria-current="location"]::after {
+    content: ''; position: absolute; height: 2px; background: currentColor;
+    left: 0; right: 0; bottom: 5px;
+  }
+  .menu-toggle, .categories button, .archive-controls > button, .intro-controls button,
+  .intro-controls summary, .button.secondary { border-color: var(--control-border); }
+  .intro-controls summary { min-height: 44px; align-items: center; }
+  .hero-bottom a, .flux-scene-note a, .footer-row a {
+    min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .hero-bottom a, .flux-scene-note a { align-self: flex-start; }
+
+  /* More deliberate headline/supporting-copy balance across all three themes. */
+  .section-heading { align-items: center; gap: 48px; margin-bottom: 32px; }
+  .section-heading > div { min-width: 0; }
+  .section-heading h2 { max-inline-size: 20ch; }
+  .section-heading > p { max-inline-size: 30ch; flex-shrink: 0; }
+  .hero-topline { font-size: 12px; }
+  .hero-description { max-inline-size: 38ch; }
+  .hero-facts strong { font-size: 16px; line-height: 1.45; }
+  .hero-facts span { font-size: 13px; line-height: 1.55; }
+  .intro p, .flux-promise p { max-inline-size: 55ch; }
+  .section-label { margin-bottom: 18px; }
+
+  /* Panel keeps its cover energy while revealing practical actions sooner. */
+  .panel-hero .identity { margin-block: 24px 28px; }
+  [data-theme="panel"] .wordmark { font-size: clamp(70px, 10.8vw, 158px); }
+  [data-theme="panel"] .hero-tagline { font-size: clamp(68px, 5.4vw, 80px); }
+  .panel-hero .panel-cover { height: 490px; }
+  .panel-hero .hero-description { margin-block: 20px; }
+  .panel-hero .hero-facts { margin-block: 20px; }
+
+  /* Filters describe selection, rather than suggesting another destination. */
+  .categories { gap: 8px; margin-bottom: 12px; }
+  .categories button { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; }
+  .categories button[aria-pressed="true"] { border-color: var(--text); }
+  .filter-count { font-size: 12px; font-variant-numeric: tabular-nums; opacity: .8; }
+  .event-count { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+  .card-top { font-size: 13px; align-items: center; line-height: 1.5; }
+  .card-top .status { font-size: 12px; padding: 4px 8px; border: 1px solid var(--control-border); }
+  .event-content h3 { line-height: 1.2; }
+  .event-content > p { line-height: 1.65; }
+  .event-details { line-height: 1.5; }
+  .card-bottom { align-items: flex-end; }
+  .card-bottom button { padding-inline: 8px; margin-right: -8px; }
+  .card-bottom button:hover { color: var(--accent); }
+  .year-controls { gap: 8px; }
+  .year-controls button { border: 1px solid transparent; }
+  .year-controls button[aria-pressed="true"] { border-color: var(--accent); background: var(--surface); }
+  .archive-story > p { max-inline-size: 42ch; }
+
+  /* A smaller comparison launcher no longer sits across the phone action group. */
+  .review-dock:not([open]) { width: 176px; }
+  .review-dock summary { gap: 8px; font-size: 12px; }
+  .review-dock .review-title { font-size: 12px; font-weight: 600; color: #eef2f6; }
+  .review-dock .review-current { font-size: 11px; color: #c0ccd5; }
+  .review-dock:not([open]) .review-current { display: none; }
+  .review-chevron { width: 14px; height: 14px; margin-left: auto; flex-shrink: 0; }
+  .review-dock[open] .review-chevron { transform: rotate(180deg); }
+  .quality-description { font-size: 12px !important; line-height: 1.6; color: #c0ccd5 !important; padding: 0 !important; margin: 8px 0; }
+  .review-dock { bottom: max(12px, env(safe-area-inset-bottom)); }
+  .review-dock:focus-within { outline: 1px solid #c4f0df; outline-offset: 3px; }
+  /* Remains tabbable: focus inside the dock immediately restores its visibility. */
+  body:has(main :focus-visible, footer :focus-visible, .site-header :focus-visible) .review-dock:not(:focus-within) {
+    opacity: 0; pointer-events: none;
+  }
+
+  @media (min-width: 1024px) {
+    .event-content h3 { min-block-size: 2.4em; }
+    .panel-hero .graphic-hero-grid { gap: 48px; }
+  }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .section-heading { gap: 28px; }
+    .section-heading > p { max-inline-size: 23ch; }
+    .graphic-hero-grid { gap: 32px; }
+    [data-theme="panel"] .hero-tagline { font-size: 70px; }
+    .panel-hero .panel-cover { height: 460px; }
+  }
+  @media (max-width: 639px) {
+    .hero { padding-top: 22px; }
+    .hero-topline { font-size: 11px; letter-spacing: .03em; line-height: 1.5; gap: 4px; }
+    .hero-topline > span:last-child { font-size: 10px; }
+    .identity { margin-block: 22px 24px; gap: 10px; }
+    .wordmark, .flux-arrival .wordmark { font-size: clamp(36px, 12vw, 48px); }
+    [data-theme="panel"] .wordmark { font-size: clamp(48px, 15vw, 64px); }
+    .edition-caption { font-size: 10px; letter-spacing: .06em; }
+    .hero-tagline, .flux-hero-copy .hero-tagline { font-size: clamp(42px, 12.3vw, 50px); line-height: 1.08; }
+    [data-theme="panel"] .hero-tagline { font-size: 58px; line-height: 1.05; }
+    .eyebrow, .flux-hero-copy .eyebrow { font-size: 11px; letter-spacing: .055em; margin-bottom: 16px; }
+    .hero-description, .flux-hero-copy .hero-description { margin-block: 18px; line-height: 1.6; }
+    .hero-facts, .panel-hero .hero-facts { margin-block: 20px; gap: 12px; }
+    .hero-facts strong { font-size: 15px; }
+    .hero-facts span { font-size: 13px; }
+    .actions { flex-direction: column; align-items: stretch; gap: 10px; max-inline-size: 320px; }
+    .actions .button { min-height: 50px; padding: 13px 16px; }
+    .flux-arrival .identity { margin-block: 22px; }
+    .section { padding-block: 52px; }
+    .section-heading { margin-bottom: 28px; }
+    .section-heading > p { margin-top: 16px; max-inline-size: 32ch; }
+    .section-heading h2 { max-inline-size: 18ch; }
+    .categories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .categories button { justify-content: space-between; }
+    .categories button { padding-inline: 12px; gap: 8px; }
+    .card-top { font-size: 13px; }
+    .event-content h3 { font-size: 26px; }
+    [data-theme="panel"] .event-content h3 { font-size: 32px; }
+    .card-bottom { flex-wrap: wrap; gap: 12px; }
+    .hero-bottom { font-size: 10px; letter-spacing: .045em; }
+    .flux-scene-note, .chapter-readout { font-size: 10px; line-height: 1.6; }
+    .panel-hero .panel-stage { width: 56%; }
+    .panel-hero .panel-cover { height: 390px; opacity: .62; mask-image: linear-gradient(90deg, transparent 12%, #000 85%); }
+    .panel-hero .panel-convergence small, .panel-hero .fragment-label, .panel-hero .panel-cut > span { display: none; }
+    .panel-hero .intro-controls { top: -60px; }
+    .panel-hero .intro-controls button, .panel-hero .intro-controls summary { font-size: 12px; }
+    .panel-hero .hero-tagline { text-shadow: 0 0 10px #f4eedc, 0 0 6px #f4eedc; }
+    .archive-story h3 { font-size: 30px; }
+    .archive-controls { gap: 8px; }
+    .year-controls { gap: 8px; }
+    .year-controls button { min-width: 44px; font-size: 13px; }
+    .review-dock:not([open]) { width: 176px; }
+    .site-header { gap: 8px; }
+    .comparison-toggle {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 8px 10px; min-height: 44px; border: 1px solid var(--control-border);
+      font-size: 12px; font-weight: 600; margin-left: auto;
+    }
+    .review-dock:not([open]) { display: none; }
+    .menu-toggle { padding-inline: 10px; }
+    .hero-description, .flux-hero-copy .hero-description { margin-block: 14px; }
+    .identity, .panel-hero .identity { margin-block: 20px; }
+    .eyebrow, .flux-hero-copy .eyebrow { margin-bottom: 12px; }
+    [data-theme="panel"] .wordmark { font-size: clamp(48px, 14vw, 56px); }
+    [data-theme="panel"] .hero-tagline { font-size: 50px; }
+    .panel-hero .hero-copy { padding: 0; }
+    .panel-hero .intro-controls { top: -55px; }
+  }
+  @media (max-width: 359px) {
+    .categories button { padding-inline: 10px; font-size: 13px; }
+    .year-controls { gap: 6px; }
+    .archive-controls { gap: 6px; }
+    .review-dock:not([open]) { width: 172px; }
+  }
+}

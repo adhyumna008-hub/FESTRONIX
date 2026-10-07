@@ -1,0 +1,15 @@
+# Local build and browser output
+**/node_modules/
+**/dist/
+**/output/
+.vercel/
+
+# Local secrets and runtime files
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+
+# Duplicated convenience archive; source files remain in the folder
+/FESTRONIX_CLAUDE_ASSET_PACK.zip
