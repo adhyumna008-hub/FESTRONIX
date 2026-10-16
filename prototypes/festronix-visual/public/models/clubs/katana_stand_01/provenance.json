@@ -1,0 +1,103 @@
+{
+  "triangles": 3780,
+  "meshes": [
+    "katana_stand_01_blockout.003"
+  ],
+  "nodes": [
+    {
+      "name": "katana_stand_01",
+      "mesh": 0,
+      "children": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "katana_stand_01",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.14791372418403625,
+      5.399762812885456e-05,
+      9.400594717590138e-05
+    ],
+    "max": [
+      0.14791372418403625,
+      0.18199999630451202,
+      0.05356398969888687
+    ],
+    "dimensions": [
+      0.2958274483680725,
+      0.18194599867638317,
+      0.05346998375171097
+    ],
+    "center": [
+      0.0,
+      0.09102699696632044,
+      0.026828997823031386
+    ]
+  },
+  "units": "Source glTF metres, +Y up; source transforms preserved",
+  "asset": "katana_stand_01",
+  "name": "Katana Stand 01",
+  "authors": {
+    "Rico Cilliers": "All"
+  },
+  "sourceUrl": "https://polyhaven.com/a/katana_stand_01",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceFiles": [
+    {
+      "path": "katana_stand_01_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/katana_stand_01/katana_stand_01_1k.gltf",
+      "md5": "0da8b2f5ebb71b8e36343ebcb7b5d9a1",
+      "bytes": 2730
+    },
+    {
+      "path": "katana_stand_01.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/katana_stand_01/katana_stand_01.bin",
+      "md5": "36f6a863e368799c86bb28d6874a0b37",
+      "bytes": 104152
+    },
+    {
+      "path": "textures/katana_stand_01_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_nor_gl_1k.jpg",
+      "md5": "d973a530f16df00631dab68b9e2216af",
+      "bytes": 137816
+    },
+    {
+      "path": "textures/katana_stand_01_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_arm_1k.jpg",
+      "md5": "e90b3ebc305a8059c308d7c467e2f70f",
+      "bytes": 164709
+    },
+    {
+      "path": "textures/katana_stand_01_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_diff_1k.jpg",
+      "md5": "b372de0ea536ffa9ce554012d4e99678",
+      "bytes": 147585
+    }
+  ],
+  "modifications": "Only WebP texture encoding/resolution and glTF-to-GLB container repack; geometry/materials/nodes unchanged.",
+  "tiers": {
+    "full": {
+      "path": "/models/clubs/katana_stand_01/katana_stand_01-full.glb",
+      "textureSize": 1024,
+      "glbBytes": 389948,
+      "gzipBytes": 352746,
+      "textureBytes": 283764,
+      "sha256": "52038ccb7db839c1bb38d3954685b90188284ec103b9866dc1d5034c3d10e642"
+    },
+    "reduced": {
+      "path": "/models/clubs/katana_stand_01/katana_stand_01-reduced.glb",
+      "textureSize": 512,
+      "glbBytes": 162712,
+      "gzipBytes": 125438,
+      "textureBytes": 56526,
+      "sha256": "30564a3916f69b0e3b2590df6e86ab55648c54f0fa6146c0b995604626ee5f9b"
+    }
+  }
+}

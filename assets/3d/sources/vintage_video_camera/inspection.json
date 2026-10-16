@@ -1,0 +1,115 @@
+{
+  "triangles": 18682,
+  "meshes": [
+    "Cube.029"
+  ],
+  "nodes": [
+    {
+      "name": "vintage_video_camera",
+      "mesh": 0,
+      "children": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "vintage_video_camera",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    },
+    {
+      "name": "vintage_video_camera_glass",
+      "alphaMode": "BLEND",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.03720693662762642,
+      -0.0017817169427871704,
+      -0.049438245594501495
+    ],
+    "max": [
+      0.03399982303380966,
+      0.14321821928024292,
+      0.08314504474401474
+    ],
+    "dimensions": [
+      0.07120675966143608,
+      0.1449999362230301,
+      0.13258329033851624
+    ],
+    "center": [
+      -0.0016035567969083786,
+      0.07071825116872787,
+      0.016853399574756622
+    ]
+  },
+  "units": "Source glTF metres, +Y up; source transforms preserved",
+  "asset": "vintage_video_camera",
+  "name": "Vintage Video Camera",
+  "authors": {
+    "James Ray Cock": "Textures",
+    "Jenelle van Heerden": "Photography & Model"
+  },
+  "sourceUrl": "https://polyhaven.com/a/vintage_video_camera",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceFiles": [
+    {
+      "path": "vintage_video_camera_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/vintage_video_camera/vintage_video_camera_1k.gltf",
+      "md5": "381a5783fa79768785b995f90da2175d",
+      "bytes": 4620
+    },
+    {
+      "path": "textures/vintage_video_camera_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_video_camera/vintage_video_camera_nor_gl_1k.jpg",
+      "md5": "8a5e55fe37faff950c82eb304bc928bf",
+      "bytes": 504390
+    },
+    {
+      "path": "textures/vintage_video_camera_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_video_camera/vintage_video_camera_diff_1k.jpg",
+      "md5": "a41109e8cd6a59ce866c2904f6bd3938",
+      "bytes": 660737
+    },
+    {
+      "path": "textures/vintage_video_camera_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_video_camera/vintage_video_camera_arm_1k.jpg",
+      "md5": "bb1fffa8f28b771f1880499c11e5268e",
+      "bytes": 827363
+    },
+    {
+      "path": "vintage_video_camera.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/vintage_video_camera/vintage_video_camera.bin",
+      "md5": "30a9520c76eae50889bf257c67ac76cc",
+      "bytes": 712956
+    },
+    {
+      "path": "textures\\vintage_video_camera_alpha_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_video_camera/vintage_video_camera_alpha_1k.png",
+      "md5": "df00b94bb90e004880a3ad54055ba261",
+      "bytes": 63325
+    }
+  ],
+  "modifications": "Only WebP texture encoding/resolution and glTF-to-GLB container repack; geometry/materials/nodes unchanged. Restored original supplied alpha to diffuse RGBA, omitted by provider JPEG-only glTF export; OPAQUE material ignores alpha, BLEND material uses it.",
+  "tiers": {
+    "full": {
+      "path": "/models/clubs/vintage_video_camera/vintage_video_camera-full.glb",
+      "textureSize": 1024,
+      "glbBytes": 1094968,
+      "gzipBytes": 791086,
+      "textureBytes": 378750,
+      "sha256": "dbae75ab506199b44a4ff7bcd3108f044a5c3a51dda2baf300afb86d1f1fa7ed"
+    },
+    "reduced": {
+      "path": "/models/clubs/vintage_video_camera/vintage_video_camera-reduced.glb",
+      "textureSize": 512,
+      "glbBytes": 806068,
+      "gzipBytes": 502193,
+      "textureBytes": 89858,
+      "sha256": "bcb3cee6effd8649df5d33f1d4cbbd64ea3a57d9c91121b6dc5550997d5972e5"
+    }
+  }
+}

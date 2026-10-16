@@ -1,0 +1,92 @@
+{
+  "triangles": 13571,
+  "meshes": [
+    "security_camera.001"
+  ],
+  "nodes": [
+    {
+      "name": "security_camera_01",
+      "mesh": 0,
+      "children": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "security_camera_01",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    },
+    {
+      "name": "security_camera_01_glass",
+      "alphaMode": "BLEND",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.08473354578018188,
+      -0.024831093847751617,
+      -0.3034769296646118
+    ],
+    "max": [
+      0.08481824398040771,
+      0.26121535897254944,
+      0.2501949071884155
+    ],
+    "dimensions": [
+      0.1695517897605896,
+      0.28604645282030106,
+      0.5536718368530273
+    ],
+    "center": [
+      4.234910011291504e-05,
+      0.11819213256239891,
+      -0.026641011238098145
+    ]
+  },
+  "units": "Source glTF metres, +Y up; source transforms preserved",
+  "asset": "security_camera_01",
+  "name": "Security Camera 01",
+  "authors": {
+    "Alexander Otterbeck": "Modeling & Texturing",
+    "Yann Kervran": "Rigging"
+  },
+  "sourceUrl": "https://polyhaven.com/a/security_camera_01",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceFiles": [
+    {
+      "path": "security_camera_01_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/security_camera_01/security_camera_01_1k.gltf",
+      "md5": "e155ea9e3cd650c89904abd79b07a54c",
+      "bytes": 4743
+    },
+    {
+      "path": "security_camera_01.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/security_camera_01/security_camera_01.bin",
+      "md5": "e48ddbe564323963c0c37e29b4d0ca4b",
+      "bytes": 386836
+    },
+    {
+      "path": "textures/security_camera_01_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/security_camera_01/security_camera_01_diff_1k.jpg",
+      "md5": "a88344425885875615f1b276fc6f312e",
+      "bytes": 521174
+    },
+    {
+      "path": "textures/security_camera_01_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/security_camera_01/security_camera_01_arm_1k.jpg",
+      "md5": "0e0eea7f2bfb87f38d24304797336a6d",
+      "bytes": 530966
+    },
+    {
+      "path": "textures/security_camera_01_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/security_camera_01/security_camera_01_nor_gl_1k.jpg",
+      "md5": "8476d7209627fe850d9926992f39ed0d",
+      "bytes": 315604
+    }
+  ],
+  "modifications": "Only WebP texture encoding/resolution and glTF-to-GLB container repack; geometry/materials/nodes unchanged.",
+  "tiers": {}
+}

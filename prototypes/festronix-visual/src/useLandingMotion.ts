@@ -12,6 +12,8 @@ const entranceTargets = [
   '.event-card', '.schedule-row', '.visit > div:first-child > p', '.visit > div:first-child > .button',
   '.visit-facts article', '.stats > div', '.gallery figure', '.sponsor-list > span', '.faq details',
   '.chrono-visual', '.archive-story', '.archive-index', '.cta-row > *', 'main .fineprint',
+  '.club-stage .world-eyebrow', '.club-stage h2', '.club-stage .world-description',
+  '.club-stage .world-tags', '.club-stage .world-inspect', '.club-stage .world-category',
 ].join(',');
 const boxes = '.event-card, .schedule-row, .visit-facts article, .stats > div, .gallery figure, .sponsor-list > span, .faq details, .chrono-visual, .archive-story, .universe-links > a';
 
@@ -107,10 +109,10 @@ export function useLandingMotion(root: RefObject<HTMLDivElement | null>, theme: 
         order.set(section, sequence);
         item.dataset.revealState = 'waiting';
         const tween = gsap.fromTo(item, {opacity: 0, y: box ? 24 : 16, scale: box ? .965 : .985}, {
-          opacity: 1, y: 0, scale: 1, duration: box ? 1.15 : 1.05,
-          delay: (index % 3) * .08, ease: 'power2.out',
+          opacity: 1, y: 0, scale: 1, duration: box ? .95 : .8,
+          delay: (index % 3) * .075, ease: 'power3.out',
           scrollTrigger: {trigger: item, start: box ? 'top 92%' : 'top 88%', once: true,
-            onEnter: () => {item.dataset.revealState = 'revealing';}},
+            onEnter: () => {if(!visited.current.has(item))item.dataset.revealState = 'revealing';}},
           onComplete: () => {visited.current.add(item); item.dataset.revealState = 'shown';},
         });
         entrances.set(item, tween);

@@ -1,0 +1,120 @@
+{
+  "triangles": 14450,
+  "meshes": [
+    "cover_low",
+    "keyboard_low",
+    "lid_floaters_low"
+  ],
+  "nodes": [
+    {
+      "name": "classic_laptop_stand",
+      "mesh": 0,
+      "children": []
+    },
+    {
+      "name": "classic_laptop",
+      "mesh": 1,
+      "children": []
+    },
+    {
+      "name": "classic_laptop_screen",
+      "mesh": 2,
+      "children": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "classic_laptop",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    },
+    {
+      "name": "classic_laptop_screen",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.3258250653743744,
+      -0.0008170718792825937,
+      -0.2418784648180008
+    ],
+    "max": [
+      0.32610955834388733,
+      0.5419937670230865,
+      0.2440638393163681
+    ],
+    "dimensions": [
+      0.6519346237182617,
+      0.5428108389023691,
+      0.4859423041343689
+    ],
+    "center": [
+      0.00014224648475646973,
+      0.270588347571902,
+      0.0010926872491836548
+    ]
+  },
+  "units": "Source glTF metres, +Y up; source transforms preserved",
+  "asset": "classic_laptop",
+  "name": "Classic Laptop",
+  "authors": {
+    "Arrangemonk": "All"
+  },
+  "sourceUrl": "https://polyhaven.com/a/classic_laptop",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceFiles": [
+    {
+      "path": "classic_laptop_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/classic_laptop/classic_laptop_1k.gltf",
+      "md5": "7eeb1538a6b917c5e08a55a6c77695cf",
+      "bytes": 7496
+    },
+    {
+      "path": "textures/classic_laptop_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/classic_laptop/classic_laptop_nor_gl_1k.jpg",
+      "md5": "5039de6a8edd18f89dafbf77ab55b1cb",
+      "bytes": 445971
+    },
+    {
+      "path": "textures/classic_laptop_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/classic_laptop/classic_laptop_diff_1k.jpg",
+      "md5": "b16478b0bfdaf836180867d26054435a",
+      "bytes": 524918
+    },
+    {
+      "path": "textures/classic_laptop_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/classic_laptop/classic_laptop_arm_1k.jpg",
+      "md5": "bfdc7350cc006b818bb4163093fb1e28",
+      "bytes": 697150
+    },
+    {
+      "path": "classic_laptop.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/classic_laptop/classic_laptop.bin",
+      "md5": "61282875872d1d523a02ecbf09627a8c",
+      "bytes": 508524
+    }
+  ],
+  "modifications": "Only WebP texture encoding/resolution and glTF-to-GLB container repack; geometry/materials/nodes unchanged.",
+  "tiers": {
+    "full": {
+      "path": "/models/clubs/classic_laptop/classic_laptop-full.glb",
+      "textureSize": 1024,
+      "glbBytes": 802460,
+      "gzipBytes": 526252,
+      "textureBytes": 289070,
+      "sha256": "6d1149582f7cd2bb9f797b00fb7e2961ae3e1eeb63c405ce7290b806c463c771"
+    },
+    "reduced": {
+      "path": "/models/clubs/classic_laptop/classic_laptop-reduced.glb",
+      "textureSize": 512,
+      "glbBytes": 604988,
+      "gzipBytes": 328733,
+      "textureBytes": 91606,
+      "sha256": "35af07b2220da5a7781dd3fe75eae56aff9545b259ba99b28f3419fc57b588bc"
+    }
+  }
+}

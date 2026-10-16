@@ -1,14 +1,65 @@
 # FESTRONIX AI Handoff
 
-**Current Phase:** Detailed sourced Flux A hardware and reversible scroll disassembly completed — immersive browser comparison ready; no next product phase started
-**Status:** Owner explicitly authorized the approved immersive rebuild. Pulse Through Time, Panel intro and all three Flux experiments are implemented, with FULL/REDUCED/STATIC and four-viewport browser QA. No Flux winner selected. U1–U11 resolved at product level. U1–U4 are unchanged. U5–U11 adopt configurable faculty-controlled defaults for results, certificates, privacy, support, formats, editions and maintenance. Institutional policy, staffing, scale and launch commitments still require faculty confirmation. `USER_FLOWS.md` and screen inventory require separate authorization and have not been started. Visual-reference evidence gate remains PASSED.  
-**Last updated:** 2026-10-07
+**Current Phase:** Animated Campus X restored; shared login/registration prompts and motion polish across all four prototypes; GitHub snapshot update authorized
+**Status:** Backend/API work is now explicitly authorized by the owner's attached request and continuation messages. `backend/` implements TypeScript/Fastify, PostgreSQL through `pg`, Firebase identity verification, scoped staff permissions, events/approvals, registrations/teams, manual payments, QR tickets and atomic attendance. Final suite: 58 passed, 0 failed; build passed. Genuine Firebase credentials, live-provider verification and production operating controls remain pending. Existing liquid-glass home and five-club Flux work is preserved and remains unconnected to this backend. U1–U11 remain unchanged; institutional policy, staffing, scale and launch commitments still require faculty confirmation. `USER_FLOWS.md` and screen inventory have not been started. Visual-reference evidence gate remains PASSED.
+**Last updated:** 2026-10-16
 
 ## Purpose
 
 Keep a single shared source of truth for FESTRONIX across Go, Claude, Antigravity, Astra, and any other tools. Record decisions here and link to the detailed documents as they are created.
 
-## Detailed sourced hardware correction — 2026-10-07
+## Shared sign-in, animated X and publication — 2026-10-16 (current)
+
+- Owner requested the earlier animated X treatment back, login buttons in every theme, login prompts for unauthenticated registration, smoother scrolling/controls and publication of the current workspace to their existing FESTRONIX GitHub repository.
+- Campus now renders `CampusX`: original CSS optical arms, bounded orbit lines and three small flat category symbols. It floats and carries a slow light sweep, pauses while a dialog is open/offscreen/tab-hidden or Motion off is selected, and stops with system reduced motion. No WebGL or 3D club gallery was restored. Flat club cards remain.
+- `LoginPanel` supplies the same accessible Google/email sign-in entry to Campus, Pulse, Panel and Flux. Every theme has an explicit header Log in button. Legacy event cards have direct Register buttons; all event dialogs provide Log in to register. The selected event is shown in the login prompt. Focus is contained, Escape closes, the original trigger regains focus and background scrolling is locked while the dialog is open.
+- Real frontend Firebase sign-in remains **UNCONFIGURED**. No client credentials/project settings exist in this prototype, so provider actions clearly explain the pending setup. No mock login/session, account, registration, email or payment is created. Backend Firebase/RBAC enforcement remains as previously implemented and independent; these visual prompts do not replace server authorization.
+- Native smooth anchor scrolling, staggered Campus content entrances, refined legacy reveals, button/card/label feedback, dialog/FAQ entrances and quieter hover motion are implemented. Keyboard focus exposes waiting content; filters/day changes stay immediate. Phone headers retain login/menu/theme access. Theme/Flux variant selection now updates the URL and survives refresh.
+- Final build/typecheck passed. Browser checked login dialogs in all four themes at 390×844, 768×1024, 1440×900 and 1920×1080 with no horizontal overflow. Verified registration/event context in every theme, field feedback without sending, focus wrap, Escape/trigger recovery and Campus pause/resume/scroll behavior. QA tab returned no console errors/warnings. See [LOGIN_AND_MOTION_QA.md](LOGIN_AND_MOTION_QA.md).
+- GitHub target verified as the existing `https://github.com/adhyumna008-hub/FESTRONIX` remote, branch `main`; write dry run succeeded. Owner authorized replacing its file contents with the current workspace snapshot using a normal commit/push, retaining history. Local databases/proofs, credentials, dependencies, build output and browser output remain excluded. Root README now explains both preview and backend setup. Remote commit identity is verified after the push in the task's completion record.
+
+
+## Campus variant and flat club symbols — 2026-10-16 (current frontend change)
+
+- The owner explicitly selected **Campus as a fourth option beside Pulse, Panel and Flux**. The cream/orange home is available at `/?theme=Campus` and remains the root view. Both prototype comparison controls offer all four choices. Campus is a local visual experiment; backend theme settings and product rules were not changed.
+- Replaced the hero's glass X and the five model-poster club images with original flat SVG category symbols: gaming, code, literature, cinema and anime/culture. These are illustrative marks, not official club logos.
+- Removed the active `WorldExpedition` / 3D Club Gallery connection and its Campus links. Flux A is now **Club Symbols**, with readable content and flat SVGs. Old Flux A URLs reach this replacement. B / Liquid Flux and C / Network / Portal retain their existing experiments. Old gallery source/model files remain inactive historical material and are absent from generated JS.
+- Browser inspected Campus and Flux A at 390×844, 768×1024, 1440×900 and 1920×1080: no horizontal overflow and zero Canvas elements. Verified all four choices, menu/Escape and keyboard motion toggle. Corrected inherited arrow positioning/number contrast on club cards. Final TypeScript/build passed; QA tab logged no errors/warnings. Existing deferred Flux B/C chunk warning remains.
+- Evidence: [CAMPUS_VARIANT_QA.md](CAMPUS_VARIANT_QA.md), `output/campus-variant/`. Preview: http://127.0.0.1:4180/?theme=Campus. No backend connection or next phase started.
+
+## Backend foundation continuation — 2026-10-16 (preceding backend phase)
+
+- Continued the existing backend rather than replacing it. The owner's pasted request explicitly authorized implementation, migrations, Firebase identity preparation, scoped RBAC, QR/attendance and serious backend tests. Earlier prohibitions apply to their historical planning/prototype phases, not this authorized backend scope. No frontend/admin UI or production deployment was started.
+- Implementation root: `backend/`. Fastify 5 + TypeScript; `pg` with parameterized SQL and explicit transactions; Firebase Admin ID-token verification with revocation checking. Identity and authority remain separate; no hardcoded owner email or executable test-auth mode. Startup rejects an overprivileged runtime database account.
+- Implemented three checksum-tracked migrations and fictional development seed. Native local PostgreSQL setup lives in ignored `backend/.local`; runtime uses a restricted account distinct from migrations. No destructive annual reset; next-edition roles do not inherit old student access. Do not reseed the existing populated development database.
+- Implemented independent event approval/publication, solo/team registration and capacity locking, waitlist offers, consent-based teams/captain transfers, private payment proofs/rejection/resubmission, faculty review/override, per-member opaque hashed QR credentials with actual SVGs, reissue/revoke, authorized online scan/manual check-in, duplicate feedback and attributed attendance correction. Announcements, audit, reports, faculty CSV and certificate-evidence foundation are included.
+- Final verification: **58 integration tests passed, 0 failed, 0 skipped** against native PostgreSQL through a restricted runtime role. Covers all 15 requested security/QR scenarios, concurrent scans/final-seat competition, scope tampering, custodian handover, proof privacy, live edit restrictions and first-login safety. A temporary real loopback HTTP listener passed health/readiness/unauthenticated-denial checks. Final TypeScript build passed; typecheck passed; OpenAPI exported; production dependency audit reported 0 known vulnerabilities. No lint task is configured. Migrations were applied to development and fresh test databases, and unchanged reruns were tested.
+- Documentation: [BACKEND_ARCHITECTURE.md](BACKEND_ARCHITECTURE.md), [DATABASE_SCHEMA.md](DATABASE_SCHEMA.md), [QR_TICKETING_AND_ATTENDANCE.md](QR_TICKETING_AND_ATTENDANCE.md), [RBAC_SECURITY_MODEL.md](RBAC_SECURITY_MODEL.md), [BACKEND_SETUP.md](BACKEND_SETUP.md); `backend/README.md`, `.env.example` and `openapi.json` provide the implementation entry points.
+- Foundation limits: material publication after any registration is blocked pending participant-impact handling; post-registration substitutions, late captain changes, staff walk-ins and selective edition cloning are deferred. Paid proof resubmission requires an open admission window; no refunds/reversal system. Results/appeals/certificate release, outbound communications, full CMS and retention automation remain future work. Approved product requirements have not been silently removed.
+- Live prerequisites: genuine Firebase project/ADC and provider verification, PostgreSQL/TLS/runtime credentials, reviewed durable private evidence storage and sanitization, faculty custodians, privacy/retention policies, MFA/recovery decisions, backup-restore rehearsal and load/security review. Current proof handling checks signatures and serves private attachments; it does not claim malware scanning. No production-readiness or real-provider claim.
+
+## Liquid-glass home continuation — 2026-10-08 (preceding frontend pass)
+
+- The owner requested a new modern, useful, animated home page with liquid-glass styling, a distinctive menu and login option. Continued the existing implementation after the owner's resume message. The root URL now renders `GlassHome`; explicit `?theme=Pulse|Panel|Flux` URLs retain the earlier visual experiments in a lazy `LegacyApp` module. No existing club models or scenes were replaced.
+- Added a warm paper/charcoal/orange composition, optical-glass X artwork, frosted navigation, animated festival-directory dialog, interest filtering, shared sample event details, five club previews linked to the live gallery, shared day schedule, visit section and FAQs. Primary discovery precedes the longer optional 3D tour. No fabricated attendance statistics, sponsors or testimonials.
+- Login is a designed modal with Google/email preview controls and browser email validation, explicitly unconnected to authentication. It sends/stores no email and creates no account. The existing untracked `backend/` directory was left untouched. Real sign-in integration is not claimed.
+- Home uses no Canvas and no new dependencies. Earlier theme/GSAP/WebGL modules load only on their theme URLs. Final build passes: initial JS 77.24 KB gzip, home CSS 7.29 KB; deferred legacy JS 67.11 KB and legacy CSS 13.19 KB. Existing deferred GLTF chunk-size warning remains.
+- Checked home/menu/login at phone, tablet and desktop CSS viewports (390×844, 768×1024, 1440×900, 1920×1080). Verified filtering, sample event detail, Day 2 schedule, FAQ, modal keyboard wrapping/Escape/focus return, motion-off and offscreen pausing. Fixed home-anchor header clearance, tablet login-button wrapping and keyboard boundary behavior. No normal browser warning/error logs. Gallery link reaches ready with one Canvas. See [GLASS_HOME_DESIGN_QA.md](GLASS_HOME_DESIGN_QA.md).
+- Local preview: **http://127.0.0.1:4180/**. Current process is the Vite development server; run `npm run dev` from `prototypes/festronix-visual` to restart. No push or deployment. Owner visual review, actual authentication, confirmed festival content and real-device performance remain pending.
+
+## Five-club gallery continuation — 2026-10-07 (preceding pass)
+
+- Continued the existing authorized world implementation; did not start again. The latest owner request supersedes X-Core and AI/Robotics subjects with **Gaming**, **SDC (Student Developer Club)**, **Literature**, **CINE** and **OTAKU**. Other clubs are deferred until the owner supplies them.
+- Flux A uses the actual sourced gamepad, classic laptop, encyclopedia set, vintage video camera, and antique katana with wooden stand. All six source objects are Poly Haven **CC0 1.0**. Original meshes, UVs and PBR material detail are retained. These are authored physical-object models, not claimed photographs, scans or manufacturer CAD. Source records, hashes and preparation evidence are in [assets/3d/SOURCES.md](../assets/3d/SOURCES.md) and [ASSET_MANIFEST.md](ASSET_MANIFEST.md).
+- Implemented `WorldExpedition`, `WorldScene`, `WorldCamera`, `WorldRuntime`, `WorldEnvironment`, `WorldModel`, `WorldAssetLoader`, `ClubDisplayTexture`, `WorldExperience` and `world.css`. One lazy Canvas carries the gallery, a continuous scroll-driven camera, restrained ambience, fine-pointer response and actual-mesh raycast selection. Semantic club content, anchors, facts and actions remain HTML. Existing all-theme slow entrances, Panel tile breakup and institution logos remain.
+- Nearby exhibits mount only when required (maximum three during club travel); the closing group uses five smaller REDUCED assets. FULL/REDUCED frame scheduling, capped DPR, cached shadows, embedded-image sharing and owned cancellation/disposal bound the enhancement cost. After ten seconds outside the gallery, Canvas is released; returning restores current progress. STATIC, user motion reduction and failure use matching locally rendered stills with all content available.
+- The six runtime posters total 43,786 bytes. All five club files total 2,877,454 bytes FULL / 1,588,350 REDUCED, with 66,612 source triangles. REDUCED retains geometry with smaller maps. Earlier scene-transfer, GPU memory and triangle targets are not certified for this expanded gallery. No guarantee of lag-free operation on all phones is made.
+- Production build passes. Gzip output: initial JS 139.24 KB, CSS 13.19 KB, lazy WorldScene 9.53 KB, shared deferred GLTF 251.32 KB, retained B/C 8.72 KB. Vite's existing chunk-size warning remains; no dependencies added.
+- Browser checked 390×844, 768×1024, 1440×900 and 1920×1080 CSS viewports; all five clubs, live modes, STATIC, reduced-motion preference, mesh/keyboard interactions, missing-first-model fallback/retry, offscreen release/re-entry and theme/variant switching. Final normal console checks were empty. Camera centering/FOV, LCD orientation, static anchor clearance, reveal completion and loading-progress reporting were corrected. See [CLUB_GALLERY_QA.md](CLUB_GALLERY_QA.md) and [REAL_3D_WORLD_IMPLEMENTATION.md](REAL_3D_WORLD_IMPLEMENTATION.md).
+- Local production preview is **http://127.0.0.1:4182/?theme=Flux&variant=A&quality=FULL#main**; development server is on 4180. Rebuild/reload after source edits. Older 4180 production-preview notes below describe preceding passes.
+- Remaining: owner source/visual approval, confirmed club programs and festival facts, physical midrange-phone checks, sustained isolated performance, GPU timing/residency, forced context-loss and actual OS reduced-motion checks. Earlier hardware/world candidates remain as source history and are not the current gallery. No backend, deployment or push was performed in this continuation.
+
+## Detailed sourced hardware correction — 2026-10-07 (preceding pass)
 
 - The owner rejected the procedural board's stylized appearance and requested product-quality realism with an exploded-parts scroll effect. Work continued from the existing immersive prototype; no redesign or other product phase was started.
 - Flux A now renders the detailed **Circuit Board** asset by **Benny Weimer / Poly Haven**, under verified CC0, with its actual geometry, printed surface detail, normal/roughness/metal maps and alpha cutouts. It is a sourced hardware visualization, not asserted to be a physical photograph, scan, manufacturer CAD or accurate internal engineering teardown. The earlier handmade board remains only as source history.
@@ -135,9 +186,9 @@ The earlier batch added 24 usable captures: 14 Pulse and 10 Panel. The Flux batc
 
 ## Recommended next task
 
-Review the working local visual prototype at http://127.0.0.1:4180/ using Prototype controls to compare Pulse, Panel and Flux A/B/C, including quality modes. Read `docs/IMMERSIVE_PROTOTYPE_QA.md` for actual checks and limits. The latest owner message explicitly authorized implementation of the approved immersive architecture; prior statements requiring rebuild authorization are historical. No further phase is automatically authorized.
+Review the backend foundation and documented limits, then provide institutional staging configuration and faculty operating/security decisions for a separately authorized real-provider integration and deployment-readiness pass. Read `BACKEND_SETUP.md` first. Do not automatically build participant/admin/scanner UI or deploy the API.
 
-Choose the Flux direction only after seeing the working candidates and collecting human feedback. Final brand/fonts, real historical media rights and live event commitments remain release prerequisites. Physical-phone performance, full accessibility audits, OS motion toggling and forced context-loss verification remain pending. Do not begin Firebase, backend, database, authentication, payments, dashboards or QR work under this prototype authorization.
+The independent visual comparison remains under `prototypes/festronix-visual`; its prior preview URL was http://127.0.0.1:4180/. No current preview availability is asserted by this backend task. Final Flux choice, branding, media rights and physical-device/accessibility approval remain separate frontend work.
 
 ## Product decision status
 
@@ -205,24 +256,20 @@ Earlier U1–U4 passages and historical completion/log entries retain their orig
 - Use realistic mock data so public pages can be designed without waiting for final fest information.
 - Do not treat generated concepts or draft design documents as approved without an explicit review decision.
 - Keep the core FESTRONIX logo year independent; configure edition/year display and logo lockup separately through settings/CMS.
-- Product definition is now authorized in `docs/PRODUCT_SPEC.md`; keep technical architecture, providers and implementation out of this phase. Do not treat proposed product policies as approved.
+- Product definition and U1–U11 remain the baseline. The later explicit backend authorization now permits the implemented backend architecture and Firebase identity preparation; it does not grant live-deployment or frontend-integration approval.
 - Use Infinium only for landing-page hierarchy, hero presentation, visual pacing, section composition, and public-facing UI presentation. Do not derive backend, database, dashboard, CMS, authentication, or product architecture from it.
 - Do not generate actual assets before `docs/ASSET_MANIFEST.md` exists.
 
-## Do Not Do Yet
+## Scope boundaries after backend authorization
 
-- Public prototype coding until separately instructed; this turn authorizes blueprint documents only
-- User flows or screen inventory without a separate instruction
-- Visual prototypes or application code
-- Framework, database, final authentication-provider/implementation or deployment selection (Firebase Authentication is a provisional preference only)
-- Production backend
-- Authentication
-- Database schema
-- Payment implementation/gateway/provider selection (manual verification product rules are now authorized and recorded)
-- QR system
-- Final repository architecture
+- Do not automatically start user flows, screen inventory, frontend integration, final participant/coordinator/admin interfaces or public-site redesign.
+- Do not deploy or claim live readiness before real identity/database/storage configuration, faculty policies and operational verification.
+- Payment gateway, production email/SMS, full certificate generation, dynamic QR and offline scanning remain deferred.
+- The modular backend, PostgreSQL migrations, Firebase verification middleware, manual-payment and QR foundation are now authorized and implemented. This is not approval of every future production infrastructure choice.
 
 ## Review Gate
+
+Backend foundation gate: **LOCAL VERIFICATION COMPLETE — 2026-10-16**. 58 tests passed, build passed, three migrations exercised. Real Firebase authentication and production security/operations remain unverified; no launch approval or next-phase authorization is implied.
 
 Visual-reference evidence gate: **PASSED — 2026-10-06**. This assesses evidence sufficiency only; it does not approve final brand choices or authorize the next phase.
 
@@ -233,6 +280,8 @@ Owner decision gate: **COMPLETE AT PRODUCT LEVEL — U1–U11 RESOLVED**. Instit
 ## Planned deliverable order
 
 **Scoped public comparison branch, authorized 2026-10-06:** LANDING_PAGE_BLUEPRINT and DESIGN_SYSTEM_DRAFT are now created. Review these drafts before separately authorized public prototype coding; ASSET_MANIFEST precedes actual asset generation. This branch may use labeled mock content while the full-platform sequence below remains deferred. No next task starts automatically.
+
+The later explicit backend implementation request established a separate completed foundation branch described above. The historical sequence below does not require redoing completed documents or block that authorized work.
 
 1. `docs/THEME_REFERENCES.md` — evidence complete; visual-reference gate PASSED
 2. `docs/PRODUCT_SPEC.md` and `docs/OWNER_DECISIONS.md` — U1–U11 resolved at product level; faculty confirmations outstanding
@@ -280,6 +329,7 @@ Core context recorded for future work: FESTRONIX is a reusable annual tech-fest 
 
 | Date | Decision | Status |
 | --- | --- | --- |
+| 2026-10-16 | Implement authorized backend foundation with Fastify/TypeScript, PostgreSQL `pg`, Firebase identity and scoped server permissions; preserve U1–U11 and frontend work. | Implemented; 58 local tests pass; live configuration/review pending |
 | 2026-10-05 | Create one FESTRONIX master workspace as the cross-tool source of truth. | Adopted |
 | 2026-10-05 | Keep Pulse, Panel, and Flux as separate visual directions; use Infinium only for public landing-page presentation inspiration. | Adopted as analysis constraint |
 | 2026-10-05 | Defer production backend, auth, database schema, payments, QR system, and final repository architecture. | Adopted for current phase |

@@ -3,7 +3,7 @@ export type Theme = 'Pulse' | 'Panel' | 'Flux';
 export type Quality = 'FULL' | 'REDUCED' | 'STATIC';
 export type FluxVariant = 'A' | 'B' | 'C';
 export type Viewport = 'desktop' | 'tablet' | 'phone';
-export const variantNames = {A:'FESTRONIX Core', B:'Liquid Flux', C:'Network / Portal'};
+export const variantNames = {A:'Club Symbols', B:'Liquid Flux', C:'Network / Portal'};
 export const chapters = ['Arrival','FESTRONIX Reveal','Activation','Event Universe','Information Transition'];
 export function chapterAt(p:number) { return p<.1?0:p<.28?1:p<.5?2:p<.78?3:4; }
 export function smooth(a:number,b:number,p:number) {const t=Math.min(1,Math.max(0,(p-a)/(b-a)));return t*t*(3-2*t);}

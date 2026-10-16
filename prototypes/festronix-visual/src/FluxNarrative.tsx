@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {chapterAt,chapters,frameRecord,smooth,useMedia,useViewport,variantNames,type FluxVariant,type Quality} from './experience';
 import {FestivalIntro,HeroFacts,Identity} from './Heroes';
+import {FlatClubHero} from './FlatClubHero';
 gsap.registerPlugin(ScrollTrigger);
 const FluxScene=lazy(()=>import('./FluxScene'));
 class SceneLoadBoundary extends Component<{children:ReactNode;onFail:(error?:unknown)=>void},{failed:boolean}> {
@@ -11,7 +12,10 @@ class SceneLoadBoundary extends Component<{children:ReactNode;onFail:(error?:unk
  componentDidCatch(error:unknown){this.props.onFail(error)}
  render(){return this.state.failed?null:this.props.children}
 }
-export function FluxNarrative({variant,quality,reduced,blocked,onCategory,onDowngrade}:{variant:FluxVariant;quality:Quality;reduced:boolean;blocked:boolean;onCategory:(category:string)=>void;onDowngrade:()=>void}) {
+export function FluxNarrative(props:{variant:FluxVariant;quality:Quality;reduced:boolean;blocked:boolean;onCategory:(category:string)=>void;onDowngrade:()=>void}) {
+ return props.variant==='A'?<FlatClubHero/>:<LegacyFluxNarrative {...props}/>;
+}
+function LegacyFluxNarrative({variant,quality,reduced,blocked,onCategory,onDowngrade}:{variant:FluxVariant;quality:Quality;reduced:boolean;blocked:boolean;onCategory:(category:string)=>void;onDowngrade:()=>void}) {
  const viewport=useViewport();const short=useMedia('(max-height:599px)');const staticMode=quality==='STATIC'||reduced||short;const region=useRef<HTMLElement>(null);const host=useRef<HTMLDivElement>(null);const xRef=useRef<HTMLSpanElement>(null);const frame=useRef(frameRecord());const [failed,setFailed]=useState(false);const [needsReload,setNeedsReload]=useState(false);const [ready,setReady]=useState(false);const [mount,setMount]=useState(true);const [attempt,setAttempt]=useState(0);const loadTimer=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);const visualReady=useRef(false);const areaVisible=useRef(true);const wakeEvent=useRef(new Event('flux-frame'));const request=useCallback(()=>{host.current?.dispatchEvent(wakeEvent.current)},[]);
  const onReady=useCallback(()=>{visualReady.current=true;clearTimeout(loadTimer.current);setReady(true)},[]);const onFail=useCallback((error?:unknown)=>{visualReady.current=false;clearTimeout(loadTimer.current);setFailed(true);setReady(false);const message=error instanceof Error?error.message:String(error??'');setNeedsReload(/dynamically imported|module script|loading chunk/i.test(message))},[]);
  useLayoutEffect(()=>{visualReady.current=false;setReady(false);setFailed(false);setNeedsReload(false);setMount(true)},[variant,quality,attempt]);

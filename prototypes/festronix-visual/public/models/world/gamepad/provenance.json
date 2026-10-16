@@ -1,0 +1,103 @@
+{
+  "triangles": 9546,
+  "meshes": [
+    "gamepad_01_mesh_case"
+  ],
+  "nodes": [
+    {
+      "name": "gamepad",
+      "mesh": 0,
+      "children": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "gamepad",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.2105044722557068,
+      -0.0005923302378505468,
+      -0.21430516242980957
+    ],
+    "max": [
+      0.1935473084449768,
+      0.018331991508603096,
+      0.22065633535385132
+    ],
+    "dimensions": [
+      0.4040517807006836,
+      0.018924321746453643,
+      0.4349614977836609
+    ],
+    "center": [
+      -0.00847858190536499,
+      0.008869830635376275,
+      0.003175586462020874
+    ]
+  },
+  "units": "Source glTF metres, +Y up; source transforms preserved",
+  "asset": "gamepad",
+  "name": "Gamepad",
+  "authors": {
+    "Josh Dean": "All"
+  },
+  "sourceUrl": "https://polyhaven.com/a/gamepad",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceFiles": [
+    {
+      "path": "gamepad_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/gamepad/gamepad_1k.gltf",
+      "md5": "86e6f546e948429591f8de7c3c9cc981",
+      "bytes": 2728
+    },
+    {
+      "path": "textures/gamepad_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gamepad/gamepad_diff_1k.jpg",
+      "md5": "481e2ef26e548cec00140a32dce30ddd",
+      "bytes": 309469
+    },
+    {
+      "path": "gamepad.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/gamepad/gamepad.bin",
+      "md5": "06f345d9e959c3d265ff6f599b1640db",
+      "bytes": 256796
+    },
+    {
+      "path": "textures/gamepad_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gamepad/gamepad_nor_gl_1k.jpg",
+      "md5": "0ee54f5549614917728ed1293cc63f64",
+      "bytes": 241556
+    },
+    {
+      "path": "textures/gamepad_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gamepad/gamepad_arm_1k.jpg",
+      "md5": "67c3c5c000441d0d79a9e14df40d93a3",
+      "bytes": 510273
+    }
+  ],
+  "modifications": "Only WebP texture encoding/resolution and glTF-to-GLB container repack; geometry/materials/nodes unchanged.",
+  "tiers": {
+    "full": {
+      "path": "/models/world/gamepad/gamepad-full.glb",
+      "textureSize": 1024,
+      "glbBytes": 416592,
+      "gzipBytes": 301481,
+      "textureBytes": 157762,
+      "sha256": "87f043d60829f2ad546c3ac78bebdf04b3a9d95412eef7ee1b2ea044d3dc938a"
+    },
+    "reduced": {
+      "path": "/models/world/gamepad/gamepad-reduced.glb",
+      "textureSize": 512,
+      "glbBytes": 292188,
+      "gzipBytes": 177267,
+      "textureBytes": 33360,
+      "sha256": "e851c3917ef86981b7466e61f91774bb83faef4de01f8c7fdbd1735d4fde151e"
+    }
+  }
+}

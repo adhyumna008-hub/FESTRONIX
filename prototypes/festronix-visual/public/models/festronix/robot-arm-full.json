@@ -1,0 +1,124 @@
+{
+  "filename": "robot-arm-full.glb",
+  "bytes": 1678404,
+  "gzipBytes": 430366,
+  "triangles": 24728,
+  "drawCalls": 32,
+  "bounds": {
+    "min": [
+      -0.6703789293766022,
+      0.011250001844018698,
+      -0.522815054655075
+    ],
+    "max": [
+      1.0052302083166547,
+      3.5228964553844633,
+      0.43199999034404757
+    ],
+    "size": [
+      1.675609137693257,
+      3.5116464535404446,
+      0.9548150449991226
+    ]
+  },
+  "nodes": [
+    "FESTRONIX_ROBOTICS_MANIPULATOR",
+    "mechanical_robot",
+    "robot_base",
+    "robot_base_Anodized_graphite_chassis",
+    "robot_base_Satin_machined_titanium",
+    "robot_base_Black_oxide_steel",
+    "robot_base_Elastomer_cable_and_gasket",
+    "robot_waist",
+    "robot_waist_Satin_copper_busbar",
+    "robot_waist_Anodized_graphite_chassis",
+    "robot_waist_Powder-coated_cast_aluminum",
+    "robot_waist_Satin_machined_titanium",
+    "robot_waist_Elastomer_cable_and_gasket",
+    "robot_waist_Amber_status_acrylic",
+    "robot_shoulder",
+    "robot_elbow",
+    "robot_wrist",
+    "robot_gripper",
+    "gripper_left",
+    "gripper_left_Satin_machined_titanium",
+    "gripper_left_Elastomer_cable_and_gasket",
+    "gripper_right",
+    "gripper_right_Satin_machined_titanium",
+    "gripper_right_Elastomer_cable_and_gasket",
+    "robot_wrist_Anodized_graphite_chassis",
+    "robot_wrist_Satin_machined_titanium",
+    "robot_wrist_Black_oxide_steel",
+    "robot_wrist_Elastomer_cable_and_gasket",
+    "robot_wrist_Satin_copper_busbar",
+    "robot_wrist_Mint_indicator_acrylic",
+    "robot_elbow_Anodized_graphite_chassis",
+    "robot_elbow_Satin_machined_titanium",
+    "robot_elbow_Black_oxide_steel",
+    "robot_elbow_Elastomer_cable_and_gasket",
+    "robot_elbow_Satin_copper_busbar",
+    "robot_elbow_Powder-coated_cast_aluminum",
+    "robot_shoulder_Anodized_graphite_chassis",
+    "robot_shoulder_Satin_machined_titanium",
+    "robot_shoulder_Black_oxide_steel",
+    "robot_shoulder_Elastomer_cable_and_gasket",
+    "robot_shoulder_Satin_copper_busbar",
+    "robot_shoulder_Powder-coated_cast_aluminum"
+  ],
+  "materials": [
+    {
+      "name": "Anodized graphite chassis",
+      "metalness": 0.82,
+      "roughness": 0.32
+    },
+    {
+      "name": "Satin machined titanium",
+      "metalness": 0.92,
+      "roughness": 0.27
+    },
+    {
+      "name": "Black oxide steel",
+      "metalness": 0.9,
+      "roughness": 0.37
+    },
+    {
+      "name": "Satin copper busbar",
+      "metalness": 0.92,
+      "roughness": 0.25
+    },
+    {
+      "name": "Elastomer cable and gasket",
+      "metalness": 0.05,
+      "roughness": 0.82
+    },
+    {
+      "name": "Mint indicator acrylic",
+      "metalness": 0.1,
+      "roughness": 0.3
+    },
+    {
+      "name": "Amber status acrylic",
+      "metalness": 0.1,
+      "roughness": 0.32
+    },
+    {
+      "name": "Smoked inspection glass",
+      "metalness": 0.15,
+      "roughness": 0.13
+    },
+    {
+      "name": "Powder-coated cast aluminum",
+      "metalness": 0.48,
+      "roughness": 0.44
+    }
+  ],
+  "surfaceMaps": {
+    "type": "original procedural brushed-metal metallic-roughness and normal PNGs",
+    "embedded": true,
+    "size": 256,
+    "normalStrength": 0.3
+  },
+  "creator": "FESTRONIX original modeled prototype",
+  "license": "Project-authored asset; no external mesh or texture",
+  "source": "tools/build-mechanical-assets.mjs"
+}

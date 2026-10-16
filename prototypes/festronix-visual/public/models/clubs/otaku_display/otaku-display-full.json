@@ -1,0 +1,116 @@
+{
+  "filename": "otaku-display-full.glb",
+  "bytes": 908920,
+  "gzipBytes": 784553,
+  "sha256": "c5b0b4d4631802eb23ffb91415914b276653ae2ec34f1c6bcdcd46f2c31e8035",
+  "triangles": 10450,
+  "meshes": [
+    "Plane",
+    "katana_stand_01_blockout.003"
+  ],
+  "nodes": [
+    {
+      "name": "antique_katana_01",
+      "mesh": 0,
+      "children": []
+    },
+    {
+      "name": "katana_source_pose",
+      "mesh": null,
+      "children": [
+        0
+      ]
+    },
+    {
+      "name": "katana_stand_01",
+      "mesh": 1,
+      "children": []
+    },
+    {
+      "name": "stand_source_pose",
+      "mesh": null,
+      "children": [
+        2
+      ]
+    },
+    {
+      "name": "otaku_display",
+      "mesh": null,
+      "children": [
+        1,
+        3
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "antique_katana_01",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    },
+    {
+      "name": "katana_stand_01",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.5014718919992448,
+      5.399762812885456e-05,
+      -0.019857375827996293
+    ],
+    "max": [
+      0.5014718919992448,
+      0.19054311493259585,
+      0.07351537147405907
+    ],
+    "dimensions": [
+      1.0029437839984896,
+      0.190489117304467,
+      0.09337274730205536
+    ],
+    "center": [
+      0.0,
+      0.09529855628036235,
+      0.026828997823031386
+    ]
+  },
+  "units": "Source metres preserved; +Y up, +Z front. Katana blade points -X, hilt points +X.",
+  "composition": {
+    "katanaRotationZ": 1.5707963267948966,
+    "katanaTranslation": [
+      0.1948481649160385,
+      0.14385674128156808,
+      0.026828997823031386
+    ],
+    "standTranslation": [
+      0,
+      0,
+      0
+    ],
+    "forkX": 0.102,
+    "estimatedCradleY": 0.1274043768644333,
+    "sampledBladeLowerEdge": [
+      -0.014701385798223951,
+      -0.015652364417134808
+    ],
+    "contactClearanceMetres": 0.0008,
+    "scabbardIncluded": false
+  },
+  "license": "CC0 1.0 Universal",
+  "sources": [
+    {
+      "asset": "Antique Katana 01",
+      "creator": "Tal Swicegood",
+      "url": "https://polyhaven.com/a/antique_katana_01"
+    },
+    {
+      "asset": "Katana Stand 01",
+      "creator": "Rico Cilliers",
+      "url": "https://polyhaven.com/a/katana_stand_01"
+    }
+  ],
+  "modifications": "Combined original meshes and embedded maps into one GLB; index remapping and source node exhibit poses only. No mesh/UV/material shape changes or relative scaling. Contact pose is authored for visual staging, not engineering simulation."
+}

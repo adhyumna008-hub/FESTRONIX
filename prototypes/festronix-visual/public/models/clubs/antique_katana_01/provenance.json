@@ -1,0 +1,103 @@
+{
+  "triangles": 6670,
+  "meshes": [
+    "Plane"
+  ],
+  "nodes": [
+    {
+      "name": "antique_katana_01",
+      "mesh": 0,
+      "children": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "antique_katana_01",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.04668637365102768,
+      -0.3066237270832062,
+      -0.04668637365102768
+    ],
+    "max": [
+      0.04668637365102768,
+      0.6963200569152832,
+      0.04668637365102768
+    ],
+    "dimensions": [
+      0.09337274730205536,
+      1.0029437839984894,
+      0.09337274730205536
+    ],
+    "center": [
+      0.0,
+      0.1948481649160385,
+      0.0
+    ]
+  },
+  "units": "Source glTF metres, +Y up; source transforms preserved",
+  "asset": "antique_katana_01",
+  "name": "Antique Katana 01",
+  "authors": {
+    "Tal Swicegood": "All"
+  },
+  "sourceUrl": "https://polyhaven.com/a/antique_katana_01",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceFiles": [
+    {
+      "path": "antique_katana_01_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/antique_katana_01/antique_katana_01_1k.gltf",
+      "md5": "3779c62d53191221da2bbce887c43dba",
+      "bytes": 2718
+    },
+    {
+      "path": "antique_katana_01.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/antique_katana_01/antique_katana_01.bin",
+      "md5": "84be308e20afc9d68d95257dc798e232",
+      "bytes": 221940
+    },
+    {
+      "path": "textures/antique_katana_01_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/antique_katana_01/antique_katana_01_diff_1k.jpg",
+      "md5": "376b3d6c78e79d9b45df612478010bdf",
+      "bytes": 173883
+    },
+    {
+      "path": "textures/antique_katana_01_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/antique_katana_01/antique_katana_01_arm_1k.jpg",
+      "md5": "c2115003bfb806aaeb8f0a6e745dabc6",
+      "bytes": 152738
+    },
+    {
+      "path": "textures/antique_katana_01_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/antique_katana_01/antique_katana_01_nor_gl_1k.jpg",
+      "md5": "cc8ac7611bc3f7eac734788015d83468",
+      "bytes": 95776
+    }
+  ],
+  "modifications": "Only WebP texture encoding/resolution and glTF-to-GLB container repack; geometry/materials/nodes unchanged.",
+  "tiers": {
+    "full": {
+      "path": "/models/clubs/antique_katana_01/antique_katana_01-full.glb",
+      "textureSize": 1024,
+      "glbBytes": 519264,
+      "gzipBytes": 431463,
+      "textureBytes": 295290,
+      "sha256": "4f453d648c1c1b48d354e7d417102be478df0034a2678e3d797d9f35ebb8c609"
+    },
+    "reduced": {
+      "path": "/models/clubs/antique_katana_01/antique_katana_01-reduced.glb",
+      "textureSize": 512,
+      "glbBytes": 291804,
+      "gzipBytes": 203928,
+      "textureBytes": 67836,
+      "sha256": "aaeb303d5948d4e077fefdc521616b6ae90d7017948182552122fbdcba8333d1"
+    }
+  }
+}

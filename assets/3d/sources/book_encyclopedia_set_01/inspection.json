@@ -1,0 +1,135 @@
+{
+  "triangles": 13484,
+  "meshes": [
+    "four_sourced_encyclopedia_volumes"
+  ],
+  "nodes": [
+    {
+      "name": "literature_book_stack",
+      "mesh": 0,
+      "children": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "book_encyclopedia_set_01_cover",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    },
+    {
+      "name": "book_encyclopedia_set_01_paper",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.019316473975777626,
+      0.0,
+      -0.06206987798213959
+    ],
+    "max": [
+      0.10000968165695667,
+      0.23741817474365234,
+      0.10099244862794876
+    ],
+    "dimensions": [
+      0.1193261556327343,
+      0.23741817474365234,
+      0.16306232661008835
+    ],
+    "center": [
+      0.04034660384058952,
+      0.11870908737182617,
+      0.019461285322904587
+    ]
+  },
+  "units": "Source glTF metres, +Y up; source transforms preserved",
+  "asset": "book_encyclopedia_set_01",
+  "name": "Book Encyclopedia Set 01",
+  "authors": {
+    "John Malcolm": "All"
+  },
+  "sourceUrl": "https://polyhaven.com/a/book_encyclopedia_set_01",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceFiles": [
+    {
+      "path": "book_encyclopedia_set_01_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_1k.gltf",
+      "md5": "d0a77d421a6ea2c9d82bcaaa64e8479b",
+      "bytes": 55011
+    },
+    {
+      "path": "textures/book_encyclopedia_set_01_cover_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_diff_1k.jpg",
+      "md5": "00a10b1b5a28efa4670d68a089a64ef3",
+      "bytes": 126794
+    },
+    {
+      "path": "book_encyclopedia_set_01.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/book_encyclopedia_set_01/book_encyclopedia_set_01.bin",
+      "md5": "ac617be6503e537c5d1a16a94313e866",
+      "bytes": 2547932
+    },
+    {
+      "path": "textures/book_encyclopedia_set_01_paper_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_nor_gl_1k.jpg",
+      "md5": "816a51a0b6520cf5e08751089722fc46",
+      "bytes": 193390
+    },
+    {
+      "path": "textures/book_encyclopedia_set_01_cover_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_arm_1k.jpg",
+      "md5": "0e5788b0ee9ce810823356e187c31a8c",
+      "bytes": 189997
+    },
+    {
+      "path": "textures/book_encyclopedia_set_01_cover_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_nor_gl_1k.jpg",
+      "md5": "488fa9696ad4f1773a2d81f3af7b6c76",
+      "bytes": 19941
+    },
+    {
+      "path": "textures/book_encyclopedia_set_01_paper_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_diff_1k.jpg",
+      "md5": "7798b8e38721a4fc1ed45319ecc81b67",
+      "bytes": 115297
+    },
+    {
+      "path": "textures/book_encyclopedia_set_01_paper_roughness_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_roughness_1k.jpg",
+      "md5": "b8e5b8431b0c53b20d83ec0bcff51747",
+      "bytes": 12684
+    }
+  ],
+  "modifications": "Retained complete first four source encyclopedia volumes; baked their source node translations and batched stationary geometry into original cover/paper material groups. Retained original triangles, normals and UVs for those volumes. Embedded FULL1024/REDUCED512 WebP source maps.",
+  "tiers": {
+    "full": {
+      "path": "/models/clubs/book_encyclopedia_set_01/book_encyclopedia_set_01-full.glb",
+      "textureSize": 1024,
+      "glbBytes": 814708,
+      "gzipBytes": 474082,
+      "textureBytes": 294616,
+      "sha256": "156147692ae66c013f02c5409d2162553b5da694a0ea533698b09d5080bccf84"
+    },
+    "reduced": {
+      "path": "/models/clubs/book_encyclopedia_set_01/book_encyclopedia_set_01-reduced.glb",
+      "textureSize": 512,
+      "glbBytes": 588524,
+      "gzipBytes": 250372,
+      "textureBytes": 68436,
+      "sha256": "02371a446a5aacefd6e5893072803e0acde2e48cdafa584f38c1a38a221fca84"
+    }
+  },
+  "selectedSourceNodes": [
+    "book_encyclopedia_set_01_book01",
+    "book_encyclopedia_set_01_book02",
+    "book_encyclopedia_set_01_book03",
+    "book_encyclopedia_set_01_book04"
+  ],
+  "sourceSetTriangles": 67306,
+  "preparedGeometryBytes": 516168,
+  "preparedGeometrySha256": "09e23e6b55734cc104ae631de94dac6daf703cbb5ed491bcf9da58f1c78cc65c"
+}

@@ -1,8 +1,97 @@
 # FESTRONIX provisional immersive asset manifest
 
+## Restored animated Campus X — 2026-10-16
+
+At the owner's request, the Campus hero again uses an original optical X (`CampusX.tsx`, `campus-x.css`): two translucent CSS arms with a slow float/light sweep, bounded orbit lines and small shared SVG category symbols. No external model, generated art, texture download or new dependency. Pauses for dialogs, offscreen/tab-hidden states and Motion off; system reduced motion uses the still treatment. Campus club cards and Flux A remain flat symbols; the retired 3D Club Gallery is not restored. The preceding flat-symbol hero arrangement is now historical.
+
+## Flat Campus symbols — 2026-10-16
+
+Owner requested a fourth Campus prototype option and removal of the active 3D Club Gallery. `src/ClubSymbols.tsx` now provides five original inline SVG category marks for gaming, development, literature, cinema and anime/culture. They are scalable, lightweight illustrative symbols, not official club logos. Reused in the Campus hero, its club cards and the flat Flux A replacement. No downloaded/generated raster artwork or external logo source was added. Earlier gallery model records below are historical and the gallery is no longer imported by the active site.
+
 **Date:** 2026-10-07  
-**Status:** Provisional procedural assets and the subsequent owner-directed, CC0-sourced Flux A hardware refinement are implemented. The sourced model/textures replace A's earlier procedural board; final visual approval, artwork and branding remain pending.  
-**Scope:** Pulse, Panel and three competing Flux prototypes; see [direction reset](PROTOTYPE_DIRECTION_RESET.md) and [interaction architecture](IMMERSIVE_INTERACTION_ARCHITECTURE.md).
+**Status:** The owner's latest five-club correction is implemented as the current Flux A gallery using detailed CC0-sourced objects. Current browser QA, final visual/content approval, artwork and branding remain pending. Earlier board/machinery assets remain source history.
+
+**Scope:** Current five-club Flux A, Pulse, Panel and retained Flux B/C comparisons; see [current implementation](REAL_3D_WORLD_IMPLEMENTATION.md), [direction reset](PROTOTYPE_DIRECTION_RESET.md) and [preceding interaction architecture](IMMERSIVE_INTERACTION_ARCHITECTURE.md).
+
+## Current Flux A — five-club gallery, 2026-10-07
+
+The owner requested Gaming Club, SDC (Student Developer Club), Literature Club,
+CINE Club and OTAKU (anime) Club, with more clubs later. This correction replaces
+the bounded Core A hero and the subsequent generic machinery concept with one
+continuous scroll gallery. The club objects below are the primary subjects;
+the original X-Core/robot and preceding Circuit Board remain available as
+traceable prototype history. Pulse, Panel and Flux B/C retain their comparison
+directions. No reference-site object or copyrighted anime/game character ships.
+
+Every listed external asset is **CC0 1.0 Universal** from Poly Haven, with creator
+pages, API metadata, original source dependencies and published MD5 checks kept
+under `assets/3d/sources/`. [Poly Haven's license](https://polyhaven.com/license)
+permits modification/redistribution of the asset files; provider preview renders
+and logos are excluded. These are sourced authored meshes with detailed PBR maps,
+not asserted physical photographs, manufacturer CAD or photogrammetry scans.
+**TEMPORARY PROTOTYPE ASSET** applies to their selection/staging; source rights
+are verified and final visual/content approval is pending.
+
+| ID / club | Source / creator | Source triangles / primitive groups | FULL / REDUCED gzip bytes | Runtime stem under `public/models/clubs/` |
+| --- | --- | ---: | ---: | --- |
+| FX-CL01 / Gaming | [Gamepad](https://polyhaven.com/a/gamepad) — Josh Dean | 9,546 / 1 | 301,481 / 177,267 | `gamepad/gamepad` |
+| FX-CL02 / SDC | [Classic Laptop](https://polyhaven.com/a/classic_laptop) — Arrangemonk | 14,450 / 4 across 3 nodes | 526,252 / 328,733 | `classic_laptop/classic_laptop` |
+| FX-CL03 / Literature | [Book Encyclopedia Set 01](https://polyhaven.com/a/book_encyclopedia_set_01) — John Malcolm; four complete volumes retained | 13,484 / 2 | 474,082 / 250,372 | `book_encyclopedia_set_01/book_encyclopedia_set_01` |
+| FX-CL04 / CINE | [Vintage Video Camera](https://polyhaven.com/a/vintage_video_camera) — James Ray Cock and Jenelle van Heerden | 18,682 / 2 | 791,086 / 502,193 | `vintage_video_camera/vintage_video_camera` |
+| FX-CL05 / OTAKU | [Antique Katana 01](https://polyhaven.com/a/antique_katana_01) — Tal Swicegood, combined with [Katana Stand 01](https://polyhaven.com/a/katana_stand_01) — Rico Cilliers | 10,450 / 2 | 784,553 / 329,785 | `otaku_display/otaku-display` |
+
+Stems receive `-full.glb.gz` / `-reduced.glb.gz`; ordinary GLBs and
+`provenance.json` are alongside them. All maps are embedded WebP, at 1024 px FULL
+and 512 px REDUCED. REDUCED preserves the same source mesh detail. The five slots
+total 66,612 source triangles, 11 primitive groups and 2,877,454 / 1,588,350 gzip
+bytes if every respective tier is requested; this is file arithmetic, not a
+simultaneous draw-call, page-transfer or GPU-memory measurement.
+
+The Literature derivative batches four actual source books into their original
+cover/paper groups. CINE restores the provider's original alpha into the glass
+material. OTAKU combines the original sword and stand at their relative source
+metre scales, with authored exhibit poses and no generated primary shape; no
+scabbard is included. The laptop's original LCD receives a locally drawn,
+decorative 512 px editor texture and planar UVs at runtime; factual club content
+remains HTML. The scene rotates, uniformly fits and ground-seats the objects on
+gallery plinths. These runtime changes do not alter the preserved source files.
+
+The source gallery requests only the current and neighboring club slots; the
+arrival uses Gaming alone, and the finale uses five small REDUCED displays.
+Textures, geometry, decoded images and render targets have explicit lifecycle
+owners. Current loading/STATIC/error artwork uses a locally rendered gallery
+arrival still; compact club sections use their matching local object crops.
+These renders use the same `WorldScene` with the licensed models and local
+lighting through `tools/world-poster.tsx`. They copy no provider preview art and
+contain no mandatory title, event facts or controls. Final visual approval,
+typography/identity and institution-logo approval remain review deliverables.
+See [source ledger](../assets/3d/SOURCES.md) for full provenance, modifications,
+dimensions and authored-file costs.
+
+| FX-CL06 locally rendered fallback under `public/models/clubs/posters/` | WebP dimensions | Bytes | Usage |
+| --- | --- | ---: | --- |
+| `arrival.webp` | 1000×700 | 8,768 | Decorative first-frame/loading and STATIC/error backdrop; empty alt |
+| `gaming.webp` | 550×540 | 6,250 | Lazy-loaded compact Gaming illustration with artifact alt |
+| `sdc.webp` | 550×540 | 8,868 | Lazy-loaded compact SDC illustration with artifact alt |
+| `literature.webp` | 550×540 | 6,770 | Lazy-loaded compact Literature illustration with artifact alt |
+| `cine.webp` | 550×540 | 8,276 | Lazy-loaded compact CINE illustration with artifact alt |
+| `otaku.webp` | 550×540 | 4,854 | Lazy-loaded compact OTAKU illustration with artifact alt |
+
+The six files total 43,786 compressed bytes. All are **TEMPORARY PROTOTYPE
+ASSET**, derived from the CC0 source objects plus original gallery staging.
+These file sizes/dimensions are checked metadata; they do not certify a rendered
+crop, decoded/GPU residency or physical-phone performance.
+
+**Current QA / budget acceptance: PENDING.** Source-container/embedded-map checks
+passed for fourteen individual and two combined club GLBs. Current browser
+composition, materials, native scroll/reverse, interactions, failures/retry,
+resource cycles, measured transfers/counters and frame timing await the root QA
+results. Earlier bounded-hero measurements below are historical. The prior
+geometry/transfer/residency targets are not certified for the new multi-object
+gallery; no physical-phone performance or deployment is claimed.
+
+The remaining sections preserve earlier asset briefs and implementation history.
+This current entry governs the active Flux A subject selection.
 
 ## 1. Status and provenance rules
 
@@ -56,7 +145,7 @@ Future image-generation briefs must specify original engineering subject matter,
 
 ## 5. Flux experiment assets
 
-All three candidates remain available for comparison. Procedural forms supplied the first comparison pass; the owner's subsequent realism clarification authorized a detailed sourced hardware model for A. B/C retain their existing concepts and implementations. This asset refinement selects no Flux winner and does not approve final branding.
+This section records the preceding bounded-hero comparison pass. Procedural forms supplied that first comparison; the owner's subsequent realism clarification authorized the sourced Circuit Board refinement described here. The current five-club entry above supersedes A's subject/layout. B/C retain their existing concepts and implementations; final branding remains unapproved.
 
 | ID | Status | Medium / quantity | Requirements |
 | --- | --- | --- | --- |
@@ -95,6 +184,10 @@ All three candidates remain available for comparison. Procedural forms supplied 
 No missing final asset blocks a labeled procedural immersive rebuild. Final historical media, approved brand/font files and verified public facts are required before representing the experience as the real live festival.
 
 ## Sourced hardware refinement — 2026-10-07
+
+**Historical bounded-hero refinement:** superseded as the active Flux A subject
+by the five-club gallery recorded above. Its source evidence and measurements
+remain available for traceability; they are not current club-gallery QA.
 
 The owner clarified that the preceding procedural board looked cartoonish and requested detailed product-style hardware with an animated separation of visible parts. Active Core A now uses [Circuit Board](https://polyhaven.com/a/circuit_board) by **Benny Weimer**, from Poly Haven. The [Poly Haven license](https://polyhaven.com/license) identifies its downloadable assets as **CC0**. This is a sourced, textured hardware visualization; it is not described as a photogrammetry scan, a literal physical photograph, manufacturer CAD, or a manufacturer-accurate internal teardown. Final visual approval remains pending.
 

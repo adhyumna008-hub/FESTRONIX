@@ -1,0 +1,209 @@
+{
+  "triangles": 32697,
+  "meshes": [
+    "Circle.013",
+    "Circle.016",
+    "Circle.012",
+    "Cube.033",
+    "Cube.041",
+    "Plane.001",
+    "Cylinder.016",
+    "Cylinder.019",
+    "Cylinder.014",
+    "Cylinder.010",
+    "Circle.008",
+    "Circle.022",
+    "Cube.007",
+    "Cube.060",
+    "Circle.034",
+    "Circle.035"
+  ],
+  "nodes": [
+    {
+      "name": "filmstrip_projector_8mm_takeup_holder",
+      "mesh": 0,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_spool_takeup",
+      "mesh": 1,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_spool_feed",
+      "mesh": 2,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_spool_arm",
+      "mesh": 3,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_schuko",
+      "mesh": 4,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_switch",
+      "mesh": 5,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_dial_speed",
+      "mesh": 6,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_dial_mode",
+      "mesh": 7,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_focus",
+      "mesh": 8,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_feed_roller",
+      "mesh": 9,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_feed_holder",
+      "mesh": 10,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_cable",
+      "mesh": 11,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_connector",
+      "mesh": 12,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm",
+      "mesh": 13,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_01_film_side",
+      "mesh": 14,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_cable_curve",
+      "mesh": null,
+      "children": []
+    },
+    {
+      "name": "filmstrip_projector_8mm_film",
+      "mesh": 15,
+      "children": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "filmstrip_projector_8mm",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    },
+    {
+      "name": "filmstrip_projector_8mm_film",
+      "alphaMode": "BLEND",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.1537434346973896,
+      0.0,
+      -0.2805512547492981
+    ],
+    "max": [
+      0.09993579983711243,
+      0.3454076796770096,
+      0.3220675364136696
+    ],
+    "dimensions": [
+      0.25367923453450203,
+      0.3454076796770096,
+      0.6026187911629677
+    ],
+    "center": [
+      -0.026903817430138588,
+      0.1727038398385048,
+      0.020758140832185745
+    ]
+  },
+  "units": "Source glTF metres, +Y up; source transforms preserved",
+  "asset": "filmstrip_projector_8mm",
+  "name": "Filmstrip Projector 8mm",
+  "authors": {
+    "PeterM": "All"
+  },
+  "sourceUrl": "https://polyhaven.com/a/filmstrip_projector_8mm",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceFiles": [
+    {
+      "path": "filmstrip_projector_8mm_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/filmstrip_projector_8mm/filmstrip_projector_8mm_1k.gltf",
+      "md5": "c2ff3599353990b66e55c4f495860f3a",
+      "bytes": 27195
+    },
+    {
+      "path": "textures/filmstrip_projector_8mm_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/filmstrip_projector_8mm/filmstrip_projector_8mm_nor_gl_1k.jpg",
+      "md5": "4c05df8354944628df3d76851c9207da",
+      "bytes": 636895
+    },
+    {
+      "path": "textures/filmstrip_projector_8mm_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/filmstrip_projector_8mm/filmstrip_projector_8mm_diff_1k.jpg",
+      "md5": "d8f9b73e1101f24352299452b11a9a6b",
+      "bytes": 533640
+    },
+    {
+      "path": "textures/filmstrip_projector_8mm_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/filmstrip_projector_8mm/filmstrip_projector_8mm_arm_1k.jpg",
+      "md5": "9245a9554ff8d7226baebedafe5188f8",
+      "bytes": 835281
+    },
+    {
+      "path": "filmstrip_projector_8mm.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/filmstrip_projector_8mm/filmstrip_projector_8mm.bin",
+      "md5": "fc9b5024ecca1370a70001ccb356c61b",
+      "bytes": 1088504
+    },
+    {
+      "path": "textures\\filmstrip_projector_8mm_alpha_1k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/filmstrip_projector_8mm/filmstrip_projector_8mm_alpha_1k.png",
+      "md5": "7920f4928a329d204e7d45358c94de00",
+      "bytes": 8031
+    }
+  ],
+  "modifications": "Only WebP texture encoding/resolution and glTF-to-GLB container repack; geometry/materials/nodes unchanged. Restored original supplied alpha to diffuse RGBA, omitted by provider JPEG-only glTF export; OPAQUE material ignores alpha, BLEND material uses it.",
+  "tiers": {
+    "full": {
+      "path": "/models/clubs/filmstrip_projector_8mm/filmstrip_projector_8mm-full.glb",
+      "textureSize": 1024,
+      "glbBytes": 1522740,
+      "gzipBytes": 933748,
+      "textureBytes": 417572,
+      "sha256": "b00cfe0fa4b5ee2ad67ad3c78cb167c43db9dac58088757045802265211e4c01"
+    },
+    "reduced": {
+      "path": "/models/clubs/filmstrip_projector_8mm/filmstrip_projector_8mm-reduced.glb",
+      "textureSize": 512,
+      "glbBytes": 1221532,
+      "gzipBytes": 632457,
+      "textureBytes": 116368,
+      "sha256": "e9fdd358eef3f1d75c15739e8f67d4e9919d2a388b879b4e965b7bbb2eeb92fb"
+    }
+  }
+}

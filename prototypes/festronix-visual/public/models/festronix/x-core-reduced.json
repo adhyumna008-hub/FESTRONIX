@@ -1,0 +1,122 @@
+{
+  "filename": "x-core-reduced.glb",
+  "bytes": 2212504,
+  "gzipBytes": 461251,
+  "triangles": 33760,
+  "drawCalls": 31,
+  "bounds": {
+    "min": [
+      -1.7132413387298584,
+      -1.7132413387298584,
+      -0.9856250137090683
+    ],
+    "max": [
+      1.7132413387298584,
+      1.7132413387298584,
+      0.41749998927116394
+    ],
+    "size": [
+      3.426482677459717,
+      3.426482677459717,
+      1.4031250029802322
+    ]
+  },
+  "nodes": [
+    "FESTRONIX_X_CORE",
+    "mechanical_xcore",
+    "xcore_chassis",
+    "chassis_Anodized_graphite_chassis",
+    "chassis_Elastomer_cable_and_gasket",
+    "chassis_Satin_machined_titanium",
+    "chassis_Satin_copper_busbar",
+    "chassis_Black_oxide_steel",
+    "chassis_Mint_indicator_acrylic",
+    "chassis_Amber_status_acrylic",
+    "arm_panel_0",
+    "heatshield_0_Satin_machined_titanium",
+    "heatshield_0_Anodized_graphite_chassis",
+    "heatshield_0_Mint_indicator_acrylic",
+    "heatshield_0_Elastomer_cable_and_gasket",
+    "arm_panel_1",
+    "heatshield_1_Satin_machined_titanium",
+    "heatshield_1_Anodized_graphite_chassis",
+    "heatshield_1_Mint_indicator_acrylic",
+    "heatshield_1_Elastomer_cable_and_gasket",
+    "arm_panel_2",
+    "heatshield_2_Satin_machined_titanium",
+    "heatshield_2_Anodized_graphite_chassis",
+    "heatshield_2_Mint_indicator_acrylic",
+    "heatshield_2_Elastomer_cable_and_gasket",
+    "arm_panel_3",
+    "heatshield_3_Satin_machined_titanium",
+    "heatshield_3_Anodized_graphite_chassis",
+    "heatshield_3_Mint_indicator_acrylic",
+    "heatshield_3_Elastomer_cable_and_gasket",
+    "core_rotor",
+    "rotor_Black_oxide_steel",
+    "rotor_Satin_machined_titanium",
+    "rotor_Satin_copper_busbar",
+    "rotor_Anodized_graphite_chassis",
+    "rotor_Elastomer_cable_and_gasket",
+    "inspection_shield",
+    "inspection_Smoked_inspection_glass",
+    "inspection_Satin_machined_titanium",
+    "inspection_Elastomer_cable_and_gasket"
+  ],
+  "materials": [
+    {
+      "name": "Anodized graphite chassis",
+      "metalness": 0.82,
+      "roughness": 0.32
+    },
+    {
+      "name": "Satin machined titanium",
+      "metalness": 0.92,
+      "roughness": 0.27
+    },
+    {
+      "name": "Black oxide steel",
+      "metalness": 0.9,
+      "roughness": 0.37
+    },
+    {
+      "name": "Satin copper busbar",
+      "metalness": 0.92,
+      "roughness": 0.25
+    },
+    {
+      "name": "Elastomer cable and gasket",
+      "metalness": 0.05,
+      "roughness": 0.82
+    },
+    {
+      "name": "Mint indicator acrylic",
+      "metalness": 0.1,
+      "roughness": 0.3
+    },
+    {
+      "name": "Amber status acrylic",
+      "metalness": 0.1,
+      "roughness": 0.32
+    },
+    {
+      "name": "Smoked inspection glass",
+      "metalness": 0.15,
+      "roughness": 0.13
+    },
+    {
+      "name": "Powder-coated cast aluminum",
+      "metalness": 0.48,
+      "roughness": 0.44
+    }
+  ],
+  "surfaceMaps": {
+    "type": "original procedural brushed-metal metallic-roughness and normal PNGs",
+    "embedded": true,
+    "size": 128,
+    "normalStrength": 0.3
+  },
+  "creator": "FESTRONIX original modeled prototype",
+  "license": "Project-authored asset; no external mesh or texture",
+  "source": "tools/build-mechanical-assets.mjs"
+}

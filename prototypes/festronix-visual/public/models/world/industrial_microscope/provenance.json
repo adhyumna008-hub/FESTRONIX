@@ -1,0 +1,109 @@
+{
+  "triangles": 16598,
+  "meshes": [
+    "Cube.048",
+    "Cube.045"
+  ],
+  "nodes": [
+    {
+      "name": "industrial_microscope_cable",
+      "mesh": 0,
+      "children": []
+    },
+    {
+      "name": "industrial_microscope",
+      "mesh": 1,
+      "children": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "industrial_microscope",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.09376397728919983,
+      -0.0016222792910411954,
+      -0.33148518204689026
+    ],
+    "max": [
+      0.12077084183692932,
+      0.460121750831604,
+      0.16660547256469727
+    ],
+    "dimensions": [
+      0.21453481912612915,
+      0.4617440301226452,
+      0.4980906546115875
+    ],
+    "center": [
+      0.013503432273864746,
+      0.2292497357702814,
+      -0.0824398547410965
+    ]
+  },
+  "units": "Source glTF metres, +Y up; source transforms preserved",
+  "asset": "industrial_microscope",
+  "name": "Industrial Microscope",
+  "authors": {
+    "Lukas Walzer": "All"
+  },
+  "sourceUrl": "https://polyhaven.com/a/industrial_microscope",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceFiles": [
+    {
+      "path": "industrial_microscope_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/industrial_microscope/industrial_microscope_1k.gltf",
+      "md5": "472c893cc84e3f7e9f76454aba612e42",
+      "bytes": 4270
+    },
+    {
+      "path": "textures/industrial_microscope_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/industrial_microscope/industrial_microscope_nor_gl_1k.jpg",
+      "md5": "2e3d69f1bf720fa98bd3c76708a0b471",
+      "bytes": 566472
+    },
+    {
+      "path": "textures/industrial_microscope_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/industrial_microscope/industrial_microscope_diff_1k.jpg",
+      "md5": "d98e729ea074d94a3a3e34050bc68a94",
+      "bytes": 508322
+    },
+    {
+      "path": "textures/industrial_microscope_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/industrial_microscope/industrial_microscope_arm_1k.jpg",
+      "md5": "16d17224f4750da5f0c99c6ac8e1771b",
+      "bytes": 775071
+    },
+    {
+      "path": "industrial_microscope.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/industrial_microscope/industrial_microscope.bin",
+      "md5": "be2a9782f02eabcc9a02f67dd7c6fd33",
+      "bytes": 602404
+    }
+  ],
+  "modifications": "Only WebP texture encoding/resolution and glTF-to-GLB container repack; geometry/materials/nodes unchanged.",
+  "tiers": {
+    "full": {
+      "path": "/models/world/industrial_microscope/industrial_microscope-full.glb",
+      "textureSize": 1024,
+      "glbBytes": 985824,
+      "gzipBytes": 682441,
+      "textureBytes": 380478,
+      "sha256": "a5c0b126dfa499b3d36d721884a5a065c26b318f6987ef947211bd1961e80a48"
+    },
+    "reduced": {
+      "path": "/models/world/industrial_microscope/industrial_microscope-reduced.glb",
+      "textureSize": 512,
+      "glbBytes": 711416,
+      "gzipBytes": 407951,
+      "textureBytes": 106066,
+      "sha256": "7b85ef1e3277cbd02351cfedf5e39bbb59e194c89e2d41e0a270deb493502579"
+    }
+  }
+}

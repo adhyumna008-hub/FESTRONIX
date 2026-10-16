@@ -1,0 +1,175 @@
+{
+  "triangles": 58526,
+  "meshes": [
+    "Plane.011",
+    "Cylinder.082",
+    "Cylinder.083",
+    "Cylinder.006",
+    "Circle.004",
+    "Circle.012",
+    "Circle.027",
+    "Cylinder.040",
+    "Cube.022",
+    "Bolt.003",
+    "Cylinder.078",
+    "B\u00e9zierCurve.004",
+    "Cube.001"
+  ],
+  "nodes": [
+    {
+      "name": "drill_press_01",
+      "mesh": 0,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_plate",
+      "mesh": 1,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_catch",
+      "mesh": 2,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_lid",
+      "mesh": 3,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_belt",
+      "mesh": 4,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_gear_b",
+      "mesh": 5,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_gear_a",
+      "mesh": 6,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_handle",
+      "mesh": 7,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_button_a",
+      "mesh": 8,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_limiter",
+      "mesh": 9,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_bit",
+      "mesh": 10,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_plug",
+      "mesh": 11,
+      "children": []
+    },
+    {
+      "name": "drill_press_01_button_b",
+      "mesh": 12,
+      "children": []
+    }
+  ],
+  "materials": [
+    {
+      "name": "drill_press_01",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    }
+  ],
+  "animationClips": [],
+  "bounds": {
+    "min": [
+      -0.2058801202874293,
+      1.4901161193847656e-08,
+      -0.3530048131942749
+    ],
+    "max": [
+      0.15998275578022003,
+      0.9015651554212893,
+      0.24578049778938293
+    ],
+    "dimensions": [
+      0.36586287606764933,
+      0.9015651405201281,
+      0.5987853109836578
+    ],
+    "center": [
+      -0.022948682253604635,
+      0.45078258516122527,
+      -0.053612157702445984
+    ]
+  },
+  "units": "Source glTF metres, +Y up; source transforms preserved",
+  "asset": "drill_press_01",
+  "name": "Drill Press 01",
+  "authors": {
+    "Viktor": "All"
+  },
+  "sourceUrl": "https://polyhaven.com/a/drill_press_01",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://polyhaven.com/license",
+  "sourceFiles": [
+    {
+      "path": "drill_press_01_1k.gltf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/drill_press_01/drill_press_01_1k.gltf",
+      "md5": "d0c8a1129283a4554983dcff450d8ccc",
+      "bytes": 21382
+    },
+    {
+      "path": "textures/drill_press_01_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/drill_press_01/drill_press_01_nor_gl_1k.jpg",
+      "md5": "5ca3f57733fcdba6de5c82d310c8b0c6",
+      "bytes": 672092
+    },
+    {
+      "path": "textures/drill_press_01_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/drill_press_01/drill_press_01_diff_1k.jpg",
+      "md5": "46c429f55302b33a65decda70a7bdce6",
+      "bytes": 610938
+    },
+    {
+      "path": "textures/drill_press_01_arm_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/drill_press_01/drill_press_01_arm_1k.jpg",
+      "md5": "ee280b9ca3252dad7cf28c60c53eed10",
+      "bytes": 817996
+    },
+    {
+      "path": "drill_press_01.bin",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/drill_press_01/drill_press_01.bin",
+      "md5": "6f4a830570aa92b2089f16c9f0e1a663",
+      "bytes": 1911136
+    }
+  ],
+  "modifications": "Only WebP texture encoding/resolution and glTF-to-GLB container repack; geometry/materials/nodes unchanged.",
+  "tiers": {
+    "full": {
+      "path": "/models/world/drill_press_01/drill_press_01-full.glb",
+      "textureSize": 1024,
+      "glbBytes": 2340032,
+      "gzipBytes": 1371464,
+      "textureBytes": 415820,
+      "sha256": "0107d69f17e30503bbe85e619a11e8bb11bb6338b47918da087ad448c7a3aa53"
+    },
+    "reduced": {
+      "path": "/models/world/drill_press_01/drill_press_01-reduced.glb",
+      "textureSize": 512,
+      "glbBytes": 2019756,
+      "gzipBytes": 1051113,
+      "textureBytes": 95548,
+      "sha256": "8d9fd7596da38cba94d109c4ee15a122d580de19392682abb8f7baec5d7a869f"
+    }
+  }
+}
