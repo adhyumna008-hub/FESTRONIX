@@ -22,6 +22,10 @@ npm run build
 
 This checks TypeScript and creates the preview build. Build output and dependencies are ignored by Git.
 
+## Vercel preview hosting
+
+Import this repository into Vercel with Root Directory `./`. The root `vercel.json` builds the nested visual prototype and publishes its `dist` folder. Preferred project name: `festronix2k27`, subject to availability. See [deployment status and settings](docs/VERCEL_DEPLOYMENT.md). This publishes the visual preview only; account services and the backend remain unconnected.
+
 ## Backend foundation
 
 `backend/` contains the Fastify/TypeScript API, PostgreSQL migrations and Firebase Admin identity verification, scoped roles, event approvals, manual-payment review, QR tickets and individual attendance. The documented local integration suite has 58 passing checks. Genuine Firebase, database/TLS and private storage configuration are required before live use.

@@ -1,6 +1,6 @@
 # FESTRONIX AI Handoff
 
-**Current Phase:** Animated Campus X restored; shared login/registration prompts and motion polish across all four prototypes; GitHub snapshot update authorized
+**Current Phase:** Vercel visual-preview deployment authorized; build configuration prepared; waiting for owner sign-in
 **Status:** Backend/API work is now explicitly authorized by the owner's attached request and continuation messages. `backend/` implements TypeScript/Fastify, PostgreSQL through `pg`, Firebase identity verification, scoped staff permissions, events/approvals, registrations/teams, manual payments, QR tickets and atomic attendance. Final suite: 58 passed, 0 failed; build passed. Genuine Firebase credentials, live-provider verification and production operating controls remain pending. Existing liquid-glass home and five-club Flux work is preserved and remains unconnected to this backend. U1–U11 remain unchanged; institutional policy, staffing, scale and launch commitments still require faculty confirmation. `USER_FLOWS.md` and screen inventory have not been started. Visual-reference evidence gate remains PASSED.
 **Last updated:** 2026-10-16
 
@@ -8,10 +8,23 @@
 
 Keep a single shared source of truth for FESTRONIX across Go, Claude, Antigravity, Astra, and any other tools. Record decisions here and link to the detailed documents as they are created.
 
-## Shared sign-in, animated X and publication — 2026-10-16 (current)
+## Vercel deployment preparation — 2026-10-16
+
+- Owner explicitly authorized deploying the GitHub repository to Vercel, preferably at `festronix2k27.vercel.app`. Existing remote is `adhyumna008-hub/FESTRONIX`, branch `main`.
+- Added root `vercel.json` to install/build only `prototypes/festronix-visual` and publish its `dist` output. Import with Vercel Root Directory `./`. No frontend secrets or backend configuration are required for this visual-only deployment.
+- Vercel dashboard and GitHub OAuth currently require user sign-in. No Vercel project, deployment, or hostname reservation is confirmed. User sign-in requested; do not claim that the site is live. See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md).
+
+## Original Campus X fidelity correction — 2026-10-16
+
+- Owner correctly identified that the preceding X recreation differed from the first version. Compared `output/glass-home/home-desktop.png` against the recreated hero and recovered the actual original CSS from saved Git blob `0b0ad318687920f7edc056c6516ad96c2b88d118`, plus original artwork markup from `87ebb46202652b9b3629a1045e1abaaa7d8ac023`.
+- Restored the original 330×400 artwork with 110×395 arms, glass gradients/shadows, crossing order, orbit perspective, floating edition ticket, caption and responsive rules. Original motion is a 9-second ease-in-out float from −13° toward −7° with 14px downward travel (12px on tablet), plus the ticket's 10-second float. Removed the recreated 8-second float and its extra light sweep. Phones retain the original still composition.
+- `CampusX` retains observer/visibility cleanup and pause handling for dialogs, Motion off, offscreen and hidden-tab states. Existing reduced-motion rules apply. Five flat club cards, Flux A Club Symbols, four-theme selection and shared login remain in place; no gallery or backend changes.
+- Build/typecheck passed. Visually inspected Campus at 390×844, 768×1024, 1440×900 and 1920×1080; no horizontal overflow. Observed running float, dialog pause and manual Motion off pause. Phone X/ticket animations are disabled. Browser console check was empty. Evidence: `output/glass-x-restore/`; see the correction addendum in [LOGIN_AND_MOTION_QA.md](LOGIN_AND_MOTION_QA.md). Physical-device and actual OS preference emulation were not repeated.
+
+## Shared sign-in, animated X and publication — 2026-10-16 (preceding pass)
 
 - Owner requested the earlier animated X treatment back, login buttons in every theme, login prompts for unauthenticated registration, smoother scrolling/controls and publication of the current workspace to their existing FESTRONIX GitHub repository.
-- Campus now renders `CampusX`: original CSS optical arms, bounded orbit lines and three small flat category symbols. It floats and carries a slow light sweep, pauses while a dialog is open/offscreen/tab-hidden or Motion off is selected, and stops with system reduced motion. No WebGL or 3D club gallery was restored. Flat club cards remain.
+- Campus rendered `CampusX` with recreated CSS optical arms, bounded orbit lines and three small flat category symbols. This recreation differed from the first version and is superseded by the original-artwork recovery above. Flat club cards remain.
 - `LoginPanel` supplies the same accessible Google/email sign-in entry to Campus, Pulse, Panel and Flux. Every theme has an explicit header Log in button. Legacy event cards have direct Register buttons; all event dialogs provide Log in to register. The selected event is shown in the login prompt. Focus is contained, Escape closes, the original trigger regains focus and background scrolling is locked while the dialog is open.
 - Real frontend Firebase sign-in remains **UNCONFIGURED**. No client credentials/project settings exist in this prototype, so provider actions clearly explain the pending setup. No mock login/session, account, registration, email or payment is created. Backend Firebase/RBAC enforcement remains as previously implemented and independent; these visual prompts do not replace server authorization.
 - Native smooth anchor scrolling, staggered Campus content entrances, refined legacy reveals, button/card/label feedback, dialog/FAQ entrances and quieter hover motion are implemented. Keyboard focus exposes waiting content; filters/day changes stay immediate. Phone headers retain login/menu/theme access. Theme/Flux variant selection now updates the URL and survives refresh.

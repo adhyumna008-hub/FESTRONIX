@@ -1,5 +1,13 @@
 # Shared login and motion update — 2026-10-16
 
+## Original glass X correction — later 2026-10-16
+
+The owner's comparison was correct: the first recreation used broader, brighter arms, an 8-second float and an added moving highlight. Recovered original CSS from saved Git blob `0b0ad318687920f7edc056c6516ad96c2b88d118` and markup from `87ebb46202652b9b3629a1045e1abaaa7d8ac023`. Restored the artwork CSS verbatim, including 9-second X float, 10-second ticket float, original gradients/shadows, orbit perspective, dimensions and tablet keyframes. Existing original responsive rules again apply; phones use still X/ticket artwork.
+
+Visually inspected 390×844, 768×1024, 1440×900 and 1920×1080. No horizontal overflow; desktop/tablet motion is running, login pauses both animations, Motion off pauses both, and phone computed animation names are `none`. Running transforms differed across observations, consistent with the original float. Five flat club SVG cards remain and Campus has zero Canvas elements. Browser error/warning logs were empty. TypeScript/Vite build passed; existing unrelated deferred Flux chunk warning remains. No dependencies or backend changes. Actual OS preference emulation and physical devices were not repeated. Captures: `output/glass-x-restore/`.
+
+The implementation description below records the preceding pass; its recreated X treatment is superseded by this correction.
+
 ## Implemented behavior
 
 Campus restores an animated optical X using CSS rather than a WebGL model. Flat club icons/cards and the flat Flux A replacement remain. The X pauses offscreen, in a hidden tab, when a dialog is open or when Motion off is selected; system reduced-motion CSS disables its animations.
