@@ -4,7 +4,7 @@ A reusable annual technology-festival platform for Vardhaman College of Engineer
 
 ## Visual preview
 
-The local React/TypeScript prototype offers **Pulse, Panel, Flux and Campus** presentations backed by the same sample festival data. Campus includes an animated optical X and flat club symbols. Flux A uses flat club symbols; B/C retain their separate scene experiments. The old 3D Club Gallery is inactive.
+The local React/TypeScript prototype offers **Pulse, Panel, Flux and Campus** presentations backed by the same sample festival data. Campus includes an animated optical X and illustrated SVG club posters. Flux A uses flat club symbols; B/C retain their separate scene experiments. The old 3D Club Gallery is inactive.
 
 ```sh
 cd prototypes/festronix-visual
@@ -23,6 +23,8 @@ npm run build
 This checks TypeScript and creates the preview build. Build output and dependencies are ignored by Git.
 
 ## Vercel preview hosting
+
+Live visual preview: **https://festronix2k27.vercel.app/** (production deployment of commit `a7d9ea2`). Login, registration and payments remain unconnected.
 
 Import this repository into Vercel with Root Directory `./`. The root `vercel.json` builds the nested visual prototype and publishes its `dist` folder. Preferred project name: `festronix2k27`, subject to availability. See [deployment status and settings](docs/VERCEL_DEPLOYMENT.md). This publishes the visual preview only; account services and the backend remain unconnected.
 

@@ -1,0 +1,146 @@
+/* Campus-specific refinement. Functional content and the original optical X are shared unchanged. */
+.gl-home{--gl-display:Outfit,Manrope,Arial,sans-serif}
+.gl-home h1,.gl-home h2,.gl-home h3{font-family:var(--gl-display);font-weight:500;text-wrap:balance}
+.gl-home .gl-header{padding-block:10px}
+.gl-home .gl-hero{padding-top:26px}
+.gl-home .gl-wordmark{font-size:clamp(76px,16.4vw,280px);font-weight:600;letter-spacing:-.02em;line-height:1.03;padding-block:8px 16px;text-wrap:nowrap}
+.gl-home .gl-wordmark sup{font-family:Manrope,Arial,sans-serif;font-size:14px;letter-spacing:0;margin:28px 0 0 16px}
+.gl-home .gl-hero-stage{min-height:460px}
+.gl-home .gl-hero-copy{padding:36px 0 30px 40px}
+.gl-home .gl-hero-copy h2{font-size:clamp(40px,4.2vw,66px);line-height:1.02;letter-spacing:-.045em;margin:26px 0 20px;max-width:13ch}
+.gl-home .gl-hero-copy>p:not(.gl-eyebrow){font-size:15px;line-height:1.65;max-width:42ch}
+.gl-home .gl-hero-cta{margin-top:24px;gap:26px}
+.gl-home .gl-hero-facts{margin-top:27px;gap:30px;font-size:11px}
+.gl-home .gl-hero-facts small{font-size:10px}
+.gl-home .gl-optical{min-height:460px}
+.gl-home .gl-glass-x{top:23px}
+.gl-home .gl-orbit{top:-10px;width:440px;height:440px}
+.gl-home .gl-orbit-two{top:4px}
+.gl-home .gl-ticket{width:158px;padding:17px;bottom:28px;right:32px}
+.gl-home .gl-ticket b{font-size:28px;margin-top:8px}
+.gl-home .gl-barcode{height:20px;margin-top:12px}
+.gl-home .gl-art-caption{bottom:26px}
+.gl-home .gl-orbit-label{top:76px}
+.gl-home .gl-hero-bottom{padding-block:10px}
+.gl-home .gl-section{padding-block:72px}
+.gl-home .gl-section-heading{margin-bottom:28px;gap:28px}
+.gl-home .gl-section h2{letter-spacing:-.035em;line-height:1.08}
+.gl-home .gl-section .gl-eyebrow{margin-bottom:14px}
+.gl-home .gl-section-heading>p{font-size:14px}
+.gl-home .gl-interest-list{padding-bottom:22px}
+.gl-home .gl-interest-description{margin:22px 0}
+.gl-home .gl-interest-description p{font-size:13px;line-height:1.65}
+.gl-home .gl-event-info h3{font-size:25px;line-height:1.15;margin:12px 0 16px;letter-spacing:-.025em}
+.gl-home .gl-event-info>p,.gl-home .gl-event-info>div{font-size:12px}
+.gl-home .gl-fineprint{font-size:11px;line-height:1.6;margin-top:18px!important}
+.gl-home .gl-club-grid{gap:20px}
+.gl-home .gl-club-poster{background:#dbe2bf;aspect-ratio:240/264;border-radius:9px;border:1px solid #ffffff26;isolation:isolate}
+.gl-home .gl-club-poster-sdc{background:#f5eddb}
+.gl-home .gl-club-poster-literature{background:#c8b6db;color:#48324f}
+.gl-home .gl-club-poster-cine{background:#f59a70;color:#54362b}
+.gl-home .gl-club-poster-otaku{background:#c3d7ca;color:#31463c}
+.gl-home .gl-club-poster-gaming,.gl-home .gl-club-poster-sdc{color:#24342c}
+.gl-home .gl-club-poster>svg{position:static;display:block;width:100%;height:100%;max-width:none}
+.gl-home .gl-club-poster>span{position:absolute;top:13px;font-size:9px;letter-spacing:.1em;font-weight:700;color:inherit;z-index:1}
+.gl-home .gl-club-poster .gl-club-index{left:14px}
+.gl-home .gl-club-poster .gl-club-category{left:auto;right:14px}
+.gl-home .gl-club h3{font-size:19px;line-height:1.15;letter-spacing:-.02em;margin:16px 0 7px;min-height:2.3em}
+.gl-home .gl-club p{font-size:12px;line-height:1.5}
+.gl-home .gl-clubs-foot{margin-top:26px;padding-top:18px;font-size:11px}
+.gl-home .club-art-subject{transform-box:view-box;transform-origin:center;transition:translate .45s cubic-bezier(.2,.7,.2,1)}
+.gl-home .gl-timetable>button{padding-block:23px}
+.gl-home .gl-timetable h3{font-size:25px;letter-spacing:-.02em}
+.gl-home .gl-timetable time{font-size:16px;font-variant-numeric:tabular-nums}
+.gl-home .gl-visit h2{font-size:52px}
+.gl-home .gl-visit-title>p:not(.gl-eyebrow){margin:20px 0}
+.gl-home .gl-questions summary{min-height:68px;padding-block:19px}
+.gl-home .gl-last-call{padding-block:64px}
+.gl-home .gl-last-call h2{margin-block:22px 28px;letter-spacing:-.035em}
+.gl-home .gl-event-dialog{padding:34px;max-width:620px}
+.gl-home .gl-event-dialog>.gl-eyebrow{padding-top:12px;padding-right:95px;font-size:10px}
+.gl-home .gl-event-dialog h2{font-family:var(--gl-display);font-size:36px;letter-spacing:-.025em;line-height:1.1;margin:28px 0 16px}
+.gl-home .gl-event-dialog>p:not(.gl-eyebrow){font-size:14px;line-height:1.65}
+.gl-home .gl-event-dialog dl{margin:20px 0}
+.gl-home .gl-event-dialog dl>div{padding-block:10px;font-size:13px;grid-template-columns:72px 1fr}
+.gl-home .gl-event-dialog .gl-login-notice{font-size:11px;line-height:1.6;margin-block:18px}
+.gl-home .gl-event-dialog .registration-actions{display:flex;margin:0}
+.gl-home .gl-event-dialog .gl-register{width:100%;background:var(--gl-orange);color:#211710;min-height:50px}
+@media(hover:hover) and (pointer:fine){.gl-home .gl-club:hover .club-art-subject{translate:0 -5px}}
+@media(min-width:1800px){.gl-home .gl-hero-stage,.gl-home .gl-optical{min-height:485px}.gl-home .gl-hero-copy{padding:42px 0 30px 48px}.gl-home .gl-glass-x{top:36px}.gl-home .gl-orbit{top:6px}.gl-home .gl-ticket{right:40px}}
+@media(max-width:1050px){
+ .gl-home .gl-wordmark{font-size:16.3vw}
+ .gl-home .gl-hero-stage{grid-template-columns:1.1fr 1fr;min-height:445px}
+ .gl-home .gl-hero-copy{padding:30px 0 25px 28px}
+ .gl-home .gl-hero-copy h2{font-size:41px;margin-block:24px 18px;max-width:12ch}
+ .gl-home .gl-hero-copy>p:not(.gl-eyebrow){font-size:13px;max-width:28ch}
+ .gl-home .gl-hero-cta{gap:15px;margin-top:20px}
+ .gl-home .gl-hero-facts{gap:20px;font-size:10px;margin-top:22px}
+ .gl-home .gl-optical{min-height:445px}
+ .gl-home .gl-glass-x{top:4px;left:-18%}
+ .gl-home .gl-orbit{width:350px;height:380px;left:-19%;top:-7px}
+ .gl-home .gl-ticket{width:135px;right:20px;bottom:22px;padding:14px}
+ .gl-home .gl-art-caption{left:10px;bottom:155px;font-size:8px}
+ .gl-home .gl-orbit-label{right:10px;top:60px;font-size:6px}
+ .gl-home .gl-section{padding-block:56px}
+ .gl-home .gl-section-heading{gap:20px}
+ .gl-home .gl-club-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:24px 18px}
+ .gl-home .gl-club{grid-column:span 2}
+ .gl-home .gl-club:nth-child(4){grid-column:2/span 2}
+ .gl-home .gl-club h3{font-size:19px;min-height:0}
+ .gl-home .gl-visit h2{font-size:42px}
+}
+@media(max-width:639px){
+ .gl-home .gl-header{padding:7px 10px;top:10px}
+ .gl-home .gl-brand{font-size:11px;gap:8px}
+ .gl-home .gl-institutions{gap:5px}
+ .gl-home .gl-hero{padding-top:24px}
+ .gl-home .gl-wordmark{font-size:16.4vw;letter-spacing:-.02em;padding-block:10px 17px}
+ .gl-home .gl-wordmark sup{font-size:8px;margin:8px 0 0 5px}
+ .gl-home .gl-hero-meta{font-size:7px}
+ .gl-home .gl-hero-stage{display:block;min-height:0}
+ .gl-home .gl-hero-copy{padding:28px 24px 0}
+ .gl-home .gl-hero-copy h2{font-size:40px;letter-spacing:-.035em;margin-block:22px 17px;max-width:14ch}
+ .gl-home .gl-hero-copy>p:not(.gl-eyebrow){font-size:13px;max-width:30ch;line-height:1.65}
+ .gl-home .gl-hero-cta{gap:18px;margin-top:20px}
+ .gl-home .gl-hero-facts{gap:24px;font-size:10px;margin-top:22px}
+ .gl-home .gl-hero-facts small{font-size:9px}
+ .gl-home .gl-optical{height:250px;min-height:0;max-width:370px}
+ .gl-home .gl-glass-x{top:-65px;left:-5%}
+ .gl-home .gl-orbit{width:290px;height:270px;left:7%;top:-24px}
+ .gl-home .gl-ticket{width:122px;right:23px;bottom:24px;padding:13px}
+ .gl-home .gl-ticket b{font-size:23px;margin-top:5px}
+ .gl-home .gl-barcode{height:15px;margin-top:10px}
+ .gl-home .gl-art-caption{left:25px;bottom:16px;font-size:7px}
+ .gl-home .gl-orbit-label{top:8px;right:15px;font-size:6px}
+ .gl-home .gl-hero-bottom{padding-block:8px;gap:4px 12px}
+ .gl-home .gl-section{padding:46px 24px}
+ .gl-home .gl-section h2{font-size:35px}
+ .gl-home .gl-section-heading{margin-bottom:24px}
+ .gl-home .gl-section-heading>p{font-size:13px;line-height:1.65;margin-top:16px}
+ .gl-home .gl-interest-description{margin-block:20px}
+ .gl-home .gl-interest-description h3{font-size:22px}
+ .gl-home .gl-event-grid{gap:28px}
+ .gl-home .gl-event-info h3{font-size:26px;margin:10px 0 14px}
+ .gl-home .gl-event-info>p,.gl-home .gl-event-info>div{font-size:12px}
+ .gl-home .gl-club-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}
+ .gl-home .gl-club,.gl-home .gl-club:nth-child(4){grid-column:auto}
+ .gl-home .gl-club:last-child{grid-column:1/-1}
+ .gl-home .gl-club:last-child .gl-club-poster{aspect-ratio:2.1/1}
+ .gl-home .gl-club:last-child .club-artwork{object-fit:contain}
+ .gl-home .gl-club h3{font-size:19px;line-height:1.15;margin:12px 0 6px}
+ .gl-home .gl-club p{font-size:11px;line-height:1.6}
+ .gl-home .gl-club-poster>span{font-size:8px;top:10px}
+ .gl-home .gl-club-poster .gl-club-index{left:11px}
+ .gl-home .gl-club-poster .gl-club-category{right:11px}
+ .gl-home .gl-timetable h3{font-size:21px}
+ .gl-home .gl-timetable time{font-size:12px}
+ .gl-home .gl-visit{padding:34px 24px}
+ .gl-home .gl-visit h2{font-size:36px}
+ .gl-home .gl-last-call{padding:48px 24px}
+ .gl-home .gl-last-call h2{font-size:54px}
+ .gl-home .gl-event-dialog{padding:28px 24px 24px}
+ .gl-home .gl-event-dialog h2{font-size:30px;margin-block:26px 16px;overflow-wrap:anywhere}
+ .gl-home .gl-event-dialog>p:not(.gl-eyebrow){font-size:13px}
+ .gl-home .gl-event-dialog>.gl-eyebrow{padding-top:7px;padding-right:88px;font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){.gl-home .club-art-subject{transition:none}}

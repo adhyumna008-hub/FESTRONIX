@@ -1,18 +1,35 @@
 # FESTRONIX AI Handoff
 
-**Current Phase:** Vercel visual-preview deployment authorized; build configuration prepared; waiting for owner sign-in
+**Current Phase:** Campus screenshot-feedback refinement implemented and locally reviewed; updating the existing GitHub/Vercel visual preview
 **Status:** Backend/API work is now explicitly authorized by the owner's attached request and continuation messages. `backend/` implements TypeScript/Fastify, PostgreSQL through `pg`, Firebase identity verification, scoped staff permissions, events/approvals, registrations/teams, manual payments, QR tickets and atomic attendance. Final suite: 58 passed, 0 failed; build passed. Genuine Firebase credentials, live-provider verification and production operating controls remain pending. Existing liquid-glass home and five-club Flux work is preserved and remains unconnected to this backend. U1–U11 remain unchanged; institutional policy, staffing, scale and launch commitments still require faculty confirmation. `USER_FLOWS.md` and screen inventory have not been started. Visual-reference evidence gate remains PASSED.
-**Last updated:** 2026-10-16
+**Last updated:** 2026-10-17
 
 ## Purpose
 
 Keep a single shared source of truth for FESTRONIX across Go, Claude, Antigravity, Astra, and any other tools. Record decisions here and link to the detailed documents as they are created.
+
+## Campus screenshot-feedback refinement — 2026-10-17
+
+- Owner requested fixes based on supplied screenshots: plain club cards, singular Developers label, duplicated event dismissal/header discovery, weak wordmark emphasis, typography/spacing and mobile adaptation.
+- Campus now uses original illustrated SVG club posters and the corrected shared **Student Developers Club** label. Added provisional Outfit display headings with shared Manrope body text, a larger wordmark, shorter supporting hero and tighter section rhythm. Original glass-X geometry/shading/9-second float and existing event-art concepts remain.
+- Removed the center header discovery link and event-dialog Back to exploring duplicate. One Close plus one primary Log in to register action remain in the event detail. Login remains unconfigured and keeps the selected event.
+- Browser checked the four required sizes, narrow phone and landscape; no measured horizontal overflow. Inspected cards/dialogs, focus wrap/Escape/trigger recovery, motion control and console. See [CAMPUS_FEEDBACK_QA.md](CAMPUS_FEEDBACK_QA.md). Publishing to the existing GitHub/Vercel preview follows the previously authorized update scope; release identity/status recorded after completion. No backend or next product phase.
+
+## Vercel publication completed — 2026-10-16
+
+- Owner renewed deployment authorization with “yes” after Vercel plugin connection. Created project `festronix2k27` (`prj_WiMAMhuc87fnn8YTdxiNazH2rQs9`) and deployed GitHub `adhyumna008-hub/FESTRONIX`, `main`, commit `a7d9ea2c8640062c24d4a35aeeafeeaab70efd04` to production.
+- Deployment `dpl_3TY934pA2LTqyAgSJ1y3b46WoGCa` reached **READY**. Verified primary alias and public URL **https://festronix2k27.vercel.app/**. Secondary `festronix-2k27.vercel.app` is also a verified project domain. No paid upgrades, backend services, credential additions or protection changes.
+- Browser checked live Campus at 1440×900 and 390×844, original X motion, institution images, login preview and four-theme switching; no horizontal overflow or browser errors/warnings observed. Login/registration remain unconnected visual prompts. No real-account or payment availability is claimed.
+- Project/domain/deployment operations succeeded in the plugin's default context. Explicit team-scoped reads and build-event logs returned scope permission errors; no authenticated CLI fallback exists. Remote READY and actual public browser rendering were independently verified. See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md); screenshots under `output/vercel-deployment/`.
+- This publishes the existing visual comparison only. Backend remains unconnected and institutional launch/security prerequisites remain pending. No next product phase started. Post-release documentation edits remain local; deployed source is pinned above.
 
 ## Vercel deployment preparation — 2026-10-16
 
 - Owner explicitly authorized deploying the GitHub repository to Vercel, preferably at `festronix2k27.vercel.app`. Existing remote is `adhyumna008-hub/FESTRONIX`, branch `main`.
 - Added root `vercel.json` to install/build only `prototypes/festronix-visual` and publish its `dist` output. Import with Vercel Root Directory `./`. No frontend secrets or backend configuration are required for this visual-only deployment.
 - Vercel dashboard and GitHub OAuth currently require user sign-in. No Vercel project, deployment, or hostname reservation is confirmed. User sign-in requested; do not claim that the site is live. See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md).
+- Later owner instruction stopped the deployment attempt in favor of manual deployment and requested a plugin alternative. Configuration and original X restoration were already pushed as `a7d9ea2` before that instruction. Vercel plugin found and suggested, but not installed/connected; no deployment should resume without renewed owner authorization.
+- Subsequent plugin connection confirmed. Applied `vercel:deployments-cicd` guidance and successfully listed the connected account's teams and FESTRONIX-named projects; both lists were empty. No project or deployment was created. Browser sign-in is no longer the blocker for available authenticated plugin tools; the owner's earlier stop remains in effect until publishing is requested again. Hostname availability remains unverified.
 
 ## Original Campus X fidelity correction — 2026-10-16
 

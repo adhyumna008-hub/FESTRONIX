@@ -1,6 +1,6 @@
 export const campusClubs = [
  {id:'gaming',name:'Gaming',note:'Play. Compete. Repeat.',label:'PLAY'},
- {id:'sdc',name:'Student Developer Club',note:'Ideas into working things.',label:'BUILD'},
+ {id:'sdc',name:'Student Developers Club',note:'Ideas into working things.',label:'BUILD'},
  {id:'literature',name:'Literature',note:'A home for every story.',label:'WRITE'},
  {id:'cine',name:'CINE',note:'Find a different frame.',label:'CREATE'},
  {id:'otaku',name:'OTAKU',note:'Worlds worth getting lost in.',label:'DISCOVER'},
