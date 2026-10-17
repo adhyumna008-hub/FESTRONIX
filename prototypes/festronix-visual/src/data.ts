@@ -4,7 +4,7 @@ export const events = [
   {id:'robot',number:'02',title:'RoboRumble',category:'Build',format:'Team · 2–5',day:18,time:'11:30 AM',venue:'Engineering Arena',fee:'₹500 / team',prize:'₹80,000',status:'Open',description:'Precision meets controlled chaos. Design a robot, tune your strategy and put your engineering instincts to the test in the arena.',rules:'Teams of 2–5. Safety inspection required before arena entry. Equipment limits would be published by faculty for a real event.'},
   {id:'signal',number:'03',title:'Signal / Noise',category:'Discover',format:'Solo workshop',day:19,time:'10:00 AM',venue:'Design Studio',fee:'Free',prize:'Learning lab',status:'Waitlist available',description:'Make sense of the signals around you. An exploratory workshop in creative electronics, sensors and making things respond.',rules:'Bring curiosity; workshop equipment is provided. Attendance-based certificates would require an approved event policy. No certificate promise is made by this demo.'}
 ];
-export type FestivalEvent = typeof events[number];
+export interface FestivalEvent {id:string;number:string;title:string;category:string;format:string;day:number;time:string;venue:string;fee:string;prize:string;status:string;description:string;rules:string}
 export const faqs = [
  ['Who can take part?', 'Students from Vardhaman and other recognized colleges and universities may participate, subject to each event’s approved eligibility rules. The events on this page are fictional samples.'],
  ['Is there a general fest pass?', 'No. Events have individual free or paid registration. This visual prototype does not accept registrations or money.'],

@@ -452,3 +452,14 @@ The owner decision review is complete at product level. Recommend a separately a
 After those workflows are accepted, derive `docs/SCREEN_INVENTORY.md` from them. This intentionally updates the earlier planning order: product definition and workflow agreement now precede screen inventory. Technical architecture and visual prototypes remain later separate tasks.
 
 Sources of project intent: `AI_HANDOFF.md`, `THEME_REFERENCES.md`, `REFERENCE_CANDIDATES.md` and the current user brief. Repository skills applied: `festronix-context`, `premium-web-design`, and `auth-rbac-security` solely for product responsibility/sensitive-action boundaries. No provider, schema or implementation decision is made here.
+
+## Owner clarification — operational prototype, 17 October 2026
+
+The owner explicitly requested three operational experiences across **all four current prototype UIs**, including Campus, plus a complete Events directory. FESTRONIX is a technology festival: public tracks/content must focus on technical events, not unrelated cinema/literature/anime/cultural programming.
+
+- An appointed student coordinator may own/manage at most **two events per edition**, with faculty-controlled reassignment and approval. Archiving does not free another coordinator slot. Coordinators never acquire faculty authority by creating events.
+- Coordinators may appoint **event helpers / sub-coordinators** for their own events. Helpers receive only that event's minimal roster and confirmed-entry check-in capability, not event editing, payment proof, results, staff delegation or other-event access.
+- Admins manage bounded edition/website settings, UI theme, faculty/student assignments, approvals, schedules/venues through events, support contacts, sponsors, announcements and FAQs. Yearly rollover copies reusable configuration, preserves private history and expires prior student access. Completed events are removed from public discovery through archiving; only unused drafts may be deleted.
+- Institutional owners retain archive financial/results/appeal closeout. Archiving does not reopen admission or scanning, and previous participant history remains private. A faculty custodian handover must keep at least two owners and must not promote students to institutional control.
+
+These are owner-authorized refinements, not replacements for U1–U11. The interactive frontend demonstrates them with fictional browser-local records. It does not change backend architecture, deploy permissions, process money, upload proof, issue certificates or finalize institutional policy. See `PLATFORM_UI_SCOPE.md` and `PLATFORM_UI_QA.md` for exact implementation limits and future server enforcement.

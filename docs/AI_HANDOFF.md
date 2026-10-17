@@ -1,19 +1,29 @@
 # FESTRONIX AI Handoff
 
-**Current Phase:** Campus screenshot-feedback refinement implemented and locally reviewed; updating the existing GitHub/Vercel visual preview
-**Status:** Backend/API work is now explicitly authorized by the owner's attached request and continuation messages. `backend/` implements TypeScript/Fastify, PostgreSQL through `pg`, Firebase identity verification, scoped staff permissions, events/approvals, registrations/teams, manual payments, QR tickets and atomic attendance. Final suite: 58 passed, 0 failed; build passed. Genuine Firebase credentials, live-provider verification and production operating controls remain pending. Existing liquid-glass home and five-club Flux work is preserved and remains unconnected to this backend. U1–U11 remain unchanged; institutional policy, staffing, scale and launch commitments still require faculty confirmation. `USER_FLOWS.md` and screen inventory have not been started. Visual-reference evidence gate remains PASSED.
+**Current Phase:** Technology-fest content and shared interactive operational prototypes across Campus, Pulse, Panel and Flux; existing backend remains unconnected
+**Status:** Four-theme operational UI prototype implemented and browser-checked with fictional local data. Existing TypeScript/Fastify/PostgreSQL/Firebase backend is preserved but unconnected; its earlier 58-test result is historical, not rerun in this frontend task. Real identity, secure staff scope/quota enforcement, evidence upload, admission and institutional launch policies remain pending. U1–U11 remain unchanged, with the new two-event coordinator/helper clarification recorded in PRODUCT_SPEC. USER_FLOWS and screen inventory have not been started.
 **Last updated:** 2026-10-17
 
 ## Purpose
 
 Keep a single shared source of truth for FESTRONIX across Go, Claude, Antigravity, Astra, and any other tools. Record decisions here and link to the detailed documents as they are created.
 
+## Technology-fest operational prototype — 2026-10-17
+
+- Owner requested technology-fest copy, a full Events tab with Register buttons and Admin, Coordinator and Participant experiences in all four UIs. Removed active nontechnical club/cultural copy and changed flat illustrations to technical tracks. Original Campus glass X and existing Flux B/C experiments remain.
+- One shared browser-local provider drives all themes and website settings; no per-theme business records. Added local interactive event creation/submission/approval/publication, faculty appointments, two-event coordinator quota, event-specific helpers, manual-proof status/resubmission, confirmed-only demo QR, check-in/duplicate feedback, provisional results/appeals and private participant history.
+- Admin can edit year/edition label, dates, published theme, hero/introduction/contact content, sponsors, FAQs, announcements and registration state. Annual preparation copies configuration only; activation preserves history, expires old edition staff and keeps institutional custodians. Institutional faculty retain archive closeout. Unused drafts can be deleted; other events are archived/unlisted. Faculty-owner handover maintains two custodians.
+- All role/account switches are explicitly fictional previews. No real sign-in, authority, upload, payment, message, certificate or valid admission is created. Demo proof stores only invented filename/reference metadata. Team QR is simplified; real per-member tickets remain in the existing backend. The new two-event rule still needs authoritative backend integration/enforcement.
+- Browser exercised 64 workspace/theme/viewport combinations at 390×844, 768×1024, 1440×900 and 1920×1080; fixed phone grid overflow. Walked through approval, free/paid registration and rejection/resubmission, helper scope, wrong-event/duplicate scans, results/appeals and annual rollover with preserved history. Build passed. Physical-camera and live-provider verification remain pending. See [PLATFORM_UI_SCOPE.md](PLATFORM_UI_SCOPE.md) and [PLATFORM_UI_QA.md](PLATFORM_UI_QA.md).
+- Publication uses the existing GitHub main → Vercel integration. Verify the matching remote commit and READY/public rendering for this update; older pinned releases below remain historical. No backend configuration, SQL/auth redesign, USER_FLOWS, screen inventory or next phase was started.
+
 ## Campus screenshot-feedback refinement — 2026-10-17
 
 - Owner requested fixes based on supplied screenshots: plain club cards, singular Developers label, duplicated event dismissal/header discovery, weak wordmark emphasis, typography/spacing and mobile adaptation.
 - Campus now uses original illustrated SVG club posters and the corrected shared **Student Developers Club** label. Added provisional Outfit display headings with shared Manrope body text, a larger wordmark, shorter supporting hero and tighter section rhythm. Original glass-X geometry/shading/9-second float and existing event-art concepts remain.
 - Removed the center header discovery link and event-dialog Back to exploring duplicate. One Close plus one primary Log in to register action remain in the event detail. Login remains unconfigured and keeps the selected event.
-- Browser checked the four required sizes, narrow phone and landscape; no measured horizontal overflow. Inspected cards/dialogs, focus wrap/Escape/trigger recovery, motion control and console. See [CAMPUS_FEEDBACK_QA.md](CAMPUS_FEEDBACK_QA.md). Publishing to the existing GitHub/Vercel preview follows the previously authorized update scope; release identity/status recorded after completion. No backend or next product phase.
+- Browser checked the four required sizes, narrow phone and landscape; no measured horizontal overflow. Inspected cards/dialogs, focus wrap/Escape/trigger recovery, motion control and console. See [CAMPUS_FEEDBACK_QA.md](CAMPUS_FEEDBACK_QA.md). No backend or next product phase.
+- Published commit `31c222fa5a8dcdae2fdb30209265fc0b24bccf8b` to GitHub `main`. Git integration automatically built deployment `dpl_5tthx1b3e2MhUtL7k9ho1ZZQBMFC`, which reached **READY** in approximately 19.8 seconds. Primary URL remains **https://festronix2k27.vercel.app/**. Public browser check confirmed posters, corrected club name, absent duplicate header link, simplified event dialog and phone fit; console was empty. Release-result documentation is recorded locally after publication.
 
 ## Vercel publication completed — 2026-10-16
 

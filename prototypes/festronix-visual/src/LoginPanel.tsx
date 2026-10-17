@@ -1,5 +1,6 @@
 import {useEffect,useId,useRef,useState,type FormEvent} from 'react';
 import './login-panel.css';
+import {href,type VisualTheme} from './platform/model';
 
 /** Sign-in entry shared by every visual theme. Never creates a mock session. */
 export function LoginPanel({titleId,eventTitle,onClose}:{titleId:string;eventTitle?:string;onClose:()=>void}) {
@@ -29,6 +30,7 @@ export function LoginPanel({titleId,eventTitle,onClose}:{titleId:string;eventTit
   <h2 id={titleId} tabIndex={-1} ref={heading}>{eventTitle?'Log in to register.':'Good to see you.'}</h2>
   {eventTitle?<div className="auth-event"><span>YOU’RE JOINING</span><strong>{eventTitle}</strong><p>Sign in first. Your event stays selected while you choose how to continue.</p></div>:<p className="auth-intro">Your events. Your team. Your FESTRONIX.</p>}
   <p className="auth-notice">Sign-in preview · Account services are not connected yet.</p>
+  <p className="auth-notice"><a href={href('participant',(new URLSearchParams(location.search).get('theme')??'Campus') as VisualTheme)}>Explore participant preview with fictional data ↗</a><br/>This does not log you in or grant staff access.</p>
   <button type="button" className="auth-google" onClick={()=>setMessage('Google sign-in is not configured yet. No account or registration has been created.')}><span className="auth-google-mark" aria-hidden="true">G</span>Continue with Google<span aria-hidden="true">↗</span></button>
   <div className="auth-or"><span/>or continue with email<span/></div>
   <form onSubmit={email}>

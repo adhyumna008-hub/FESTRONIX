@@ -1,8 +1,10 @@
 import {useId} from 'react';
+import {ClubSymbol} from './ClubSymbols';
 
 /** Original two-dimensional club posters, not official club logos. */
 export function ClubArtwork({id}:{id:string}) {
  const pattern=useId().replace(/:/g,'')+'-dots';
+ if(['literature','cine','otaku'].includes(id))return <svg className="club-artwork" viewBox="0 0 240 264" aria-hidden="true" fill="none"><defs><pattern id={pattern} width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="currentColor" opacity=".2"/></pattern></defs><rect width="240" height="264" fill={`url(#${pattern})`}/><circle cx="120" cy="132" r="86" stroke="currentColor" opacity=".25"/><path d="M20 38V20h18m164 0h18v18M20 226v18h18m164 0h18v-18" stroke="currentColor" opacity=".35"/><g transform="translate(38 50) rotate(-8 82 82)"><rect width="164" height="164" rx="9" fill="#f8f4e9" stroke="currentColor" strokeWidth="3"/><svg x="20" y="20" width="124" height="124"><ClubSymbol id={id}/></svg></g><path d="M48 231h92m12 0h40" stroke="currentColor" strokeWidth="3"/><circle cx="204" cy="44" r="7" fill="#ec7546"/></svg>;
  return <svg className="club-artwork" viewBox="0 0 240 264" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
   <defs><pattern id={pattern} width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="currentColor" opacity=".2"/></pattern></defs>
   <rect width="240" height="264" fill={`url(#${pattern})`}/>

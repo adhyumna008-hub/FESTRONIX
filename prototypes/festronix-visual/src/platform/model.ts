@@ -1,0 +1,43 @@
+import {events as originalEvents,faqs as originalFaqs,type FestivalEvent} from '../data';
+export type VisualTheme='Campus'|'Pulse'|'Panel'|'Flux';
+export type Role='Owner'|'Faculty'|'Coordinator'|'Helper'|'Participant';
+export type EventState='Draft'|'In review'|'Changes requested'|'Approved'|'Published'|'Live'|'Completed'|'Archived';
+export type RegistrationState='CONFIRMED'|'PAYMENT_VERIFICATION_PENDING'|'PAYMENT_REJECTED'|'WAITLISTED'|'WITHDRAWN';
+export interface Staff {id:string;name:string;role:Role;editionId:string;active:boolean}
+export interface Edition {id:string;year:number;label:string;startDate:string;endDate:string;phase:'Active'|'Upcoming'|'Archived';theme:VisualTheme;registrationOpen:boolean;tagline:string;heroTitle:string;heroBody:string;intro:string;contact:string;location:string;sponsors:string[];announcements:string[];faqs:string[][]}
+export interface ManagedEvent extends FestivalEvent {editionId:string;ownerId:string;state:EventState;date:string;duration:number;price:number;capacity:number;deadline:string;teamMin:number;teamMax:number;teamEditDeadline:string;clashPolicy:'Warn'|'Block';paymentInstructions:string;waitlist:boolean;walkins:boolean;eligibility:string;appealHours:number;certificate:'None'|'Attendance'|'Winners';helpers:string[];reviewNote:string;results:string;resultsState:'None'|'Provisional'|'Final';appealUntil:string}
+export interface Entry {id:string;eventId:string;participantId:string;name:string;team:string;members:string;status:RegistrationState;token:string;checkedIn:boolean;checkedAt:string;paymentRef:string;proofName:string;note:string;appeal:string}
+export interface Audit {id:string;at:string;actor:string;action:string}
+export interface FestivalState {version:1;activeEditionId:string;editions:Edition[];staff:Staff[];events:ManagedEvent[];entries:Entry[];audit:Audit[]}
+export const initialEdition:Edition={id:'edition-2027',year:2027,label:'2K27',startDate:'2027-10-18',endDate:'2027-10-19',phase:'Active',theme:'Campus',registrationOpen:true,tagline:'Build. Break. Discover.',heroTitle:'Build beyond the classroom.',heroBody:'Compete in coding, robotics and engineering challenges. Learn new tools in hands-on workshops at Vardhaman’s annual technology festival.',intro:'FESTRONIX brings student engineers, developers and innovators together through technical competitions, practical workshops and collaborative challenges.',contact:'Faculty help desk · contact details to be confirmed',location:'Vardhaman College of Engineering · Hyderabad, India',sponsors:[],announcements:['Sample programme: check each event’s eligibility, team size and admission status before registering.'],faqs:originalFaqs.map(x=>[...x])};
+const newEvents:FestivalEvent[]=[
+ {id:'cyber',number:'04',title:'Capture the Flag',category:'Code',format:'Team · 1–3',day:19,time:'09:00 AM',venue:'Computing Lab',fee:'Free',prize:'₹25,000',status:'Open',description:'Solve web-security, cryptography and digital-forensics challenges in a supervised, isolated competition environment.',rules:'Recognized-college students. Teams of 1–3. Bring a laptop. Work only on the provided challenge systems.'},
+ {id:'ai',number:'05',title:'AI for Campus',category:'Code',format:'Team · 2–4',day:18,time:'02:00 PM',venue:'Innovation Lab',fee:'Free',prize:'₹40,000',status:'Open',description:'Build and demonstrate a practical machine-learning prototype that solves a campus problem. Explain your data, evaluation and limitations.',rules:'Teams of 2–4 college students. Use the supplied non-personal dataset; disclose external tools and models.'},
+ {id:'circuit',number:'06',title:'Circuit Sprint',category:'Build',format:'Team · 2–3',day:19,time:'01:30 PM',venue:'Electronics Lab',fee:'₹200 / team',prize:'₹30,000',status:'Open',description:'Debug, design and demonstrate a working circuit against a timed engineering brief with supervised lab equipment.',rules:'College students in teams of 2–3. Faculty safety briefing and supervised equipment use are mandatory.'}
+];
+export function seedState():FestivalState {
+ const sources=[...originalEvents,...newEvents];
+ return {version:1,activeEditionId:initialEdition.id,editions:[structuredClone(initialEdition)],staff:[
+  {id:'primary',name:'Primary Faculty Owner',role:'Owner',editionId:'institution',active:true},
+  {id:'backup',name:'Backup Faculty Owner',role:'Owner',editionId:'institution',active:true},
+  {id:'approver',name:'Faculty Approver',role:'Faculty',editionId:initialEdition.id,active:true},
+  {id:'dev',name:'Aarav · Development',role:'Coordinator',editionId:initialEdition.id,active:true},
+  {id:'engineering',name:'Meera · Engineering',role:'Coordinator',editionId:initialEdition.id,active:true},
+  {id:'security',name:'Rohan · Cybersecurity',role:'Coordinator',editionId:initialEdition.id,active:true},
+  {id:'helper-dev',name:'Diya · Development check-in',role:'Helper',editionId:initialEdition.id,active:true},
+  {id:'helper-engineering',name:'Kabir · Robotics check-in',role:'Helper',editionId:initialEdition.id,active:true},
+  {id:'participant',name:'Sample Participant',role:'Participant',editionId:initialEdition.id,active:true}
+ ],events:sources.map((e,i)=>({...e,editionId:initialEdition.id,ownerId:['dev','engineering','dev','security','security','engineering'][i],state:'Published',date:`2027-10-${e.day}`,duration:120,price:[300,500,0,0,0,200][i],capacity:60,deadline:'2027-10-17T18:00',teamMin:[2,2,1,1,2,2][i],teamMax:[4,5,1,3,4,3][i],teamEditDeadline:'2027-10-17T18:00',clashPolicy:'Warn',paymentInstructions:'Faculty-approved payment destination and instructions must be configured before real registration. Do not pay in this preview.',waitlist:i===2,walkins:false,eligibility:e.rules,appealHours:48,certificate:'Attendance',helpers:i===0?['helper-dev']:i===1?['helper-engineering']:[],reviewNote:'Sample event approved by faculty.',results:'',resultsState:'None',appealUntil:''})),entries:[
+  {id:'demo-entry-1',eventId:'quantum',participantId:'sample-anika',name:'Anika · sample attendee',team:'Team Vector',members:'Anika, Dev',status:'CONFIRMED',token:'FESTRONIX-DEMO:quantum:entry-1',checkedIn:false,checkedAt:'',paymentRef:'SAMPLE-UTR-101',proofName:'sample-proof.png',note:'Sample proof approved.',appeal:''},
+  {id:'demo-entry-2',eventId:'robot',participantId:'sample-isha',name:'Isha · sample attendee',team:'Team Circuit',members:'Isha, Neel',status:'PAYMENT_VERIFICATION_PENDING',token:'FESTRONIX-DEMO:robot:entry-2',checkedIn:false,checkedAt:'',paymentRef:'SAMPLE-UTR-102',proofName:'sample-proof.png',note:'',appeal:''}
+ ],audit:[]};
+}
+export const isFaculty=(actor:Staff)=>actor.role==='Owner'||actor.role==='Faculty';
+export const canManage=(actor:Staff,event:ManagedEvent)=>isFaculty(actor)||(actor.role==='Coordinator'&&event.ownerId===actor.id&&actor.editionId===event.editionId);
+export const canScan=(actor:Staff,event:ManagedEvent)=>canManage(actor,event)||(actor.role==='Helper'&&event.helpers.includes(actor.id)&&actor.editionId===event.editionId);
+export function editionDates(e:Edition){const fmt=new Intl.DateTimeFormat('en-IN',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});return `${fmt.format(new Date(e.startDate+'T12:00:00Z'))} – ${fmt.format(new Date(e.endDate+'T12:00:00Z'))}`}
+export function eventDate(e:ManagedEvent,edition:Edition){return new Date((e.date??edition.startDate.slice(0,8)+String(e.day).padStart(2,'0'))+'T12:00:00Z').toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'})}
+export function clock24(value:string){const m=value.match(/(\d+):(\d+)\s*(AM|PM)?/i);if(!m)return '09:00';let h=Number(m[1]);if(m[3])h=h%12+(m[3].toUpperCase()==='PM'?12:0);return String(h).padStart(2,'0')+':'+m[2]}
+export function overlaps(a:ManagedEvent,b:ManagedEvent){const minutes=(v:string)=>{const match=v.match(/(\d+):(\d+)\s*(AM|PM)?/i);if(!match)return 0;let h=Number(match[1]);if(match[3])h=h%12+(match[3].toUpperCase()==='PM'?12:0);return h*60+Number(match[2])};return a.date===b.date&&minutes(a.time)<minutes(b.time)+(b.duration??120)&&minutes(b.time)<minutes(a.time)+(a.duration??120)}
+export function href(view='home',theme?:VisualTheme,extra?:Record<string,string>){const p=new URLSearchParams();const preview=new URLSearchParams(location.search).get('preview');if(preview&&['home','events'].includes(view))p.set('preview',preview);if(theme)p.set('theme',theme);if(view!=='home')p.set('view',view);Object.entries(extra??{}).forEach(([k,v])=>p.set(k,v));return '/?'+p.toString()}
+export const eventStates:EventState[]=['Draft','In review','Changes requested','Approved','Published','Live','Completed','Archived'];

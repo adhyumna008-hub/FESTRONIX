@@ -21,6 +21,14 @@
 - Final local browser error/warning log was empty. Initial review required restarting the stopped local server. One hot source refresh closed an open dialog during QA; it was reopened and rechecked.
 - Local captures: `output/campus-feedback/` (ignored QA evidence). Final screenshots and live deployment verification are recorded after publication.
 
+## Publication
+
+- GitHub commit: `31c222fa5a8dcdae2fdb30209265fc0b24bccf8b` on `main`.
+- Vercel deployment: `dpl_5tthx1b3e2MhUtL7k9ho1ZZQBMFC`, production, **READY**; build approximately 19.8 seconds. Git integration triggered automatically after push, so no duplicate deployment was created.
+- URL: https://festronix2k27.vercel.app/.
+- Public desktop/phone smoke check confirmed new posters, plural Developers name, removed header duplicate, event dialog with one dismissal and one primary action, and no horizontal overflow. Browser error/warning log empty. Live screenshot: `output/campus-feedback/live-clubs.png`; phone: `live-phone.png`.
+- Platform build-log scope limitations from the original release remain; no monitoring, drains, or backend operation was added. Physical devices and actual OS preference changes remain unverified.
+
 ## Scope
 
 Campus visual refinement only, with a shared club-name correction. Event datasets, product rules, three original themes, Firebase/backend/payment connections, roles and architecture are unchanged. The previously removed 3D Club Gallery remains inactive. The owner’s screenshots are visual feedback, not authorization to copy third-party assets or contact the people shown.

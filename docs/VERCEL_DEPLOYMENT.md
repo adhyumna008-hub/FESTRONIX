@@ -1,5 +1,9 @@
 # Vercel visual-preview deployment
 
+## Latest update — 2026-10-17
+
+Campus screenshot-feedback fixes are live from GitHub commit `31c222fa5a8dcdae2fdb30209265fc0b24bccf8b`. Git integration automatically created production deployment `dpl_5tthx1b3e2MhUtL7k9ho1ZZQBMFC` and reached **READY** in about 19.8 seconds. Both existing aliases are retained; primary URL remains **https://festronix2k27.vercel.app/**. Public desktop/phone smoke checks and console checks completed. See [CAMPUS_FEEDBACK_QA.md](CAMPUS_FEEDBACK_QA.md). No separate manual deployment, backend or account-service connection was made. The original release record below is historical; the latest deployed commit is the one in this section.
+
 ## Status — 2026-10-16
 
 **LIVE — READY.** After connecting the Vercel plugin, the owner explicitly renewed publishing authorization with “yes.” Deployed the GitHub `main` commit containing the recovered original glass X. No browser login was needed for deployment through the connected plugin.
@@ -44,6 +48,6 @@ Only frontend build output is served. The existing backend/database are not conf
 
 ## Subsequent changes
 
-The project was created with the existing GitHub repository and deployed from its `main` commit. Automatic deployment on a subsequent Git push has not been exercised by this task. Deployment-result documentation is saved locally after the release; the running website remains the pinned commit above.
+The project was created with the existing GitHub repository and deployed from its `main` commit. Automatic Git-push deployment was verified on 2026-10-17 for the Campus refinement above. Deployment-result documentation is saved locally after each release.
 
 Configuration follows Vercel's [project configuration](https://vercel.com/docs/project-configuration) and [Vite guidance](https://vercel.com/docs/frameworks/frontend/vite). A successful local build is not evidence of a completed Vercel deployment.
