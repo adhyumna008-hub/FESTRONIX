@@ -38,3 +38,7 @@ Local browser output is under `output/platform-ui/` (ignored): layout matrix and
 - Actual OS reduced-motion preference, assistive technology and physical-device performance were not newly certified. Dashboard transitions have a reduced-motion CSS override; existing landing-page fallbacks remain.
 
 See [PLATFORM_UI_SCOPE.md](PLATFORM_UI_SCOPE.md) for responsibilities, product rules and primary research sources.
+
+## Public deployment check
+
+Implementation commit `547d0f12265fccead8b33008922b70f6bb020d36` reached Vercel READY as `dpl_4K2sG54h77Vg6bPDjpgme3gVt2QS`. On the public alias, checked the desktop directory/selected-event login and Admin website settings, then all four themes at 390×844 with six shared sample events and no horizontal overflow. The Flux phone event dialog was visually inspected; normal browser error/warning logs were empty. Live screenshots: `live-events-desktop.png`, `live-event-cards.png`, `live-admin-settings.png`, `live-flux-event-phone.png`. No real registration, payment, staff assignment or camera permission was used in the public checks.

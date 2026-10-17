@@ -1,6 +1,14 @@
 # Vercel visual-preview deployment
 
-## Latest update — 2026-10-17
+## Operational UI release — 2026-10-17
+
+Frontend implementation commit **`547d0f12265fccead8b33008922b70f6bb020d36`** was pushed to GitHub `main`. Automatic production deployment **`dpl_4K2sG54h77Vg6bPDjpgme3gVt2QS`** reached **READY**, with the matching Git SHA, in approximately 21 seconds. Both existing domains remain assigned; primary URL is **https://festronix2k27.vercel.app/**.
+
+Public browser verification confirmed six technical events, Register → selected-event login prompt, editable Admin settings and all four theme presentations at phone width without horizontal overflow. Console checks returned no errors/warnings. Screenshots and the layout record are under `output/platform-ui/`; see [PLATFORM_UI_QA.md](PLATFORM_UI_QA.md). A navigation wait timed out once while the page had already rendered; a fresh DOM check confirmed the correct route and subsequent theme navigation worked.
+
+This release publishes fictional browser-local operational previews only. Authentication, backend/private storage, payment, actual staff authority and valid QR admission remain unconnected. A documentation-only follow-up records this verification and retains identical frontend output. The implementation commit/deployment above identify the verified UI release; older release records below are historical.
+
+## Preceding Campus refinement — 2026-10-17
 
 Campus screenshot-feedback fixes are live from GitHub commit `31c222fa5a8dcdae2fdb30209265fc0b24bccf8b`. Git integration automatically created production deployment `dpl_5tthx1b3e2MhUtL7k9ho1ZZQBMFC` and reached **READY** in about 19.8 seconds. Both existing aliases are retained; primary URL remains **https://festronix2k27.vercel.app/**. Public desktop/phone smoke checks and console checks completed. See [CAMPUS_FEEDBACK_QA.md](CAMPUS_FEEDBACK_QA.md). No separate manual deployment, backend or account-service connection was made. The original release record below is historical; the latest deployed commit is the one in this section.
 
