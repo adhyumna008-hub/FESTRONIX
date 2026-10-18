@@ -14,22 +14,39 @@ npm run dev
 
 Open `http://127.0.0.1:4180/`. Use **Prototype controls** to compare themes. A specific version can be opened with `?theme=Pulse`, `?theme=Panel`, `?theme=Flux` or `?theme=Campus`.
 
-Every theme provides login entry points and registration sign-in prompts. **Real frontend authentication and registration are not connected yet.** Google/email controls explain the pending setup and do not create accounts, accept money or store a mock login. Event content and dates are fictional. Reduced motion preserves readable content and working controls.
+Every theme provides the same temporary demo sign-in and registration prompts. **Real frontend authentication and registration remain unconnected.** The public demo accounts below operate only on fictional browser-local data; they never authenticate against Firebase or the backend. Reduced motion preserves readable content and working controls.
 
 ### Interactive operational previews
 
 - `/?view=events` — searchable technical events with Details/Register actions.
+- `/?view=schedule` — event times, venues and links to the event directory.
+- `/?view=help` — visit information, faculty contact and FAQs.
 - `/?view=participant` — fictional registration, manual-proof status, demo QR, results/appeal and past editions.
 - `/?view=coordinator` — two-event quota, owned-event drafts/review, roster/payments, event helpers, check-in and provisional results.
 - `/?view=admin` — edition/CMS/theme, staff, approvals, event archives, safe yearly rollover and faculty closeout.
 
-Add `&theme=Campus|Pulse|Panel|Flux` to compare the same workspace/data. Changes persist **only in that browser's local storage**. Preview account switching is not login or real permission assignment. Use fictional information only; demo QR codes are not valid admission. Reset sample data restores the original dataset. See [scope and permissions](docs/PLATFORM_UI_SCOPE.md) and [QA/limitations](docs/PLATFORM_UI_QA.md).
+Add `&theme=Campus|Pulse|Panel|Flux` to compare the same workspace/data. Changes persist **only in that browser's local storage** and synchronize between tabs on the same origin, not between devices. Use fictional information only; demo QR codes are not valid admission. Admin can reset the sample dataset. See [scope and permissions](docs/PLATFORM_UI_SCOPE.md) and the [current test guide and limitations](docs/EVENTS_DEMO_QA.md).
+
+| Username | Password | Initial demo role |
+|---|---|---|
+| admin | admin123 | Institutional admin |
+| user1 | user1 | Participant |
+| user2 | user2 | Second participant |
+| user3 | user3 | Quantum / Signal coordinator |
+| user4 | user4 | RoboRumble / Circuit coordinator |
+| user5 | user5 | Quantum check-in helper |
+| user6 | user6 | RoboRumble check-in helper |
+
+The default current edition is **2026 / 2K26**. Admin settings include editable edition presets through **2030**; choosing a future year opens its settings and preview. Annual activation is explicit and preserves previous records.
+
+Confirmed entries expose one unique QR per member. Assigned staff scan individual passes; reports update individual attendance. Coordinators download their event's `.xlsx`; admin downloads individual events or all events with a consolidated attendee sheet. Exported files exclude QR credentials and payment evidence. New staff records illustrate assignment but do not automatically create additional login credentials.
 
 ```sh
 npm run build
+npm test
 ```
 
-This checks TypeScript and creates the preview build. Build output and dependencies are ignored by Git.
+These check TypeScript, create the preview build and run the demo behavior/report tests. Build output and dependencies are ignored by Git. Browser access is restored. Current workflow and phone checks are recorded in docs/EVENTS_DEMO_QA.md and docs/AI_HANDOFF.md; desktop screenshot capture remains limited.
 
 ## Vercel preview hosting
 

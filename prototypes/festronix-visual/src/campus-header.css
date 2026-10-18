@@ -1,0 +1,27 @@
+.campus-nav,.campus-nav-menu{font-family:Manrope,Arial,sans-serif;color:#20221f;box-sizing:border-box}
+.campus-nav{position:sticky;top:16px;margin:16px 32px 0;padding:10px 18px;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid #ffffffbd;border-radius:100px;background:#f5f4ebed;backdrop-filter:blur(18px) saturate(1.4);box-shadow:inset 0 1px 1px #fff,0 8px 30px #20221f0c}
+.campus-nav a,.campus-nav-menu a{color:inherit;text-decoration:none}
+.campus-nav .campus-nav-brand{display:flex;align-items:center;gap:16px;font-size:16px;font-weight:800;letter-spacing:-.04em;line-height:1.3;flex-shrink:0}
+.campus-nav-brand small{display:block;font-size:8px;letter-spacing:.14em;margin-top:3px;font-weight:600}
+.campus-nav-x{color:#be3f18}
+.campus-nav-institutions{display:flex;gap:8px;border-right:1px solid #25251f33;padding-right:14px;align-items:center}
+.campus-nav-institutions img{width:43px;height:38px;object-fit:contain}.campus-nav-institutions img:first-child{transform:scale(1.45)}.campus-nav-institutions img+img{width:35px;height:35px}
+.campus-nav-actions{display:flex;align-items:center;gap:20px}
+.campus-nav .campus-nav-tab{display:flex;align-items:center;min-height:44px;font-size:12px;font-weight:700;border-bottom:2px solid transparent}.campus-nav-tab[aria-current=page]{border-bottom-color:#be3f18}
+.campus-nav button,.campus-nav-menu button{appearance:none;cursor:pointer;font:inherit;min-height:44px;box-shadow:none;transition:background .2s,color .2s;transform:none}
+.campus-nav .campus-nav-login{border:0;background:transparent;color:#20221f;padding:8px;font-size:12px}.campus-nav-login span{margin-left:12px}
+.campus-nav .campus-nav-explore{display:flex;gap:25px;align-items:center;border:0;border-radius:50px;background:#20221f;color:#fff;padding:14px 22px;font-size:12px}.campus-nav-explore>span{display:grid;gap:5px}.campus-nav-explore i{width:17px;height:1px;background:currentColor}
+.campus-nav .campus-nav-explore:hover{background:#394036}.campus-nav-tab:hover,.campus-nav .campus-nav-login:hover{color:#b74220}
+.campus-nav :focus-visible,.campus-nav-menu :focus-visible{outline:3px solid #b74220;outline-offset:4px}
+.campus-nav-menu{margin:auto;width:min(740px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;background:#f1f0e9;border:1px solid #d0d2c5;border-radius:24px;padding:30px}
+.campus-nav-menu::backdrop{background:#10191399;backdrop-filter:blur(8px)}
+.campus-nav-menu-top{display:flex;align-items:center;justify-content:space-between;gap:20px}.campus-nav-menu .campus-nav-menu-top h2{font-family:Outfit,Manrope,sans-serif;font-size:26px;margin:0;letter-spacing:-.03em;text-transform:none}
+.campus-nav-menu button{background:transparent;color:#20221f;border:1px solid #b8bdad;border-radius:30px;padding:10px 16px;font-size:12px;white-space:nowrap}
+.campus-nav-menu nav{margin:25px 0}.campus-nav-menu nav a{display:flex;align-items:center;gap:20px;padding:18px 0;border-top:1px solid #c9cdbf;font-size:25px;font-weight:600}.campus-nav-menu nav small{font-size:10px;color:#64675e}.campus-nav-menu nav a>span:last-child{margin-left:auto}.campus-nav-menu nav a[aria-current=page]{color:#b74220}
+.campus-nav-menu-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}.campus-nav-menu-bottom label{display:grid;gap:8px;font-size:12px}.campus-nav-menu-bottom select{font:inherit;min-height:44px;padding:10px;border:1px solid #b8bdad;background:#f5f4eb;color:#20221f;border-radius:8px}
+.op-theme-campus>.op-preview-banner{margin-top:16px}
+@media(max-width:1050px){.campus-nav{margin-inline:20px}.campus-nav-actions{gap:12px}}
+@media(max-width:700px){.campus-nav .campus-nav-schedule{display:none}}
+@media(max-width:540px){.campus-nav{top:10px;margin:10px 12px 0;padding:7px 10px;gap:8px;flex-wrap:wrap}.campus-nav .campus-nav-brand{gap:8px;font-size:12px}.campus-nav-brand small{font-size:6px;letter-spacing:.07em}.campus-nav-institutions{gap:5px;padding-right:7px}.campus-nav-institutions img{width:27px;height:29px}.campus-nav-institutions img+img{width:25px;height:25px}.campus-nav-actions{margin-left:auto;gap:7px}.campus-nav .campus-nav-tab{font-size:11px}.campus-nav .campus-nav-login{font-size:11px;padding:7px}.campus-nav-login span{display:none}.campus-nav .campus-nav-explore{padding:12px 13px;gap:12px;font-size:11px}.campus-nav-explore i{width:14px}.campus-nav-menu{padding:22px}.campus-nav-menu .campus-nav-menu-top h2{font-size:22px}.campus-nav-menu nav a{font-size:22px}}
+@media(max-width:420px){.campus-nav .campus-nav-tab{display:none}}
+@media(prefers-reduced-motion:reduce){.campus-nav button,.campus-nav-menu button{transition:none}}

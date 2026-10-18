@@ -8,6 +8,7 @@ import {campusClubs} from './ClubSymbols';
 import {ClubArtwork} from './ClubArtwork';
 import {PrototypeThemes} from './PrototypeThemes';
 import {CampusX} from './CampusX';
+import {CampusHeader} from './CampusHeader';
 import {LoginPanel} from './LoginPanel';
 import './campus-refinements.css';
 
@@ -20,13 +21,13 @@ const interests=[
  {name:'Electronics',line:'Make the circuit work.',copy:'Develop your hardware skills through sensors, circuits and practical lab challenges.',category:'Build'}
 ];
 const Arrow=()=> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" strokeWidth="1.6"/></svg>;
-type Sheet='menu'|'login'|FestivalEvent|null;
+type Sheet='login'|FestivalEvent|null;
 export default function GlassHome(){
- const {edition,events,faqs,config,scheduleDays}=useFestival();
- const [interest,setInterest]=useState(0),[day,setDay]=useState(Number(config.startDate.slice(8))),[sheet,setSheet]=useState<Sheet>(null),[loginEvent,setLoginEvent]=useState<FestivalEvent|null>(null),[calm,setCalm]=useState(false);
+ const {edition,events,faqs,config,scheduleDays,actor}=useFestival();
+ const [interest,setInterest]=useState(0),[day,setDay]=useState(Number(config.startDate.slice(8))),[sheet,setSheet]=useState<Sheet>(null),[loginEvent,setLoginEvent]=useState<FestivalEvent|null>(null),[calm,setCalm]=useState(false),[menuOpen,setMenuOpen]=useState(false);
  const dialog=useRef<HTMLDialogElement>(null),trigger=useRef<HTMLElement|null>(null),root=useRef<HTMLDivElement>(null);
  const open=(next:Sheet)=>{if(!dialog.current?.open)trigger.current=document.activeElement as HTMLElement;setLoginEvent(null);setSheet(next)};
- const requestRegistration=(event:FestivalEvent)=>{setLoginEvent(event);setSheet('login')};
+ const requestRegistration=(event:FestivalEvent)=>{if(actor?.role==='Participant'){location.assign(href('events','Campus',{event:event.id,register:'1'}));return}setLoginEvent(event);setSheet('login')};
  const sheetOpen=sheet!==null;
  const close=()=>setSheet(null);
  useEffect(()=>{
@@ -70,17 +71,14 @@ export default function GlassHome(){
  const selectedInterest=interests[interest],filtered=events.filter(event=>selectedInterest.category==='All'||event.category===selectedInterest.category);
  return <div className={'gl-home'+(calm?' gl-calm':'')+(sheet?' gl-paused':'')} ref={root}>
   <a className="gl-skip" href="#discover">Skip to event discovery</a>
-  <header className="gl-header">
-   <a href="#home" className="gl-brand" aria-label="FESTRONIX home"><span className="gl-institutions"><img src="/wardhaman-college-of-engineering.png" alt="Vardhaman College of Engineering"/><img src="/sac-logo.png" alt="Students Activity Council"/></span><span>FESTRONI<span className="gl-orange">X</span><small>VARDHAMAN · {edition.label}</small></span></a>
-   <div className="gl-header-actions"><a className="gl-events-link" href={href('events','Campus')}>Events</a><button className="gl-login-link" aria-haspopup="dialog" onClick={()=>open('login')}>Log in <span aria-hidden="true">↗</span></button><button className="gl-menu-toggle" onClick={()=>open('menu')} aria-haspopup="dialog" aria-expanded={sheet==='menu'}>Explore <span className="gl-menu-glyph" aria-hidden="true"><i/><i/></span></button></div>
-  </header>
+  <CampusHeader onLogin={()=>open('login')} onMenuChange={setMenuOpen}/>
   <main id="home">
    <section className="gl-hero" aria-labelledby="gl-title">
     <div className="gl-hero-meta"><span>VARDHAMAN’S ANNUAL TECHNOLOGY FESTIVAL.</span><span>CODE. ENGINEER. INNOVATE.</span></div>
     <h1 id="gl-title" className="gl-wordmark">FESTRONI<span>X</span><sup>{edition.label}</sup></h1>
     <div className="gl-hero-stage">
      <div className="gl-hero-copy"><p className="gl-eyebrow"><span className="gl-dot"/> VARDHAMAN’S TECHNOLOGY FESTIVAL</p><h2>{config.heroTitle}</h2><p>{config.heroBody}</p><div className="gl-hero-cta"><a className="gl-button gl-button-orange" href={href('events','Campus')}>Explore events <Arrow/></a><a className="gl-text-link" href="#lineup">Plan your day <span aria-hidden="true">↓</span></a></div><div className="gl-hero-facts"><span><b>{edition.dates}</b><small>Sample edition dates</small></span><span><b>Vardhaman campus</b><small>Hyderabad, India</small></span></div></div>
-     <CampusX paused={calm||sheetOpen}/>
+     <CampusX paused={calm||sheetOpen||menuOpen}/>
     </div>
     <div className="gl-hero-bottom"><span>STUDENT-LED TECHNICAL EVENTS. FACULTY-APPROVED.</span><a href="#discover">Explore the programme <span aria-hidden="true">↓</span></a><button onClick={()=>setCalm(!calm)} aria-pressed={calm}>{calm?'Motion off':'Motion on'} <span aria-hidden="true">◉</span></button></div>
    </section>
@@ -100,9 +98,9 @@ export default function GlassHome(){
   </main>
   <footer className="gl-footer"><a className="gl-footer-brand" href="#home">FESTRONIX<span>↗</span></a><div><span>VARDHAMAN · {edition.label}</span><button onClick={()=>open('login')}>Participant login <Arrow/></button><span>Technology festival · Interactive preview</span></div><WorkspaceLinks theme="Campus"/></footer>
   <details className="gl-theme-picker"><summary>Prototype controls <span>Campus</span></summary><div><p>Compare the four visual directions.</p><WorkspaceLinks theme="Campus"/><PrototypeThemes active="Campus" onSelect={theme=>{if(theme!=='Campus')location.assign('/?theme='+theme)}}/></div></details>
-  <dialog ref={dialog} className={'gl-dialog '+(sheet==='menu'?'gl-menu-dialog':sheet==='login'?'gl-auth-dialog':'gl-event-dialog')} aria-labelledby="gl-dialog-title" onCancel={close} onClick={event=>{if(event.target===dialog.current)close();}}>
+  <dialog ref={dialog} className={'gl-dialog '+(sheet==='login'?'gl-auth-dialog':'gl-event-dialog')} aria-labelledby="gl-dialog-title" onCancel={close} onClick={event=>{if(event.target===dialog.current)close();}}>
    <button className="gl-close" onClick={close} aria-label="Close dialog">Close <span aria-hidden="true">×</span></button>
-   {sheet==='menu'?<><div className="gl-menu-top"><span>FESTRONI<span className="gl-orange">X</span> / FIELD GUIDE</span><small>FIND YOUR WAY IN.</small></div><div className="gl-menu-layout"><div><h2 id="gl-dialog-title" className="gl-sr">Explore FESTRONIX</h2><nav aria-label="Festival directory">{[['01','Technical events','discover','Competitions & workshops'],['02','Technical tracks','clubs','Software, AI & engineering'],['03','Make your plan','lineup','Schedule & sessions'],['04','Come on over','visit','Campus & essentials']].map(([num,title,id,note])=><a href={'#'+id} key={id} onClick={close}><small>{num}</small><div>{title}<span>{note}</span></div><Arrow/></a>)}</nav></div><aside className="gl-menu-aside"><span className="gl-menu-x" aria-hidden="true">×</span><p>A little curiosity<br/>goes a long way.</p><a href="#questions" onClick={close}>Questions? Start here <Arrow/></a><button className="gl-button gl-button-orange" onClick={()=>setSheet('login')}>Participant login <Arrow/></button></aside></div><div className="gl-menu-bottom"><span>VARDHAMAN COLLEGE OF ENGINEERING</span><span>CODE / BUILD / INNOVATE</span></div></>:sheet==='login'?<LoginPanel titleId="gl-dialog-title" eventTitle={loginEvent?.title} onClose={close}/>:sheet&&typeof sheet==='object'?<><p className="gl-eyebrow">{sheet.category} / SAMPLE EVENT</p><h2 id="gl-dialog-title">{sheet.title}</h2><p>{sheet.description}</p><dl>{[['When',`${eventDate(sheet as import('./platform/model').ManagedEvent,config)} · ${sheet.time} IST`],['Where',sheet.venue],['Entry',sheet.fee],['Format',sheet.format]].map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl><p>{sheet.rules}</p><div className="gl-login-notice">This is a sample event. No registration or payment is accepted in this preview.</div><div className="registration-actions"><button className="gl-button gl-register" onClick={()=>requestRegistration(sheet)}>Log in to register <Arrow/></button></div></>:null}
+   {sheet==='login'?<LoginPanel titleId="gl-dialog-title" eventTitle={loginEvent?.title} onClose={close}/>:sheet&&typeof sheet==='object'?<><p className="gl-eyebrow">{sheet.category} / SAMPLE EVENT</p><h2 id="gl-dialog-title">{sheet.title}</h2><p>{sheet.description}</p><dl>{[['When',`${eventDate(sheet as import('./platform/model').ManagedEvent,config)} · ${sheet.time} IST`],['Where',sheet.venue],['Entry',sheet.fee],['Format',sheet.format]].map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl><p>{sheet.rules}</p><div className="gl-login-notice">Sample event · test registrations are saved only in your browser. No payment is collected.</div><div className="registration-actions"><button className="gl-button gl-register" onClick={()=>requestRegistration(sheet)}>{actor?.role==='Participant'?'Register':'Log in to register'} <Arrow/></button></div></>:null}
   </dialog>
  </div>;
 }

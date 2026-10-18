@@ -144,3 +144,4 @@
  .gl-home .gl-event-dialog>.gl-eyebrow{padding-top:7px;padding-right:88px;font-size:8px}
 }
 @media(prefers-reduced-motion:reduce){.gl-home .club-art-subject{transition:none}}
+@media(max-width:700px){.gl-header .gl-schedule-link{display:none}}

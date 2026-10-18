@@ -2,7 +2,7 @@ import {Component,Suspense,lazy,useCallback,useEffect,useLayoutEffect,useRef,use
 import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {HeroFacts,Identity} from './Heroes';
-import {edition} from './data';
+import {useFestival} from './platform/store';
 import {useMedia,useViewport,type Quality} from './experience';
 import {clubs,machines,worldChapter,worldChapters,worldFrame,type ClubId} from './WorldExperience';
 import './world.css';
@@ -16,6 +16,7 @@ class WorldBoundary extends Component<{children:ReactNode;onFail:()=>void},{fail
 }
 type Props={quality:Quality;reduced:boolean;blocked:boolean;onCategory:(category:string)=>void;onDowngrade:()=>void};
 export function WorldExpedition({quality,reduced,blocked,onCategory,onDowngrade}:Props){
+  const {edition}=useFestival();
   const viewport=useViewport(),short=useMedia('(max-height:540px)');
   const staticMode=quality==='STATIC'||reduced||short;
   const region=useRef<HTMLElement>(null),host=useRef<HTMLDivElement>(null),frame=useRef(worldFrame());
@@ -113,7 +114,7 @@ export function WorldExpedition({quality,reduced,blocked,onCategory,onDowngrade}
     </aside>}
     <div className="world-flow">
       <section className="world-stage world-arrival" id="arrival"><div className="world-copy">
-        <p className="world-kicker">VARDHAMAN COLLEGE OF ENGINEERING <span>ANNUAL TECHNOLOGY FESTIVAL / 2027</span></p><Identity/>
+        <p className="world-kicker">VARDHAMAN COLLEGE OF ENGINEERING <span>ANNUAL TECHNOLOGY FESTIVAL / {edition.year}</span></p><Identity/>
         <p className="world-eyebrow">MANY INTERESTS. ONE FESTRONIX.</p><h2>Find your<br/><em>people.</em></h2>
         <p className="world-description">Travel through the clubs that bring our campus together. Play, develop, write, film and discover.</p><HeroFacts/>
         <a className="world-travel" href="#gaming-club">Explore the club gallery <span>↓</span></a>

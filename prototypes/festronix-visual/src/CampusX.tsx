@@ -1,8 +1,9 @@
 import {useEffect,useRef} from 'react';
+import './glass-home.css';
 import './campus-x.css';
 import {useFestival} from './platform/store';
 
-export function CampusX({paused}:{paused:boolean}) {
+export function CampusX({paused,monogram=false}:{paused:boolean;monogram?:boolean}) {
  const {config}=useFestival();
  const artwork=useRef<HTMLDivElement>(null);
  useEffect(()=>{
@@ -13,6 +14,7 @@ export function CampusX({paused}:{paused:boolean}) {
   observer.observe(node);document.addEventListener('visibilitychange',update);
   return()=>{observer.disconnect();document.removeEventListener('visibilitychange',update);};
  },[]);
+ if(monogram)return <div ref={artwork} className={'campus-monogram'+(paused?' campus-x-paused':'')} aria-hidden="true"><span className="campus-monogram-edition">FESTRONIX / {config.label}</span><div className="campus-monogram-mark"><b>F</b><div className="campus-monogram-x"><div className="gl-glass-x"><i/><i/></div></div></div><small>CODE · BUILD · DISCOVER</small></div>;
  return <div ref={artwork} className={'gl-optical campus-x-stage'+(paused?' campus-x-paused':'')} aria-hidden="true">
   <div className="gl-orbit gl-orbit-one"/><div className="gl-orbit gl-orbit-two"/>
   <div className="gl-glass-x"><i/><i/></div>

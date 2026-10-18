@@ -1,44 +1,31 @@
-import {useEffect,useId,useRef,useState,type FormEvent} from 'react';
+import {useEffect,useRef,useState} from 'react';
 import './login-panel.css';
 import {href,type VisualTheme} from './platform/model';
+import {useFestival} from './platform/store';
+import {DEMO_ACCOUNTS,workspaceFor,canOpenView} from './platform/demoAuth';
 
-/** Sign-in entry shared by every visual theme. Never creates a mock session. */
-export function LoginPanel({titleId,eventTitle,onClose}:{titleId:string;eventTitle?:string;onClose:()=>void}) {
- const [message,setMessage]=useState('');
- const emailId=useId();
- const heading=useRef<HTMLHeadingElement>(null);
- useEffect(()=>{
-  heading.current?.focus({preventScroll:true});
-  const dialog=heading.current?.closest('dialog');
-  if(!dialog)return;
-  const containFocus=(event:KeyboardEvent)=>{
-   if(event.key!=='Tab'||event.defaultPrevented)return;
-   const controls=Array.from(dialog.querySelectorAll<HTMLElement>('button:not([disabled]),input:not([disabled]),a[href],[tabindex="0"]')).filter(el=>el.getClientRects().length>0);
-   const first=controls[0],last=controls.at(-1);
-   if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus()}
-   else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus()}
-  };
-  dialog.addEventListener('keydown',containFocus);
-  return()=>dialog.removeEventListener('keydown',containFocus);
- },[]);
- const email=(event:FormEvent<HTMLFormElement>)=>{
-  event.preventDefault();
-  setMessage('Email sign-in is not configured yet. No link has been sent and no account has been created.');
+export function LoginPanel({titleId,eventTitle,onClose}:{titleId:string;eventTitle?:string;onClose:()=>void}){
+ const {state,actor,signIn,signOut,config}=useFestival();
+ const [message,setMessage]=useState('');const heading=useRef<HTMLHeadingElement>(null);
+ useEffect(()=>{heading.current?.focus({preventScroll:true})},[]);
+ const theme=(new URLSearchParams(location.search).get('theme')??config.theme) as VisualTheme;
+ const go=(person:NonNullable<typeof actor>)=>{
+  const event=state.events.find(e=>e.title===eventTitle&&e.editionId===config.id);
+  const current=new URLSearchParams(location.search).get('view');
+  location.assign(event&&person.role==='Participant'?href('events',theme,{event:event.id,register:'1'}):href(current&&canOpenView(person,current)?current:workspaceFor(person),theme));
  };
  return <div className="auth-panel">
-  <p className="auth-eyebrow">FESTRONIX / YOUR SPACE</p>
-  <h2 id={titleId} tabIndex={-1} ref={heading}>{eventTitle?'Log in to register.':'Good to see you.'}</h2>
-  {eventTitle?<div className="auth-event"><span>YOU’RE JOINING</span><strong>{eventTitle}</strong><p>Sign in first. Your event stays selected while you choose how to continue.</p></div>:<p className="auth-intro">Your events. Your team. Your FESTRONIX.</p>}
-  <p className="auth-notice">Sign-in preview · Account services are not connected yet.</p>
-  <p className="auth-notice"><a href={href('participant',(new URLSearchParams(location.search).get('theme')??'Campus') as VisualTheme)}>Explore participant preview with fictional data ↗</a><br/>This does not log you in or grant staff access.</p>
-  <button type="button" className="auth-google" onClick={()=>setMessage('Google sign-in is not configured yet. No account or registration has been created.')}><span className="auth-google-mark" aria-hidden="true">G</span>Continue with Google<span aria-hidden="true">↗</span></button>
-  <div className="auth-or"><span/>or continue with email<span/></div>
-  <form onSubmit={email}>
-   <label htmlFor={emailId}>Email address</label>
-   <input id={emailId} type="email" name="email" autoComplete="email" placeholder="you@college.edu" required aria-describedby={message?emailId+'-message':undefined}/>
-   <button className="auth-primary" type="submit">Continue with email<span aria-hidden="true">→</span></button>
-  </form>
-  <p className="auth-feedback" id={emailId+'-message'} role="status" aria-live="polite">{message}</p>
-  <button className="auth-back" type="button" onClick={onClose}>Keep exploring<span aria-hidden="true">↗</span></button>
+  <p className="auth-eyebrow">FESTRONIX / TEST ACCESS</p>
+  <h2 id={titleId} ref={heading} tabIndex={-1}>{actor?'Your FESTRONIX workspace.':'Try the complete journey.'}</h2>
+  {eventTitle&&<div className="auth-event"><span>SELECTED EVENT</span><strong>{eventTitle}</strong></div>}
+  <p className="auth-notice">Temporary demo sign-in · fictional data saved in this browser only. These public test accounts cannot access the real platform. Use the same browser to test registration, staff check-in and reports.</p>
+  {actor?<><p className="auth-intro">Signed in as <strong>{actor.name}</strong> · {actor.role}</p><button className="auth-primary" onClick={()=>go(actor)}>{eventTitle&&actor.role==='Participant'?'Continue registration':'Open workspace'} ↗</button><button className="auth-back" onClick={()=>{signOut();setMessage('Signed out. Choose another test account.')}}>Switch account / sign out</button></>:<form onSubmit={e=>{e.preventDefault();const data=new FormData(e.currentTarget);try{const person=signIn(String(data.get('username')),String(data.get('password')));go(person)}catch(err){setMessage(err instanceof Error?err.message:'Unable to sign in.')}}}>
+   <label htmlFor={titleId+'-user'}>Demo username</label><input id={titleId+'-user'} name="username" required autoComplete="off" autoCapitalize="none" spellCheck={false} placeholder="admin or user1–user6"/>
+   <label htmlFor={titleId+'-password'}>Demo password</label><input id={titleId+'-password'} name="password" type="password" required autoComplete="off"/>
+   <button className="auth-primary" type="submit">Sign in to demo <span aria-hidden="true">→</span></button>
+  </form>}
+  <p className="auth-feedback" role="status">{message}</p>
+  <details className="auth-accounts"><summary>Test accounts & what to try</summary><div className="auth-account-list">{DEMO_ACCOUNTS.map(a=><div key={a.username}><strong>{a.username} / {a.password}</strong><span>{a.purpose}</span></div>)}</div><p>Register as user1, approve a paid entry and start the event as user3, scan as user5, then export as user3 or admin. Log out before changing accounts. All six user passwords match their usernames.</p></details>
+  <button className="auth-back" onClick={onClose}>Keep exploring ↗</button>
  </div>;
 }

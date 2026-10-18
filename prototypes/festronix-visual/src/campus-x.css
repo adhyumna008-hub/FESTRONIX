@@ -5,3 +5,17 @@
 .campus-x-resting .gl-ticket {
   animation-play-state: paused;
 }
+
+/* Event-directory identity: an ordinary F with a smaller glass X at its foot. */
+.campus-monogram{position:relative;display:flex;flex-direction:column;justify-content:space-between;width:300px;height:300px;max-width:100%;padding:28px 30px;box-sizing:border-box;align-self:center;justify-self:center;border-radius:18px;transform:rotate(4deg);background:#202920;color:#f1f0e9;overflow:hidden}
+.campus-monogram-edition,.campus-monogram>small{font:500 10px Manrope,Arial,sans-serif;letter-spacing:.08em;position:relative;z-index:1}
+.campus-monogram-mark{position:relative;flex:none;width:240px;height:175px;transform-origin:left center}
+.campus-monogram-mark>b{position:absolute;left:0;top:-9px;font:700 184px/1 Manrope,Arial,sans-serif;letter-spacing:-.08em;color:#f1f0e9}
+.campus-monogram-x{position:absolute;left:102px;top:64px;width:330px;height:400px;transform:scale(.28);transform-origin:top left;pointer-events:none}
+.campus-monogram .gl-glass-x{left:0;top:0;width:330px;height:400px;transform:rotate(-13deg);animation:gl-float 9s ease-in-out infinite}
+.campus-monogram .gl-glass-x i{box-sizing:border-box}
+.campus-monogram.campus-x-paused .gl-glass-x,.campus-monogram.campus-x-resting .gl-glass-x{animation-play-state:paused}
+@media(max-width:1100px){.campus-monogram{width:230px;height:230px;padding:22px}.campus-monogram-mark{height:130px;transform:scale(.76)}.campus-monogram-edition,.campus-monogram>small{font-size:8px}}
+@media(min-width:541px) and (max-width:800px){.campus-monogram{width:160px;height:160px;padding:16px}.campus-monogram-mark{height:88px;transform:scale(.51)}.campus-monogram-edition,.campus-monogram>small{font-size:6px}}
+@media(max-width:540px){.campus-monogram{width:240px;height:240px;padding:24px}.campus-monogram-mark{height:132px;transform:scale(.8)}.campus-monogram .gl-glass-x{animation:none}}
+@media(prefers-reduced-motion:reduce){.campus-monogram .gl-glass-x{animation:none}}

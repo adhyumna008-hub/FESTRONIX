@@ -5,3 +5,4 @@
 @media(max-width:639px){.site-header .comparison-toggle{display:inline-flex;font-size:11px;padding:8px;min-width:52px;margin-left:0}.site-header .logo>small{display:none}.site-header .logo{gap:7px;flex-shrink:1}.site-header .institution-logos{gap:4px;padding-right:7px}.site-header .institution-logos img{width:22px!important;height:24px!important}}
 
 @media(max-width:639px){[data-theme=panel] .auth-panel h2{font-size:42px}.auth-panel .auth-eyebrow{margin-bottom:18px}.auth-or{margin-block:20px}}
+.auth-panel input[type=password]{margin-bottom:20px}.auth-accounts{margin:16px 0;border-block:1px solid #8886;padding:12px 0;font-size:12px}.auth-accounts summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700}.auth-account-list{display:grid;gap:12px;padding:12px 0}.auth-account-list>div{display:grid;gap:3px}.auth-account-list span{font-size:12px}.auth-accounts p{font-size:12px;line-height:1.7}

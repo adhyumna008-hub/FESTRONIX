@@ -1,8 +1,8 @@
 # FESTRONIX operational UI prototype
 
-## Scope — 17 October 2026
+## Scope — updated 18 October 2026
 
-The owner requested reusable festival administration, event discovery, coordinator and event-helper operations in Campus, Pulse, Panel and Flux. This pass builds one shared **local, fictional-data prototype**, with four visual layers. It does not connect the existing backend, create accounts, take payments, send messages or issue valid admission credentials. Public role previews are demonstrations, not authentication or authorization.
+The owner requested reusable festival administration, event discovery, coordinator and event-helper operations in Campus, Pulse, Panel and Flux. This is one shared **local, fictional-data prototype**, with four visual layers. It does not connect the existing backend, create real accounts, take payments, send messages or issue valid admission credentials. Temporary demo sign-in now replaces public role switching; its client-side guards are demonstrations, not a production security boundary. See [current account and QA guide](EVENTS_DEMO_QA.md).
 
 ## Permission and responsibility matrix
 
@@ -17,7 +17,8 @@ The owner requested reusable festival administration, event discovery, coordinat
 ## Product rules retained
 
 - Free entries confirm only when eligibility, admission window and capacity permit. Paid entries wait for assigned-coordinator/faculty review of payment reference/proof metadata. No payment gateway. Rejection permits resubmission. Demo uploads store **only a filename**, never file bytes.
-- QR credentials appear only for confirmed registrations. Demo QR contents carry a `FESTRONIX-DEMO` prefix and no personal information; they are not live tickets. Wrong event, invalid, pending, withdrawn and duplicate scans receive distinct feedback. Manual check-in requires a reason.
+- Individual QR credentials appear only for confirmed registrations. Each member gets a different opaque token with a `FESTRONIX-DEMO` prefix and no personal information; they are not live tickets. Wrong event, invalid, pending, withdrawn and duplicate scans receive distinct feedback. Manual check-in requires a reason. Attendance records identify the member, scanning staff and timestamp.
+- The assigned event coordinator can export that event to Excel. Faculty/admin can export individual events or all current events; institutional owners can export archived editions. Workbooks include one summary and one consolidated attendee sheet, with registration and individual attendance counted separately. Helpers cannot export. QR tokens and payment evidence are excluded.
 - Coordinator scope is assigned by faculty; student helpers are assigned to individual events by their coordinator. Active-edition access expires at rollover. UI guards illustrate scope, but authoritative server checks remain mandatory before launch.
 - Drafts without registrations may be deleted after confirmation. Completed/published events are archived/unlisted, preserving private operational history. Annual activation archives the former edition and revokes its student access. It copies public configuration only, not events, participants, proofs, attendance or student assignments.
 - Event changes after approval return to review. Rules cannot be changed during a live event. After registrations exist, participant-impacting changes remain deferred to the existing backend's controlled change workflow; prototype edits are blocked rather than silently invalidating registrations.
