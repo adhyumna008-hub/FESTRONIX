@@ -1,12 +1,26 @@
 # FESTRONIX AI Handoff
 
 **Current Phase:** Campus-first event directory, temporary demo sign-in, personal event passes and attendance/Excel reports across all four themes; existing backend remains unconnected
-**Status:** Implementation, TypeScript/build and 20 automated behavior/report/edition checks passed. Browser access is restored; current visual/workflow verification is PARTIAL. Campus guest login → paid team registration → coordinator approval → personal teammate QR → scoped helper token check-in → duplicate rejection → coordinator/admin Excel downloads were exercised. Phone Events introductions were inspected in all four themes. Reliable tablet/large-desktop captures and remaining workflows/device checks are pending; see EVENTS_DEMO_QA.md. Existing TypeScript/Fastify/PostgreSQL/Firebase backend is preserved but unconnected; its earlier 58-test result is historical. U1–U11 remain unchanged. USER_FLOWS and screen inventory have not been started.
+**Status:** 32 automated behavior/report/regression tests and the production build passed. Core browser-local workflows were verified and repaired in an isolated QA origin, including approvals, payment-proof resubmission, individual attendance/reports, CMS and annual rollover. Four themes passed 32 responsive layout measurements; phone/native desktop screenshots were inspected, with larger capture limitations. Physical camera/real-device WebGL and connected backend services remain unverified/unconnected. See FUNCTIONAL_QA_2026-10-18.md. U1–U11 remain unchanged. USER_FLOWS and screen inventory have not been started.
 **Last updated:** 2026-10-18
 
 ## Purpose
 
 Keep a single shared source of truth for FESTRONIX across Go, Claude, Antigravity, Astra, and any other tools. Record decisions here and link to the detailed documents as they are created.
+
+## Functional verification and repairs — 2026-10-18
+
+- Completed the browser-local operational journeys in a separate origin on port 4181. Existing local/production data was not reset. The test fixture includes preserved 2026 history and a working 2027 programme; the published default remains 2026.
+- Repaired account/event-context navigation, paid waitlist/deadline and teammate-clash checks, confirmation feedback, session invalidation after revocation, duplicate sign-in forms, clipboard fallback, expired landing actions, Campus CMS rendering, preview/theme continuity and phone date readability.
+- **32 automated tests passed** and the release build passed. Browser tested all supplied accounts, creation/revision/approval, free/paid registration, individual scoped check-in, event/all-event/archived report downloads, results/appeals, CMS and annual activation followed by a new-year registration. Four themes/Home/Events passed 32 width measurements.
+- See [FUNCTIONAL_QA_2026-10-18.md](FUNCTIONAL_QA_2026-10-18.md) for the coverage matrix, evidence and actual limits. This supersedes older pending browser checklists below. Real authentication/shared data/payment/certificate services remain unconnected; physical camera and real-device 3D checks remain pending.
+
+## Production update published — 2026-10-18
+
+- Owner requested the current version on Vercel. Pushed frontend/documentation commit `768038186c0c9514f55ce4650cd6ae071ca893e5` to GitHub `main` through the existing integration. Production deployment `dpl_88BgjJ2vPreWvz4VBDb7VzvQsVqS` reached **READY**, with the matching Git SHA and both existing aliases assigned, in approximately 38.4 seconds. Primary URL: **https://festronix2k27.vercel.app/**.
+- Published the current shared Campus header, F plus glass-X badge, temporary demo sign-in, individual QR/attendance/Excel workflows and reusable **2026–2030 edition presets**. **2026 / 2K26** is the current default. Backend services remain unconnected.
+- Release build passed; the 20-test result immediately preceding this publication remains applicable. Public browser smoke check confirmed the 2K26 hero/dates, Events badge and shared navigation, successful demo admin sign-in, dropdown options 2026–2030, and 2030 settings while the public edition stayed 2026. Signed out after checking. Inspected desktop at 1280px and phone at 390px; no measured horizontal overflow or console errors. This does not replace the outstanding broader workflow/WebGL/device review recorded below.
+- Local evidence: `output/vercel-deployment-2026/live-campus-2k26.png`. See `docs/VERCEL_DEPLOYMENT.md` for the pinned deployment. Release-result documentation is retained locally after publishing; preceding local-only notes below describe work before this release.
 
 ## Shared Campus navigation and compact glass X — 2026-10-18
 

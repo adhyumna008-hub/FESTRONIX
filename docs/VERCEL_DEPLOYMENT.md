@@ -1,5 +1,20 @@
 # Vercel visual-preview deployment
 
+## Current release — 2026-10-18
+
+**LIVE — READY:** https://festronix2k27.vercel.app/
+
+- Source: GitHub `adhyumna008-hub/FESTRONIX`, `main`, commit `768038186c0c9514f55ce4650cd6ae071ca893e5`.
+- Project: `festronix2k27` / `prj_WiMAMhuc87fnn8YTdxiNazH2rQs9`; existing account scope and production configuration retained.
+- Production deployment: `dpl_88BgjJ2vPreWvz4VBDb7VzvQsVqS`, matching source SHA, **READY**. Build-to-ready interval: approximately 38.4 seconds.
+- Existing aliases `festronix2k27.vercel.app` and `festronix-2k27.vercel.app` both assigned successfully.
+- Includes the 2026 / 2K26 default, editable 2026–2030 presets, shared Campus navigation, F plus small glass-X badge, temporary demo sign-in, individual event passes/attendance and Excel reports. This is the same browser-local prototype; no backend deployment or real authentication/payment service was connected.
+- Verification: release build passed, with the preceding 20 automated checks passed. Public browser confirmed the hero/current date year, Events badge, shared navigation, demo sign-in, all five admin edition options and selecting 2030 without changing the active 2026 edition. Desktop 1280px and phone 390px were inspected with no measured horizontal overflow; console error scan was empty. Admin was signed out afterward.
+- Evidence: `output/vercel-deployment-2026/live-campus-2k26.png`. Broader workflow/WebGL/device QA remains as recorded in `AI_HANDOFF.md` and `EVENTS_DEMO_QA.md`.
+- Rollback reference: previous ready production deployment `dpl_EcM5AwjJsK5ZmjaZh7ULZ4s6Gwm7`, Git SHA `af9594c3855e34542a4b36e067171444a3041346`. No rollback was performed.
+
+This section supersedes the historical release records below. Release-result documentation is saved locally after publication.
+
 ## Operational UI release — 2026-10-17
 
 Frontend implementation commit **`547d0f12265fccead8b33008922b70f6bb020d36`** was pushed to GitHub `main`. Automatic production deployment **`dpl_4K2sG54h77Vg6bPDjpgme3gVt2QS`** reached **READY**, with the matching Git SHA, in approximately 21 seconds. Both existing domains remain assigned; primary URL is **https://festronix2k27.vercel.app/**.

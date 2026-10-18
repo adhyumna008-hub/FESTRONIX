@@ -46,7 +46,7 @@ npm run build
 npm test
 ```
 
-These check TypeScript, create the preview build and run the demo behavior/report tests. Build output and dependencies are ignored by Git. Browser access is restored. Current workflow and phone checks are recorded in docs/EVENTS_DEMO_QA.md and docs/AI_HANDOFF.md; desktop screenshot capture remains limited.
+These check TypeScript, create the preview build and run the demo behavior/report tests. Build output and dependencies are ignored by Git. Core workflow checks and repairs are recorded in [the functional QA report](docs/FUNCTIONAL_QA_2026-10-18.md). All 32 automated tests passed; phone/native desktop browser checks passed with larger screenshot and physical-device limits documented there.
 
 ## Vercel preview hosting
 

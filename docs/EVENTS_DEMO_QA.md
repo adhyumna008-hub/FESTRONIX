@@ -2,9 +2,9 @@
 
 ## Current status
 
-Implementation is available locally at **http://127.0.0.1:4180/?theme=Campus&view=events**. Campus is the primary UI; Pulse, Panel and Flux use the same directory, data, demo sessions and workspaces. This pass is not pushed or deployed. The live Vercel site still represents the previously published version.
+The prototype has been published on Vercel. The latest comprehensive check and repair pass is recorded in [FUNCTIONAL_QA_2026-10-18.md](FUNCTIONAL_QA_2026-10-18.md): 32 automated tests, build and core browser workflows passed. Current production default is 2026, with edition presets through 2030. See AI_HANDOFF.md / VERCEL_DEPLOYMENT.md for the verified release.
 
-**Automated checks passed; browser QA is partially completed.** Browser access now works after the owner's settings/restart changes. Current Campus desktop registration, payment approval, individual attendance and Excel downloads were exercised through the built-in browser. Phone event introductions were inspected in all four themes. Full coverage remains pending as listed below; previous QA captures do not certify this version.
+The older results and initial remaining-work list below are historical. The new report identifies what was completed and the remaining physical-device, capture and backend-integration limits.
 
 ## Public demo accounts
 

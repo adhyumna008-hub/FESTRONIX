@@ -10,16 +10,16 @@ export const DEMO_ACCOUNTS=[
  {username:'user5',password:'user5',staffId:'helper-dev',purpose:'Event helper · Quantum Challenge only'},
  {username:'user6',password:'user6',staffId:'helper-engineering',purpose:'Event helper · RoboRumble only'},
 ] as const;
-export interface DemoSession {staffId:string;expiresAt:number}
+export interface DemoSession {staffId:string;expiresAt:number;accessVersion?:number}
 export const SESSION_KEY='festronix-demo-session-v1';
 export function sessionActor(state:FestivalState,session:DemoSession|null,now=Date.now()):Staff|undefined {
  if(!session||!Number.isFinite(session.expiresAt)||session.expiresAt<=now)return;
- return state.staff.find(s=>s.id===session.staffId&&s.active&&(s.role==='Owner'||s.editionId===state.activeEditionId));
+ return state.staff.find(s=>s.id===session.staffId&&s.active&&(s.accessVersion??0)===(session.accessVersion??0)&&(s.role==='Owner'||s.editionId===state.activeEditionId));
 }
 export function authenticateDemo(state:FestivalState,username:string,password:string):DemoSession {
  const account=DEMO_ACCOUNTS.find(a=>a.username===username.trim().toLowerCase()&&a.password===password);
  if(!account)throw new Error('Incorrect demo username or password. Use one of the test accounts below.');
- const session={staffId:account.staffId,expiresAt:Date.now()+12*60*60*1000};
+ const session={staffId:account.staffId,expiresAt:Date.now()+12*60*60*1000,accessVersion:state.staff.find(s=>s.id===account.staffId)?.accessVersion??0};
  if(!sessionActor(state,session))throw new Error('This account is inactive or its edition access has expired. Ask the demo admin to restore its access.');
  return session;
 }

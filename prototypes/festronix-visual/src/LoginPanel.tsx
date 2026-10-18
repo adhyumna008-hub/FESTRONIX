@@ -2,24 +2,25 @@ import {useEffect,useRef,useState} from 'react';
 import './login-panel.css';
 import {href,type VisualTheme} from './platform/model';
 import {useFestival} from './platform/store';
-import {DEMO_ACCOUNTS,workspaceFor,canOpenView} from './platform/demoAuth';
+import {DEMO_ACCOUNTS} from './platform/demoAuth';
+import {loginDestination} from './platform/loginDestination';
 
-export function LoginPanel({titleId,eventTitle,onClose}:{titleId:string;eventTitle?:string;onClose:()=>void}){
+export function LoginPanel({titleId,eventTitle,eventId,onClose}:{titleId:string;eventTitle?:string;eventId?:string;onClose:()=>void}){
  const {state,actor,signIn,signOut,config}=useFestival();
  const [message,setMessage]=useState('');const heading=useRef<HTMLHeadingElement>(null);
  useEffect(()=>{heading.current?.focus({preventScroll:true})},[]);
  const theme=(new URLSearchParams(location.search).get('theme')??config.theme) as VisualTheme;
- const go=(person:NonNullable<typeof actor>)=>{
-  const event=state.events.find(e=>e.title===eventTitle&&e.editionId===config.id);
+ const go=(person:NonNullable<typeof actor>,workspace=false)=>{
   const current=new URLSearchParams(location.search).get('view');
-  location.assign(event&&person.role==='Participant'?href('events',theme,{event:event.id,register:'1'}):href(current&&canOpenView(person,current)?current:workspaceFor(person),theme));
+  const target=loginDestination(person,current,state.events.filter(e=>e.editionId===config.id),eventId,workspace);
+  location.assign(href(target.view,theme,target.extra));
  };
  return <div className="auth-panel">
   <p className="auth-eyebrow">FESTRONIX / TEST ACCESS</p>
   <h2 id={titleId} ref={heading} tabIndex={-1}>{actor?'Your FESTRONIX workspace.':'Try the complete journey.'}</h2>
   {eventTitle&&<div className="auth-event"><span>SELECTED EVENT</span><strong>{eventTitle}</strong></div>}
   <p className="auth-notice">Temporary demo sign-in · fictional data saved in this browser only. These public test accounts cannot access the real platform. Use the same browser to test registration, staff check-in and reports.</p>
-  {actor?<><p className="auth-intro">Signed in as <strong>{actor.name}</strong> · {actor.role}</p><button className="auth-primary" onClick={()=>go(actor)}>{eventTitle&&actor.role==='Participant'?'Continue registration':'Open workspace'} ↗</button><button className="auth-back" onClick={()=>{signOut();setMessage('Signed out. Choose another test account.')}}>Switch account / sign out</button></>:<form onSubmit={e=>{e.preventDefault();const data=new FormData(e.currentTarget);try{const person=signIn(String(data.get('username')),String(data.get('password')));go(person)}catch(err){setMessage(err instanceof Error?err.message:'Unable to sign in.')}}}>
+  {actor?<><p className="auth-intro">Signed in as <strong>{actor.name}</strong> · {actor.role}</p><button className="auth-primary" onClick={()=>go(actor,true)}>{eventTitle&&actor.role==='Participant'?'Continue registration':'Open workspace'} ↗</button><button className="auth-back" onClick={()=>{signOut();setMessage('Signed out. Choose another test account.')}}>Switch account / sign out</button></>:<form onSubmit={e=>{e.preventDefault();const data=new FormData(e.currentTarget);try{const person=signIn(String(data.get('username')),String(data.get('password')));go(person)}catch(err){setMessage(err instanceof Error?err.message:'Unable to sign in.')}}}>
    <label htmlFor={titleId+'-user'}>Demo username</label><input id={titleId+'-user'} name="username" required autoComplete="off" autoCapitalize="none" spellCheck={false} placeholder="admin or user1–user6"/>
    <label htmlFor={titleId+'-password'}>Demo password</label><input id={titleId+'-password'} name="password" type="password" required autoComplete="off"/>
    <button className="auth-primary" type="submit">Sign in to demo <span aria-hidden="true">→</span></button>

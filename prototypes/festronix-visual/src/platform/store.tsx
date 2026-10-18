@@ -10,6 +10,7 @@ function useStore(){
  const [session,setSession]=useState<DemoSession|null>(()=>{try{return JSON.parse(sessionStorage.getItem(SESSION_KEY)||'null')}catch{return null}});
  const [,tick]=useState(0);useEffect(()=>{const t=setInterval(()=>tick(n=>n+1),30000);return()=>clearInterval(t)},[]);
  const currentSession=useRef(session);currentSession.current=session;const actor=sessionActor(state,session);
+ useEffect(()=>{if(session&&!sessionActor(state,session)){sessionStorage.removeItem(SESSION_KEY);currentSession.current=null;setSession(null)}},[state,session]);
  const signIn=(username:string,password:string)=>{const next=authenticateDemo(current.current,username,password);sessionStorage.setItem(SESSION_KEY,JSON.stringify(next));currentSession.current=next;setSession(next);return sessionActor(current.current,next)!};
  const signOut=()=>{sessionStorage.removeItem(SESSION_KEY);currentSession.current=null;setSession(null)};
  const current=useRef(state);current.current=state;

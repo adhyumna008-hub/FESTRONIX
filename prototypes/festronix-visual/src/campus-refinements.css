@@ -145,3 +145,7 @@
 }
 @media(prefers-reduced-motion:reduce){.gl-home .club-art-subject{transition:none}}
 @media(max-width:700px){.gl-header .gl-schedule-link{display:none}}
+
+.gl-sponsor-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:16px}.gl-sponsor-list li{border-block:1px solid #acb2a6;padding:25px 8px;font-size:clamp(18px,2vw,26px);font-weight:700;overflow-wrap:anywhere}
+
+@media(max-width:639px){.gl-hero-facts{font-size:11px;flex-wrap:wrap;gap:14px 24px}.gl-hero-facts small{font-size:10px}}
