@@ -3,7 +3,7 @@
 **Status:** PROVISIONAL — public prototype planning, not final brand approval  
 **Date:** 2026-10-06  
 **Companion:** [DESIGN_SYSTEM_DRAFT.md](DESIGN_SYSTEM_DRAFT.md)  
-**Basis:** AI_HANDOFF, PRODUCT_SPEC, OWNER_DECISIONS U1–U11, THEME_REFERENCES and TYPOGRAPHY_DIRECTIONS including the specimen test.
+**Basis:** PRODUCT_SPEC, OWNER_DECISIONS U1–U11, THEME_REFERENCES and TYPOGRAPHY_DIRECTIONS including the specimen test.
 
 The owner has authorized this blueprint as the next planning step toward public visual prototypes. This is one reusable annual festival landing page with three presentation systems. The content, actions, section order and event facts are shared. No website, production integration, backend or API is created by this document. Fonts, palettes, motion and artwork remain provisional.
 

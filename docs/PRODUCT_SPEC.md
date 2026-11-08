@@ -451,7 +451,7 @@ The owner decision review is complete at product level. Recommend a separately a
 
 After those workflows are accepted, derive `docs/SCREEN_INVENTORY.md` from them. This intentionally updates the earlier planning order: product definition and workflow agreement now precede screen inventory. Technical architecture and visual prototypes remain later separate tasks.
 
-Sources of project intent: `AI_HANDOFF.md`, `THEME_REFERENCES.md`, `REFERENCE_CANDIDATES.md` and the current user brief. Repository skills applied: `festronix-context`, `premium-web-design`, and `auth-rbac-security` solely for product responsibility/sensitive-action boundaries. No provider, schema or implementation decision is made here.
+Sources of project intent: this specification, `OWNER_DECISIONS.md`, `THEME_REFERENCES.md`, `REFERENCE_CANDIDATES.md` and the current user brief. No provider, schema or implementation decision is made here.
 
 ## Owner clarification — operational prototype, 17 October 2026
 

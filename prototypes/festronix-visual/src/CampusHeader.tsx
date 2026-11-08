@@ -1,6 +1,6 @@
 import {useEffect,useId,useRef,useState} from 'react';
 import {useFestival} from './platform/store';
-import {href,type VisualTheme} from './platform/model';
+import {href} from './platform/model';
 import {workspaceFor} from './platform/demoAuth';
 import './campus-header.css';
 
@@ -31,7 +31,7 @@ export function CampusHeader({view='home',onLogin,onMenuChange}:{view?:string;on
   <dialog ref={dialog} className="campus-nav-menu" aria-labelledby={title} onCancel={()=>change(false)} onClick={e=>{if(e.target===dialog.current)change(false)}}>
    <div className="campus-nav-menu-top"><h2 id={title}>Explore FESTRONIX</h2><button onClick={()=>change(false)} aria-label="Close navigation">Close ×</button></div>
    <nav aria-label="Festival directory">{links.map(([key,label],index)=><a key={key} href={href(key,'Campus')} aria-current={view===key?'page':undefined}><small>0{index+1}</small><span>{label}</span><span aria-hidden="true">↗</span></a>)}{actor&&<a href={href(workspaceFor(actor),'Campus')}><small>05</small><span>My workspace</span><span aria-hidden="true">↗</span></a>}</nav>
-   <div className="campus-nav-menu-bottom"><label>UI theme<select aria-label="UI theme" value="Campus" onChange={e=>location.assign(href(view,e.target.value as VisualTheme))}>{['Campus','Pulse','Panel','Flux'].map(theme=><option key={theme}>{theme}</option>)}</select></label><button onClick={()=>{change(false);onLogin()}}>{actor?'My account':'Log in'} ↗</button></div>
+   <div className="campus-nav-menu-bottom"><button onClick={()=>{change(false);onLogin()}}>{actor?'My account':'Log in'} ↗</button></div>
   </dialog>
  </>;
 }

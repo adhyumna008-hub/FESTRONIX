@@ -62,10 +62,10 @@ Start with [backend setup](docs/BACKEND_SETUP.md) and [architecture](docs/BACKEN
 
 ## Project record
 
-- [Current handoff](docs/AI_HANDOFF.md)
 - [Product specification](docs/PRODUCT_SPEC.md)
 - [Owner decisions](docs/OWNER_DECISIONS.md)
 - [Visual blueprint](docs/LANDING_PAGE_BLUEPRINT.md)
 - [Asset provenance](docs/ASSET_MANIFEST.md)
+- [Deployment record](docs/VERCEL_DEPLOYMENT.md)
 
-Reference images and past experiments are research/history, not permission to copy third-party artwork. College approval, final brand choices and production operating policies remain separate from the local prototype.
+Design references are for research only, not permission to copy third-party artwork. College approval, final brand choices and production operating policies remain separate from the local prototype.

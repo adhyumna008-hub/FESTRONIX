@@ -13,3 +13,13 @@ __pycache__/
 
 # Duplicated convenience archive; source files remain in the folder
 /FESTRONIX_CLAUDE_ASSET_PACK.zip
+
+# Local AI assistant setup and research exports; keep these off GitHub
+/.agents/
+/.codex/
+/docs/AI_HANDOFF.md
+/FESTRONIX_CLAUDE_ASSET_PACK/
+/experiments/
+/.playwright-cli/
+/prototypes/festronix-visual/qa/
+/prototypes/festronix-visual/public/comic/

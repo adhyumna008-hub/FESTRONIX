@@ -18,6 +18,6 @@ export function EditionIdentityFields({year,label,startDate,endDate,minYear=2026
    <label className="op-field"><span>Start date</span><input name="startDate" aria-label="Start date" type="date" value={start} onChange={e=>setStart(e.target.value)} readOnly={locked} required/></label>
    <label className="op-field"><span>End date</span><input name="endDate" aria-label="End date" type="date" value={end} onChange={e=>setEnd(e.target.value)} readOnly={locked} required/></label>
   </div>
-  <p className="op-notice" aria-live="polite">Preview: <strong>FESTRONIX {display}</strong> · year {draftYear||'—'}. Saving applies this identity across all four themes. An upcoming edition stays private until activated.</p>
+  <p className="op-notice" aria-live="polite">Preview: <strong>FESTRONIX {display}</strong> · year {draftYear||'—'}. Saving applies this identity across every theme. An upcoming edition stays private until activated.</p>
  </>;
 }

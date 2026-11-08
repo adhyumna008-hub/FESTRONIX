@@ -1,0 +1,7 @@
+/* Shared media contract: theme framing can vary; uploaded pixels stay intact. */
+.event-art.event-art-neutral{position:relative;overflow:hidden;aspect-ratio:1.65;min-width:0;background:var(--fl-surface,var(--op-soft,var(--surface,#e6e5da)));color:var(--fl-muted,var(--op-muted,var(--muted,#62685d)))}
+.event-art.event-art-neutral>svg{position:absolute;inset:0!important;width:100%!important;height:100%!important;max-height:100%;object-fit:contain;transform:none!important}
+.event-art.event-art-uploaded{position:relative;min-width:0;overflow:hidden;isolation:isolate;filter:none!important;opacity:1!important;background-image:none!important}
+.event-art.event-art-uploaded>img{position:absolute!important;inset:0!important;display:block;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center;transform:none!important;filter:none!important;opacity:1!important}
+.event-art.event-art-uploaded:before,.event-art.event-art-uploaded:after{content:none!important}
+.op-app .op-event-card .event-art-uploaded{height:clamp(220px,30vw,340px)!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important}

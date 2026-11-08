@@ -1,0 +1,75 @@
+/* Directory-only composition. Data, text, actions and keyboard order stay shared. */
+.op-view-events .op-event-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
+.op-view-events .op-event-card{border-radius:3px;box-shadow:none;min-width:0}
+.op-view-events .op-event-card:hover{box-shadow:none}
+.op-view-events .op-event-body{padding:26px;gap:17px;min-width:0}
+.op-view-events .op-event-body h2{font-size:clamp(26px,2.7vw,38px);line-height:1.12}
+.op-view-events .op-event-body>p{font-size:13px;line-height:1.8;max-width:65ch}
+.op-view-events .op-card-bottom>button,.op-view-events .op-card-bottom>a{min-height:46px}
+.op-view-events .event-filter-status>button{min-height:44px}
+.op-view-events .event-art{aspect-ratio:2.15}
+.op-view-events .event-prize{margin-top:0}
+.op-view-events .op-event-meta{margin-top:auto}
+/* Campus: quiet cards with generous reading space and restrained technical artwork. */
+.op-view-events.op-theme-campus .op-event-card{border:1px solid var(--op-line);border-radius:8px}
+.op-view-events.op-theme-campus .event-art{aspect-ratio:2.35}
+.op-view-events.op-theme-campus .op-event-body{padding:28px}
+.op-view-events.op-theme-campus .op-event-body h2{font-size:33px;max-width:21ch}
+/* Pulse: one strong opening event, followed by a two-column programme. */
+.op-view-events.op-theme-pulse .event-art{--poster-bg:#d9f27c;color:#263922}
+.op-view-events.op-theme-pulse .op-event-card{border-top:4px solid var(--op-ink)}
+.op-view-events.op-theme-pulse .op-event-card:first-child{grid-column:1/-1;display:grid;grid-template-columns:1.05fr 1fr;background:var(--op-soft)}
+.op-view-events.op-theme-pulse .op-event-card:first-child .event-art{height:100%;min-height:350px;aspect-ratio:auto}
+.op-view-events.op-theme-pulse .op-event-card:first-child .event-art svg{height:100%;inset:0}
+.op-view-events.op-theme-pulse .op-event-card:first-child .op-event-body h2{font-size:clamp(34px,3.3vw,48px)}
+/* Panel: alternating editorial spreads. Only the non-interactive illustration moves. */
+.op-view-events.op-theme-panel .op-event-grid{grid-template-columns:1fr;gap:0;border-top:5px double var(--op-ink)}
+.op-view-events.op-theme-panel .op-event-card{display:grid;grid-template-columns:.7fr 1.3fr;gap:35px;border:0;border-bottom:1px solid var(--op-line);padding:30px 0;background:transparent;box-shadow:none}
+.op-view-events.op-theme-panel .op-event-card:nth-child(even){grid-template-columns:1.3fr .7fr}
+.op-view-events.op-theme-panel .op-event-card:nth-child(even)>.event-art{grid-column:2;grid-row:1}
+.op-view-events.op-theme-panel .op-event-card:nth-child(even)>.op-event-body{grid-column:1;grid-row:1}
+.op-view-events.op-theme-panel .event-art{height:100%;aspect-ratio:auto;min-height:290px;border:1px solid var(--op-ink);background-image:none}
+.op-view-events.op-theme-panel .op-event-body{padding:8px 0}
+.op-view-events.op-theme-panel .op-event-body h2{font-size:clamp(36px,4vw,56px);max-width:25ch;font-weight:700}
+.op-view-events.op-theme-panel .event-prize{display:flex;justify-content:space-between;align-items:center;gap:18px}
+.op-view-events.op-theme-panel .event-prize strong{font-size:27px}
+/* Studio and Flux: compact artwork accompanies a readable programme index. */
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-grid{grid-template-columns:1fr;gap:0;border-top:1px solid var(--op-ink)}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-card{display:grid;grid-template-columns:190px minmax(0,1fr);gap:28px;align-items:start;padding:30px 0;border:0;border-bottom:1px solid var(--op-line);background:transparent}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .event-art{aspect-ratio:1;min-height:0;border-radius:0;margin-top:7px}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .event-art-label{font-size:7px;left:13px;top:12px}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .event-art-caption{left:13px;bottom:12px;font-size:6px;max-width:80%}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .event-art-number{right:12px;top:9px;font-size:16px}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-body{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:15px 30px;padding:0}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-body>.op-split{grid-column:1/-1}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-body h2{grid-column:1;font-size:31px;max-width:22ch}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-body>p{grid-column:1;grid-row:3;font-size:12px}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .event-prize{grid-column:2;grid-row:2;border:0;padding:0;align-self:start}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-meta{grid-column:2;grid-row:3;margin:0;align-self:start}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-card-bottom{grid-column:1/-1;margin-top:5px;padding-top:16px;border-top:1px solid var(--op-line);justify-content:flex-end}
+.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-card-bottom>*{flex:0 1 190px}
+.op-view-events.op-theme-studio .event-directory-hero{grid-template-columns:minmax(0,1fr) 180px;padding-top:45px}
+.op-view-events.op-theme-studio .event-directory-heading h1{font-size:clamp(45px,5.1vw,77px)}
+.op-view-events.op-theme-studio .event-directory-stamp{padding:20px;max-width:180px}
+.op-view-events.op-theme-studio .event-directory-stamp>b{font-size:90px}
+.op-view-events.op-theme-studio .event-directory-stamp>span,.op-view-events.op-theme-studio .event-directory-stamp small{font-size:7px}
+.op-view-events.op-theme-flux .event-directory-stamp{border-radius:0;transform:none;background:transparent}
+.op-view-events.op-theme-flux .op-event-card{padding-block:34px}
+/* Blueprint: specification cards with a precise diagram, rule and fact rhythm. */
+.op-view-events.op-theme-blueprint .op-event-card{border-radius:0;border:1px solid var(--op-line)}
+.op-view-events.op-theme-blueprint .event-art{--poster-bg:var(--op-soft);color:var(--op-ink);aspect-ratio:2.45;border-bottom:1px solid var(--op-line)}
+.op-view-events.op-theme-blueprint .op-event-body{padding:24px}
+.op-view-events.op-theme-blueprint .op-event-body h2{font-size:30px;max-width:23ch}
+.op-view-events.op-theme-blueprint .event-prize{display:flex;gap:20px;justify-content:space-between;align-items:center;border-block:1px solid var(--op-line);padding:13px 0}
+.op-view-events.op-theme-blueprint .op-event-meta>div{padding:11px 0}
+.op-view-events.op-theme-blueprint .op-card-bottom>*{border-radius:0}
+/* Comic: illustrated technical panels, using the same event diagrams without character photos. */
+.op-view-events.op-theme-comic .event-directory-heading h1 em{color:var(--edition-red)}
+.op-theme-comic .event-section-title h2>span{color:var(--edition-red)}
+.op-view-events.op-theme-comic .op-event-grid{gap:30px}
+.op-view-events.op-theme-comic .op-event-card{border:2px solid var(--op-ink);border-radius:0;box-shadow:5px 5px 0 var(--edition-shadow)}
+.op-view-events.op-theme-comic .event-art{border-bottom:2px solid var(--op-ink);background-image:radial-gradient(#20202424 .8px,transparent .8px);background-size:7px 7px;aspect-ratio:2}
+.op-view-events.op-theme-comic .op-event-body h2{font-family:'Barlow Condensed',Impact,sans-serif;font-size:43px;font-weight:800;letter-spacing:-.015em}
+.op-view-events.op-theme-comic .op-card-bottom>button,.op-view-events.op-theme-comic .op-card-bottom>a{border-radius:0;border-width:2px}
+@media(max-width:900px){.op-view-events .op-event-grid{gap:23px}.op-view-events .op-event-body{padding:21px}.op-view-events.op-theme-campus .op-event-body{padding:23px}.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-card{grid-template-columns:135px minmax(0,1fr);gap:22px}.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-body{grid-template-columns:1fr;gap:14px;padding:0}.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-body>*{grid-column:1;grid-row:auto}.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-body h2{font-size:28px}.op-view-events:is(.op-theme-studio,.op-theme-flux) .event-prize{display:flex;gap:18px;align-items:center;justify-content:space-between}.op-view-events.op-theme-panel .op-event-card{gap:24px}}
+@media(max-width:620px){.op-view-events .op-event-grid,.op-view-events.op-theme-panel .op-event-grid{grid-template-columns:1fr;gap:27px}.op-view-events .op-event-body,.op-view-events.op-theme-campus .op-event-body{padding:22px}.op-view-events .op-event-body h2,.op-view-events.op-theme-campus .op-event-body h2{font-size:29px}.op-view-events .op-event-body>p{font-size:13px}.op-view-events.op-theme-pulse .op-event-card:first-child{display:flex;grid-column:auto}.op-view-events.op-theme-pulse .op-event-card:first-child .event-art{height:auto;min-height:0;aspect-ratio:1.85}.op-view-events.op-theme-pulse .op-event-card:first-child .op-event-body h2{font-size:31px}.op-view-events.op-theme-panel .op-event-card,.op-view-events.op-theme-panel .op-event-card:nth-child(even){display:flex;flex-direction:column;gap:18px;padding:0 0 27px}.op-view-events.op-theme-panel .event-art{height:auto;min-height:0;aspect-ratio:1.9;width:100%}.op-view-events.op-theme-panel .op-event-body{padding:0}.op-view-events.op-theme-panel .op-event-body h2{font-size:39px}.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-grid{gap:0}.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-card{display:flex;flex-direction:column;gap:18px;padding:25px 0}.op-view-events:is(.op-theme-studio,.op-theme-flux) .event-art{width:100%;aspect-ratio:2.7;margin:0}.op-view-events:is(.op-theme-studio,.op-theme-flux) .event-art svg{inset:0;height:100%}.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-event-body{width:100%;display:flex;gap:15px}.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-card-bottom{width:100%;justify-content:stretch}.op-view-events:is(.op-theme-studio,.op-theme-flux) .op-card-bottom>*{flex:1}.op-view-events.op-theme-studio .event-directory-hero{grid-template-columns:1fr;padding-top:32px}.op-view-events.op-theme-studio .event-directory-stamp{display:none}.op-view-events.op-theme-studio .event-directory-heading h1{font-size:45px}.op-view-events.op-theme-blueprint .op-event-body{padding:21px}.op-view-events.op-theme-blueprint .op-event-body h2{font-size:28px}.op-view-events.op-theme-comic .op-event-body h2{font-size:39px}.op-view-events.op-theme-comic .op-event-card{box-shadow:4px 4px 0 var(--edition-shadow)}}

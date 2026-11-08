@@ -1,0 +1,64 @@
+.festival-landing[data-theme="Flux"]{--fl-bg:#080f12;--fl-surface:#101c20;--fl-ink:#eaf3ee;--fl-muted:#a8bbb3;--fl-accent:#b2e6d1;--fl-on-accent:#10231d;--fl-line:#30413d;--fl-display:"Sora","Manrope",sans-serif}
+.festival-landing[data-theme="Flux"] ::selection{background:#b2e6d1;color:#10231d}
+.festival-landing[data-theme="Flux"] .flux-hero{position:relative;isolation:isolate;min-height:740px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);align-items:center;padding:54px clamp(24px,5vw,90px) 78px;overflow:hidden;border-bottom:1px solid var(--fl-line);background:#080f12}
+.festival-landing[data-theme="Flux"] .flux-hero-content{position:relative;z-index:2;max-width:660px;min-width:0;overflow-wrap:anywhere;pointer-events:none}
+.festival-landing[data-theme="Flux"] .flux-hero-content a{pointer-events:auto}
+.festival-landing[data-theme="Flux"] .flux-identity{margin-bottom:32px}
+.festival-landing[data-theme="Flux"] .flux-hero-tagline{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#c2d3ca;margin:0 0 16px}
+.festival-landing[data-theme="Flux"] .flux-identity h1{font-family:var(--fl-display);font-size:clamp(68px,6.7vw,112px);font-weight:600;line-height:1;letter-spacing:-.04em;margin:0;white-space:nowrap;color:#edf7f1}
+.festival-landing[data-theme="Flux"] .flux-identity h1 span{color:#b3e3cf}
+.festival-landing[data-theme="Flux"] .flux-edition{display:inline-block;font-family:var(--fl-display);font-size:21px;letter-spacing:.12em;margin-top:17px;color:#c5ded2}
+.festival-landing[data-theme="Flux"] .flux-hero-content>h2{font-family:var(--fl-display);font-size:clamp(30px,3.25vw,48px);font-weight:500;line-height:1.15;letter-spacing:-.035em;max-width:530px;margin:0 0 20px;text-wrap:balance}
+.festival-landing[data-theme="Flux"] .flux-hero-description{max-width:410px;font-size:16px;line-height:1.7;color:#b5c8be;margin:0 0 28px}
+.festival-landing[data-theme="Flux"] .flux-hero-facts{display:grid;grid-template-columns:1fr;gap:12px;max-width:425px;margin:0 0 30px}
+.festival-landing[data-theme="Flux"] .flux-hero-facts>div{display:grid;grid-template-columns:49px minmax(0,1fr);gap:14px}
+.festival-landing[data-theme="Flux"] .flux-hero-facts dt{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#91a89c;padding-top:2px}
+.festival-landing[data-theme="Flux"] .flux-hero-facts dd{margin:0;font-size:14px;line-height:1.5;color:#dce8e0}
+.festival-landing[data-theme="Flux"] .flux-hero-actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.festival-landing[data-theme="Flux"] .flux-hero-actions .fl-button{background:#b2e6d1;color:#10231d}
+.festival-landing[data-theme="Flux"] .flux-stage{position:absolute;z-index:0;left:36%;right:-5%;top:0;bottom:0;pointer-events:none;background:radial-gradient(ellipse at 56% 42%,#173c342b 0,transparent 65%)}
+.festival-landing[data-theme="Flux"] .flux-stage:before{content:"";position:absolute;z-index:2;inset:0;pointer-events:none;background:linear-gradient(90deg,#080f12 0,transparent 32%,transparent 88%,#080f12 100%),linear-gradient(0deg,#080f12 0,transparent 18%,transparent 80%,#080f12 100%)}
+.festival-landing[data-theme="Flux"] .flux-stage:after{content:"";position:absolute;width:50%;height:1px;left:28%;bottom:14%;background:linear-gradient(90deg,transparent,#688e7755,transparent);transform:perspective(400px) rotateX(60deg)}
+.festival-landing[data-theme="Flux"] .flux-still-object,.festival-landing[data-theme="Flux"] .flux-live-object{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .35s ease}
+.festival-landing[data-theme="Flux"] .flux-still-object{opacity:1;padding:40px 10px 10px 0}
+.festival-landing[data-theme="Flux"] .flux-live-object{opacity:0}
+.festival-landing[data-theme="Flux"] .flux-stage-ready .flux-live-object{opacity:1}
+.festival-landing[data-theme="Flux"] .flux-stage-ready .flux-still-object{opacity:0}
+.festival-landing[data-theme="Flux"] .flux-mode-control{position:absolute;z-index:4;right:clamp(24px,5vw,90px);bottom:24px;font-size:12px;color:#b0c9bb;max-width:400px;background:transparent;border:0;margin:0}
+.festival-landing[data-theme="Flux"] .flux-mode-control>summary{list-style:none;display:flex;align-items:center;gap:12px;cursor:pointer;min-height:44px;border-bottom:1px solid #4a6355;padding:8px 0;font-size:12px;font-weight:500}
+.festival-landing[data-theme="Flux"] .flux-mode-control>summary::-webkit-details-marker{display:none}
+.festival-landing[data-theme="Flux"] .flux-mode-control>summary span{color:#e2eee7}
+.festival-landing[data-theme="Flux"] .flux-mode-control[open]>summary svg{transform:rotate(180deg)}
+.festival-landing[data-theme="Flux"] .flux-mode-options{padding:14px;position:absolute;bottom:100%;right:0;width:300px;background:#14211d;border:1px solid #496456;display:grid;gap:7px}
+.festival-landing[data-theme="Flux"] .flux-mode-options button{min-height:42px;text-align:left;font:inherit;font-size:13px;color:#dcece2;background:#172a21;border:1px solid #4f6758;padding:9px 11px;cursor:pointer;border-radius:0}
+.festival-landing[data-theme="Flux"] .flux-mode-options button[aria-pressed="true"]{color:#0c2117;background:#c2e3ce;border-color:#c2e3ce}
+.festival-landing[data-theme="Flux"] .flux-mode-options p{font-size:12px;line-height:1.5;margin:5px 0 0;color:#b8cbbf}
+.festival-landing[data-theme="Flux"] .flux-mode-control summary:focus-visible,.festival-landing[data-theme="Flux"] .flux-mode-options button:focus-visible{outline:2px solid #e0f1bd;outline-offset:5px}
+@media(min-width:1600px){.festival-landing[data-theme="Flux"] .flux-hero{min-height:820px}.festival-landing[data-theme="Flux"] .flux-hero-content{margin-left:max(0px,calc((100vw - 1600px)/2))}.festival-landing[data-theme="Flux"] .flux-stage{right:0;left:40%}}
+@media(max-width:1050px){.festival-landing[data-theme="Flux"] .flux-hero{grid-template-columns:1.12fr .88fr;min-height:720px;padding-left:32px;padding-right:32px}.festival-landing[data-theme="Flux"] .flux-stage{left:34%;right:-20%;opacity:.9}.festival-landing[data-theme="Flux"] .flux-identity h1{font-size:clamp(63px,8.2vw,85px)}.festival-landing[data-theme="Flux"] .flux-hero-content>h2{font-size:34px}.festival-landing[data-theme="Flux"] .flux-hero-description{max-width:350px}.festival-landing[data-theme="Flux"] .flux-mode-control{right:32px}}
+@media(max-width:767px){
+ .festival-landing[data-theme="Flux"] .flux-hero{min-height:0;display:flex;flex-direction:column;align-items:stretch;padding:36px 22px 20px;overflow:hidden}
+ .festival-landing[data-theme="Flux"] .flux-hero-content{max-width:none;order:0}.festival-landing[data-theme="Flux"] .flux-identity{margin-bottom:22px}.festival-landing[data-theme="Flux"] .flux-hero-tagline{font-size:10px;letter-spacing:.1em;margin-bottom:16px}.festival-landing[data-theme="Flux"] .flux-identity h1{font-size:clamp(45px,12.5vw,84px);letter-spacing:-.04em}.festival-landing[data-theme="Flux"] .flux-edition{font-size:16px;margin-top:12px}.festival-landing[data-theme="Flux"] .flux-hero-content>h2{font-size:30px;max-width:500px}.festival-landing[data-theme="Flux"] .flux-hero-description{max-width:560px;font-size:15px;line-height:1.65;margin-bottom:24px}.festival-landing[data-theme="Flux"] .flux-hero-facts{margin-bottom:24px}.festival-landing[data-theme="Flux"] .flux-hero-facts>div{grid-template-columns:43px 1fr;gap:9px}.festival-landing[data-theme="Flux"] .flux-hero-facts dd{font-size:13px}.festival-landing[data-theme="Flux"] .flux-hero-actions{gap:18px}.festival-landing[data-theme="Flux"] .flux-hero-actions .fl-button{padding:13px 17px}.festival-landing[data-theme="Flux"] .flux-hero-actions .fl-inline-link{font-size:13px}
+ .festival-landing[data-theme="Flux"] .flux-stage{position:relative;left:auto;right:auto;top:auto;bottom:auto;order:1;height:350px;margin:-5px -22px -24px;opacity:1}.festival-landing[data-theme="Flux"] .flux-still-object{padding:0 20px}.festival-landing[data-theme="Flux"] .flux-stage:before{background:linear-gradient(0deg,#080f12,transparent 22%,transparent 78%,#080f12)}.festival-landing[data-theme="Flux"] .flux-stage:after{bottom:11%}.festival-landing[data-theme="Flux"] .flux-mode-control{position:relative;right:auto;bottom:auto;order:2;align-self:flex-end;max-width:100%;width:100%;font-size:11px;margin-top:0}.festival-landing[data-theme="Flux"] .flux-mode-control>summary{justify-content:space-between;gap:10px;font-size:11px}.festival-landing[data-theme="Flux"] .flux-mode-options{width:min(320px,calc(100vw - 44px));right:0}
+}
+@media(prefers-reduced-motion:reduce){.festival-landing[data-theme="Flux"] .flux-still-object,.festival-landing[data-theme="Flux"] .flux-live-object{transition:none}}
+
+/* A uses the programme's own content, never a fixed three-node illustration. */
+.festival-landing[data-theme="Flux"] .flux-hero[data-flux-mode="Technical Tracks"]{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(35px,6vw,110px);align-items:start;padding-bottom:98px}
+.festival-landing[data-theme="Flux"] .flux-programme{min-width:0;align-self:center;border-top:1px solid #668579;position:relative;z-index:2;margin-top:10px}
+.festival-landing[data-theme="Flux"] .flux-programme-top{display:flex;gap:20px;justify-content:space-between;padding:16px 0;font:500 10px/1.5 Manrope,sans-serif;letter-spacing:.1em;color:var(--fl-muted)}
+.festival-landing[data-theme="Flux"] .flux-programme-identity{display:grid;grid-template-columns:100px minmax(0,1fr);align-items:center;gap:30px;padding:24px 0 32px;border-bottom:1px solid var(--fl-line)}
+.festival-landing[data-theme="Flux"] .flux-programme-monogram{display:flex;align-items:baseline;font:500 86px/1 Sora,sans-serif;letter-spacing:-.04em;color:#eaf3ee}
+.festival-landing[data-theme="Flux"] .flux-programme-monogram>span{font-size:.65em;color:var(--fl-accent);margin-left:-6px}
+.festival-landing[data-theme="Flux"] .flux-programme-identity h3{font:500 clamp(24px,2.25vw,36px)/1.15 Sora,sans-serif;letter-spacing:-.035em;max-width:15ch;overflow-wrap:anywhere}
+.festival-landing[data-theme="Flux"] .flux-track-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:0 28px}
+.festival-landing[data-theme="Flux"] .flux-track-links>a{display:grid;grid-template-columns:20px minmax(0,1fr) 18px;gap:12px;align-items:start;padding:20px 0;min-height:84px;border-bottom:1px solid var(--fl-line);transition:border-color .2s,color .2s}
+.festival-landing[data-theme="Flux"] .flux-track-links>a:hover,.festival-landing[data-theme="Flux"] .flux-track-links>a:focus-visible{border-color:var(--fl-accent);color:var(--fl-accent)}
+.festival-landing[data-theme="Flux"] .flux-track-index{font:400 10px/1.7 Manrope,sans-serif;color:var(--fl-muted);padding-top:3px}
+.festival-landing[data-theme="Flux"] .flux-track-name{font:500 19px/1.35 Sora,sans-serif;letter-spacing:-.02em;overflow-wrap:anywhere}
+.festival-landing[data-theme="Flux"] .flux-track-name small{display:block;margin-top:7px;color:var(--fl-muted);font:400 11px/1.5 Manrope,sans-serif;letter-spacing:0}
+.festival-landing[data-theme="Flux"] .flux-programme-all{display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12px;min-height:52px;margin-top:10px}
+.festival-landing[data-theme="Flux"] .flux-programme-empty{font-size:14px;line-height:1.8;color:var(--fl-muted);padding-block:24px}
+.festival-landing[data-theme="Flux"] .fl-tracks{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+@media(max-width:1050px){.festival-landing[data-theme="Flux"] .flux-hero[data-flux-mode="Technical Tracks"]{grid-template-columns:1fr;gap:34px;min-height:0}.festival-landing[data-theme="Flux"] .flux-hero[data-flux-mode="Technical Tracks"] .flux-hero-content{max-width:680px}.festival-landing[data-theme="Flux"] .flux-programme{margin-top:0}.festival-landing[data-theme="Flux"] .flux-programme-identity{grid-template-columns:100px 1fr}.festival-landing[data-theme="Flux"] .flux-programme-identity h3{max-width:25ch}}
+@media(max-width:767px){.festival-landing[data-theme="Flux"] .flux-hero[data-flux-mode="Technical Tracks"]{display:flex;gap:32px;padding-bottom:22px}.festival-landing[data-theme="Flux"] .flux-programme{width:100%;order:1}.festival-landing[data-theme="Flux"] .flux-programme-top{font-size:9px;gap:12px}.festival-landing[data-theme="Flux"] .flux-programme-identity{grid-template-columns:76px 1fr;gap:22px;padding:20px 0 24px}.festival-landing[data-theme="Flux"] .flux-programme-monogram{font-size:66px}.festival-landing[data-theme="Flux"] .flux-programme-identity h3{font-size:25px}.festival-landing[data-theme="Flux"] .flux-track-links{grid-template-columns:1fr;gap:0}.festival-landing[data-theme="Flux"] .flux-track-links>a{min-height:76px;padding:17px 0}.festival-landing[data-theme="Flux"] .flux-track-name{font-size:19px}}

@@ -1,0 +1,141 @@
+/* Campus programme composition. The original CampusX scene and its geometry are untouched. */
+.gl-campus-composed .gl-hero-meta{font-size:10px;letter-spacing:.08em}
+.gl-campus-composed .gl-hero-copy h2{text-wrap:balance;font-weight:500}
+.gl-campus-composed .gl-hero-copy>p:not(.gl-eyebrow){max-width:38ch}
+.gl-campus-composed .gl-hero-bottom{border-bottom:1px solid #c5c6ba}
+.gl-campus-composed .gl-campus-intro{display:grid;grid-template-columns:1fr 2fr;gap:clamp(35px,7vw,120px);padding:64px;max-width:1800px;margin:auto;border-bottom:1px solid #d0d1c5}
+.gl-campus-intro>.gl-eyebrow{font-size:10px;line-height:1.8;color:#64675e;margin:6px 0}
+.gl-campus-intro>div>p{font-family:Outfit,Manrope,sans-serif;font-size:clamp(24px,2.55vw,40px);letter-spacing:-.025em;line-height:1.25;max-width:34ch;margin:0}
+.gl-campus-intro dl{display:flex;flex-wrap:wrap;gap:40px 70px;margin:30px 0 0}
+.gl-campus-intro dl>div{display:flex;flex-direction:column-reverse;gap:5px}
+.gl-campus-intro dt{font-size:10px;color:#64675e}
+.gl-campus-intro dd{margin:0;font:500 28px/1.15 Outfit,Manrope,sans-serif;letter-spacing:-.03em}
+.gl-campus-composed .gl-section{padding-block:80px}
+.gl-campus-composed .gl-section-heading{align-items:flex-end;margin-bottom:35px}
+.gl-campus-composed .gl-section h2{font-size:clamp(38px,4.4vw,68px);line-height:1.02;font-weight:500}
+.gl-campus-composed .gl-section h2 span{color:#7b7f73}
+.gl-campus-composed .gl-interest-list{border:0;gap:8px;padding-bottom:12px}
+.gl-campus-composed .gl-interest-list button{border-radius:4px;min-width:112px;justify-content:space-between;padding:12px 16px}
+.gl-campus-composed .gl-interest-description{border-top:1px solid #bcbeb2;padding-top:22px;margin-bottom:28px;align-items:center}
+.gl-campus-composed .gl-interest-description h3{font-size:21px;letter-spacing:-.02em}
+.gl-campus-composed .gl-interest-description p{max-width:44ch}
+.gl-programme-board{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;border-bottom:1px solid #bcbeb2}
+.gl-programme-event{padding:25px 0!important;border-top:1px solid #bcbeb2;display:flex;flex-direction:column;gap:16px;min-width:0;text-align:left}
+.gl-programme-meta{display:flex;justify-content:space-between;gap:15px;font-size:10px;letter-spacing:.065em;color:#64675e;font-weight:600}
+.gl-programme-event h3{margin:0;max-width:28ch}
+.gl-programme-event h3 button{font:500 clamp(22px,2vw,31px)/1.1 Outfit,Manrope,sans-serif;letter-spacing:-.025em;display:flex;align-items:start;justify-content:space-between;gap:20px;text-align:left;width:100%;padding:0;min-height:44px}
+.gl-programme-event h3 svg{flex:none;margin-top:4px;width:19px;height:19px}
+.gl-programme-facts{display:grid;gap:5px;font-size:11px;line-height:1.6;margin:0}
+.gl-programme-facts>div{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px}
+.gl-programme-facts dt{color:#74796b}
+.gl-programme-facts dd{margin:0}
+.gl-programme-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:auto;font-size:11px}
+.gl-programme-actions>strong{margin-right:auto;font-size:12px;font-weight:600}
+.gl-programme-actions>button{min-height:44px;border:1px solid #aaaea0;border-radius:4px;padding:10px 13px;font-size:11px;font-weight:600}
+.gl-programme-actions .gl-card-register{display:inline-flex;align-items:center;width:auto;margin:0;min-height:44px;background:#202920;color:#f1f0e9;border-color:#202920}
+.gl-programme-actions>button:disabled{opacity:.6;cursor:not-allowed}
+.gl-programme-feature{grid-row:span 2;background:#202920;color:#f1f0e9;padding:32px!important;margin-bottom:30px;border:0;border-radius:4px;position:relative;overflow:hidden;min-height:480px}
+.gl-programme-feature:before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:#f86232}
+.gl-programme-feature .gl-programme-meta{color:#d2d6c8;border-bottom:1px solid #7c84744d;padding-bottom:24px}
+.gl-programme-feature h3{margin-top:20px;max-width:16ch}
+.gl-programme-feature h3 button{font-size:clamp(32px,3.2vw,51px);letter-spacing:-.035em}
+.gl-programme-feature h3 svg{width:26px;height:26px;color:#ff895f}
+.gl-programme-description{font-size:13px;line-height:1.75;color:#c7cdbf;max-width:44ch;margin:0 0 24px}
+.gl-programme-feature .gl-programme-facts{font-size:12px;padding-bottom:22px;border-bottom:1px solid #7c84744d}
+.gl-programme-feature .gl-programme-facts dt{color:#a6b09b}
+.gl-programme-feature .gl-programme-actions{margin-top:6px}
+.gl-programme-feature .gl-programme-actions>button{border-color:#65735c}
+.gl-programme-feature .gl-card-register{background:#f86232;color:#211710;border-color:#f86232}
+.gl-programme-single{grid-template-columns:1fr}
+.gl-programme-single .gl-programme-feature{min-height:0;max-width:850px;margin:0 auto 28px;width:100%;box-sizing:border-box}
+.gl-campus-composed .gl-all-events{width:fit-content;margin-top:24px;border-bottom:1px solid #32382d;font-size:12px;padding-block:10px;display:flex;align-items:center;gap:40px}
+.gl-campus-composed .gl-clubs{background:#e5e6dc;border-block:1px solid #c4c8b9}
+.gl-track-index{border-top:1px solid #adb4a0}
+.gl-track-row{display:grid!important;grid-template-columns:35px minmax(170px,1.5fr) minmax(150px,1fr) 80px 24px;align-items:center;gap:30px;padding:30px 0;border-bottom:1px solid #adb4a0;transition:color .2s}
+.gl-track-number{align-self:start;padding-top:6px;font:500 11px Manrope,sans-serif;color:#6e7863}
+.gl-track-row>div>small{font-size:9px;letter-spacing:.055em;color:#626c58;text-transform:uppercase}
+.gl-campus-composed .gl-track-row h3{font-size:clamp(38px,4.1vw,64px);line-height:1.05;letter-spacing:-.035em;margin:6px 0 0;min-height:0}
+.gl-campus-composed .gl-track-row p{font-size:12px;line-height:1.65;max-width:28ch;margin:0;color:#56614b}
+.gl-track-count{font-size:10px;text-align:right;color:#626c58}
+.gl-track-row>svg{width:23px;height:23px;transition:transform .2s}
+.gl-track-row:hover>svg{transform:translate(3px,-3px)}
+.gl-campus-composed .gl-lineup .gl-section-heading{border-bottom:1px solid #adb4a0;padding-bottom:28px;margin-bottom:0}
+.gl-campus-composed .gl-timetable>button{padding-block:26px}
+.gl-campus-composed .gl-visit{border:1px solid #b9c0ad;border-radius:4px;background:transparent}
+.gl-campus-composed .gl-visit h2{font-size:clamp(34px,3.9vw,58px)}
+.gl-campus-composed .gl-visit-note>.gl-eyebrow{font:600 10px/1.5 Manrope,sans-serif;letter-spacing:.08em;margin:0 0 20px}
+.gl-visit-note ol{list-style:none;padding:0;margin:0 0 23px;display:grid;gap:0}
+.gl-visit-note li{display:flex;gap:16px;font-size:13px;line-height:1.6;padding:15px 0;border-top:1px solid #b9c0ad}
+.gl-visit-note li span{font-size:10px;padding-top:3px;color:#626c58;flex:none}
+.gl-campus-composed .gl-visit-note>small{font-size:11px;line-height:1.6;color:#626c58}
+.gl-campus-composed .gl-last-call{display:flex;align-items:flex-end;justify-content:space-between;text-align:left;gap:40px;max-width:1800px;margin:auto;padding:60px 64px 75px;border-top:1px solid #c4c8b9;background:#f86232}
+.gl-campus-composed .gl-last-call h2{font:500 clamp(48px,7.3vw,112px)/.97 Outfit,Manrope,sans-serif;letter-spacing:-.04em;margin:24px 0 0}
+.gl-campus-composed .gl-last-call h2 em{color:#f8efe3;font-style:normal}
+.gl-campus-composed .gl-last-call>div+div>p{font-size:14px;line-height:1.7;margin:0 0 25px}
+.gl-campus-composed .gl-last-call .gl-button{white-space:nowrap}
+@media(max-width:1050px){
+ .gl-campus-composed .gl-campus-intro{padding:45px 36px;grid-template-columns:1fr 2fr;gap:35px}
+ .gl-campus-intro dl{gap:25px 40px}
+ .gl-campus-composed .gl-section{padding-block:58px}
+ .gl-programme-board{gap:0 24px}.gl-programme-feature{padding:26px!important;min-height:460px}
+ .gl-programme-feature h3 button{font-size:35px}.gl-programme-event h3 button{gap:12px}
+ .gl-programme-actions>strong{width:100%;margin-bottom:2px}
+ .gl-track-row{grid-template-columns:25px minmax(150px,1.3fr) minmax(130px,1fr) 24px;gap:20px}
+ .gl-track-count{display:none}
+ .gl-campus-composed .gl-last-call{padding:45px 36px 60px}
+}
+@media(max-width:639px){
+ .gl-campus-composed .gl-hero-meta{font-size:7px}
+ .gl-campus-composed .gl-campus-intro{display:block;padding:36px 24px}
+ .gl-campus-intro>.gl-eyebrow br{display:none}.gl-campus-intro>.gl-eyebrow{margin-bottom:20px}
+ .gl-campus-intro>div>p{font-size:25px;line-height:1.3}
+ .gl-campus-intro dl{gap:25px;margin-top:25px;justify-content:space-between}
+ .gl-campus-intro dd{font-size:25px}.gl-campus-intro dt{font-size:9px}
+ .gl-campus-composed .gl-section{padding:44px 24px}
+ .gl-campus-composed .gl-section h2{font-size:40px}.gl-campus-composed .gl-section-heading{margin-bottom:25px}
+ .gl-campus-composed .gl-interest-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .gl-campus-composed .gl-interest-list button{min-width:0;font-size:11px}
+ .gl-campus-composed .gl-interest-description{padding-top:19px;margin-top:10px}
+ .gl-campus-composed .gl-interest-description h3{font-size:20px}
+ .gl-programme-board{grid-template-columns:1fr;gap:0}
+ .gl-programme-feature{grid-row:auto;min-height:0;padding:25px!important;margin-bottom:0}
+ .gl-programme-feature h3{margin-top:10px}.gl-programme-feature h3 button{font-size:37px}
+ .gl-programme-feature .gl-programme-meta{font-size:9px;padding-bottom:19px}
+ .gl-programme-description{font-size:12px;margin-bottom:7px}
+ .gl-programme-event:not(.gl-programme-feature){padding:27px 0!important}
+ .gl-programme-event:not(.gl-programme-feature) h3 button{font-size:26px}
+ .gl-programme-meta{font-size:9px}.gl-programme-actions>strong{width:auto;margin-right:auto}
+ .gl-programme-actions{gap:8px}.gl-programme-actions>button{font-size:10px;padding-inline:11px}
+ .gl-programme-feature .gl-programme-actions>strong{width:100%;margin-bottom:3px}
+ .gl-programme-facts{font-size:11px}.gl-programme-feature .gl-programme-facts{font-size:11px}
+ .gl-track-row{grid-template-columns:20px minmax(0,1fr) 24px;gap:12px;padding:25px 0}
+ .gl-campus-composed .gl-track-row h3{font-size:46px}
+ .gl-track-row>p{grid-column:2;grid-row:2;max-width:none!important}
+ .gl-track-row>svg{grid-column:3;grid-row:1}.gl-track-row>div>small{font-size:8px}
+ .gl-campus-composed .gl-visit{padding:30px 24px}.gl-campus-composed .gl-visit h2{font-size:36px}
+ .gl-campus-composed .gl-last-call{display:block;padding:40px 24px 45px}
+ .gl-campus-composed .gl-last-call h2{font-size:64px;margin:20px 0 28px}
+ .gl-campus-composed .gl-last-call>div+div>p{font-size:12px;margin-bottom:20px}
+}
+@media(prefers-reduced-motion:reduce){.gl-campus-composed .gl-track-row,.gl-campus-composed .gl-track-row>svg{transition:none}}
+
+/* The frame belongs to Campus; its artwork and event copy are replaceable. */
+.gl-campus-composed .gl-interest-list{display:flex;flex-wrap:wrap}
+.gl-campus-composed .gl-interest-list button{min-width:0;max-width:100%;flex:0 1 auto;gap:20px;text-align:left;overflow-wrap:anywhere;white-space:normal}
+.gl-campus-composed .gl-interest-description>*{min-width:0;overflow-wrap:anywhere}
+.gl-programme-pair{align-items:stretch}
+.gl-programme-pair .gl-programme-feature{grid-row:auto;margin-bottom:0;min-height:0}
+.gl-programme-art{height:190px;position:relative;overflow:hidden;background:#e5e6dc;border:1px solid #bcc3b2}
+.gl-programme-feature .gl-programme-art{height:280px;background:#283329;border-color:#52614c}
+.gl-programme-art>.event-art{position:relative;height:100%!important;min-height:0!important;max-height:none!important;width:100%;aspect-ratio:auto!important;filter:none!important;background:transparent!important;color:inherit!important}
+.gl-programme-art .event-art>img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;max-height:100%!important;object-fit:contain!important;filter:none!important;transform:none!important}
+.gl-programme-art .event-art>svg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transform:none}
+.gl-programme-event h3,.gl-programme-event h3 button,.gl-programme-facts dd,.gl-programme-meta>span,.gl-track-row h3{overflow-wrap:anywhere;min-width:0}
+.gl-campus-composed .gl-programme-event h3{width:100%;max-width:none}
+.gl-campus-composed .gl-programme-event h3 button{display:grid;grid-template-columns:minmax(0,1fr) 26px;gap:16px;align-items:start}
+.gl-campus-composed .gl-programme-title{min-width:0;overflow-wrap:break-word;word-break:normal;hyphens:none;text-wrap:pretty}
+.gl-campus-composed .gl-track-row{grid-template-columns:35px minmax(0,1.5fr) minmax(0,1fr) 80px 24px}
+.gl-schedule-empty{font-size:14px;line-height:1.7;padding:24px 0;color:#626c58}
+@media(max-width:1050px){.gl-campus-composed .gl-track-row{grid-template-columns:25px minmax(0,1.3fr) minmax(0,1fr) 24px}}
+@media(max-width:639px){.gl-campus-composed .gl-interest-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.gl-campus-composed .gl-interest-list button{width:100%;gap:10px;align-items:start}.gl-programme-art,.gl-programme-feature .gl-programme-art{height:220px}.gl-programme-pair .gl-programme-feature{margin-bottom:0}.gl-campus-composed .gl-track-row{grid-template-columns:20px minmax(0,1fr) 24px}.gl-campus-composed .gl-track-row h3{font-size:clamp(28px,8vw,46px)}}
+@media(max-width:639px){.gl-campus-composed .gl-programme-feature h3 button{font-size:32px}.gl-campus-composed .gl-programme-event h3 button{gap:12px;grid-template-columns:minmax(0,1fr) 24px}}

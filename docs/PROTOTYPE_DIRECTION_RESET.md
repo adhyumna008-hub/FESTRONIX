@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-06  
 **Status:** Build-ready specification for the next authorized prototype; not implementation or final brand approval.  
-**Companions:** [Interaction architecture](IMMERSIVE_INTERACTION_ARCHITECTURE.md), [asset manifest](ASSET_MANIFEST.md), [handoff](AI_HANDOFF.md).
+**Companions:** [Interaction architecture](IMMERSIVE_INTERACTION_ARCHITECTURE.md), [asset manifest](ASSET_MANIFEST.md), [product specification](PRODUCT_SPEC.md).
 
 ## 1. Authority and scope
 

@@ -95,6 +95,9 @@ test('results and appeals preserve faculty finalization and archive continuity',
  s.events.find(e=>e.id==='signal')!.appealUntil='2020-01-01T00:00:00Z';act(s,'primary',{type:'results',eventId:'signal',text:'',finalize:true});
  const next=s.editions.find(e=>e.year===2027)!;
  assert.equal(s.events.filter(e=>e.editionId===next.id).length,0);assert.throws(()=>act(s,'primary',{type:'activate',editionId:next.id}),/Close/);
+ next.contact='Faculty help desk · help@example.test';
+ const draft={...structuredClone(s.events.find(e=>e.id==='signal')!),id:'signal-next-edition',editionId:next.id,ownerId:'primary',state:'Draft' as const,date:next.startDate,time:'09:00',deadline:`${next.year}-10-17T18:00`,teamEditDeadline:`${next.year}-10-17T18:00`};
+ s.events.push(draft);
  s.editions[0].registrationOpen=false;act(s,'primary',{type:'activate',editionId:next.id});
  assert.ok(s.entries.some(e=>e.id===r.id));assert.equal(staff(s,'dev').active,false);assert.equal(staff(s,'participant').editionId,next.id);
  assert.throws(()=>reportEvents(s,staff(s,'dev'),['signal']),/Only faculty/);assert.equal(reportEvents(s,staff(s,'primary'),['signal']).length,1);

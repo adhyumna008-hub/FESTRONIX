@@ -2,7 +2,7 @@
 
 ## Current status
 
-The prototype has been published on Vercel. The latest comprehensive check and repair pass is recorded in [FUNCTIONAL_QA_2026-10-18.md](FUNCTIONAL_QA_2026-10-18.md): 32 automated tests, build and core browser workflows passed. Current production default is 2026, with edition presets through 2030. See AI_HANDOFF.md / VERCEL_DEPLOYMENT.md for the verified release.
+The prototype has been published on Vercel. The latest comprehensive check and repair pass is recorded in [FUNCTIONAL_QA_2026-10-18.md](FUNCTIONAL_QA_2026-10-18.md): 32 automated tests, build and core browser workflows passed. Current production default is 2026, with edition presets through 2030. See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md) for the verified release.
 
 The older results and initial remaining-work list below are historical. The new report identifies what was completed and the remaining physical-device, capture and backend-integration limits.
 

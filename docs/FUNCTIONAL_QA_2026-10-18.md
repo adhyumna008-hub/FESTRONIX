@@ -60,4 +60,4 @@ In the 2026 browser fixture, reports showed **10 registered people, 6 confirmed,
 
 ## Release
 
-The fixes are prepared for the existing GitHub → Vercel production integration. The verified commit and deployment are recorded in `AI_HANDOFF.md` and `VERCEL_DEPLOYMENT.md` after publication.
+Published through the existing GitHub → Vercel integration: commit `d703d02dd64d8a595b53e92d082f4e1204c32dbc`, production deployment `dpl_AyhSKrNaa8MWqCdHtPANrF6BXTZF`, **READY** with matching SHA and existing aliases. Live smoke checks confirmed corrected sign-in/Open workspace routing, shared navigation, six-event directory and compact phone dates, with no measured overflow or console errors. Admin signed out; current edition remains 2026. Proof: `output/full-qa/live-campus-repaired-390.png`. See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md) for the release record; post-publication result evidence remains in local `output/`.

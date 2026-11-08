@@ -32,17 +32,20 @@ test('legacy fictional 2027 edition is corrected once without resetting records'
  const auditLength=s.audit.length;ensureEditionCatalogue(s);assert.equal(s.audit.length,auditLength);assert.equal(s.editions.length,5);
 });
 
-test('preset settings survive reload; activation is explicit and preserves old records',()=>{
+test('preset settings survive reload; a complete upcoming edition activates without losing old records',()=>{
  const s=seedState(),owner=s.staff.find(x=>x.id==='primary')!;
- const future=s.editions.find(e=>e.year===2028)!;future.heroTitle='Prepared for 2028';
- ensureEditionCatalogue(s);assert.equal(s.editions.find(e=>e.year===2028)!.heroTitle,'Prepared for 2028');
+ const preparedSettings=s.editions.find(e=>e.year===2028)!;preparedSettings.heroTitle='Prepared for 2028';
+ const future=s.editions.find(e=>e.year===2030)!;future.year=2099;future.label='2K99';future.startDate='2099-10-18';future.endDate='2099-10-19';future.contact='Faculty support · help@example.test';future.heroTitle='Prepared for 2099';
+ const event=structuredClone(s.events[0]);event.id='future-edition-event';event.editionId=future.id;event.ownerId=owner.id;event.state='Draft';event.date='2099-10-18';event.time='09:05';event.deadline='2099-10-17T18:00';event.teamEditDeadline='2099-10-17T18:00';event.price=0;event.paymentInstructions='No fee.';s.events.push(event);
+ ensureEditionCatalogue(s);assert.equal(s.editions.find(e=>e.id===preparedSettings.id)!.heroTitle,'Prepared for 2028');
  assert.equal(s.editions.find(e=>e.id===s.activeEditionId)!.year,2026);
  const entries=structuredClone(s.entries);s.editions[0].registrationOpen=false;
  execute(s,owner,{type:'activate',editionId:future.id});
  assert.equal(s.activeEditionId,future.id);assert.equal(future.registrationOpen,false);
  assert.equal(s.editions.find(e=>e.year===2026)!.phase,'Archived');
  assert.equal(s.editions.find(e=>e.year===2027)!.phase,'Archived');
- assert.equal(s.editions.find(e=>e.year===2029)!.phase,'Upcoming');
- assert.deepEqual(s.entries,entries);assert.ok(s.events.every(e=>e.state==='Archived'));
+ assert.equal(s.editions.find(e=>e.year===2029)!.phase,'Archived');
+ assert.deepEqual(s.entries,entries);assert.ok(s.events.filter(e=>e.id!=='future-edition-event').every(e=>e.state==='Archived'));
+ assert.equal(s.events.find(e=>e.id==='future-edition-event')!.state,'Draft');
  assert.throws(()=>execute(s,owner,{type:'activate',editionId:s.editions.find(e=>e.year===2027)!.id}),/Select an upcoming edition/);
 });

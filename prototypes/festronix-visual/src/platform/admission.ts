@@ -6,6 +6,5 @@ export function registrationClosed(event:ManagedEvent,edition:Edition,now=Date.n
 
 export function entryAccountIds(entry:Entry){return [...new Set([entry.participantId,...entry.attendees.flatMap(a=>a.accountId?[a.accountId]:[])])]}
 export function hasBlockedClash(state:FestivalState,event:ManagedEvent,accountIds:string[],exceptEntry?:string){
- if(event.clashPolicy!=='Block')return false;
- return state.entries.some(r=>r.id!==exceptEntry&&r.status==='CONFIRMED'&&entryAccountIds(r).some(id=>accountIds.includes(id))&&state.events.some(other=>other.id===r.eventId&&overlaps(event,other)));
+ return state.entries.some(r=>r.id!==exceptEntry&&r.status==='CONFIRMED'&&entryAccountIds(r).some(id=>accountIds.includes(id))&&state.events.some(other=>other.id===r.eventId&&(event.clashPolicy==='Block'||other.clashPolicy==='Block')&&overlaps(event,other)));
 }

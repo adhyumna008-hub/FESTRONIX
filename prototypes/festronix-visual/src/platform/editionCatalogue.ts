@@ -1,5 +1,6 @@
 import type {Edition,FestivalState} from './model';
 import {dateInYear,syncEditionLabel} from './editionIdentity';
+import {copyLandingForEdition} from './landingSettings';
 
 export const DEFAULT_EDITION_YEARS=[2026,2027,2028,2029,2030] as const;
 
@@ -21,7 +22,7 @@ export function ensureEditionCatalogue(state:FestivalState):FestivalState {
  for(const year of DEFAULT_EDITION_YEARS){
   if(state.editions.some(e=>e.year===year))continue;
   const presetId='edition-preset-'+year;
-  const edition:Edition={...structuredClone(active),id:state.editions.some(e=>e.id===presetId)?crypto.randomUUID():presetId,year,label:syncEditionLabel(year,active.label),startDate:dateInYear(active.startDate,year),endDate:dateInYear(active.endDate,year),phase:year>active.year?'Upcoming':'Archived',registrationOpen:false,sponsors:[],announcements:[]};
+  const edition:Edition={...structuredClone(active),...(active.landing?{landing:copyLandingForEdition(active)}:{}),id:state.editions.some(e=>e.id===presetId)?crypto.randomUUID():presetId,year,label:syncEditionLabel(year,active.label),startDate:dateInYear(active.startDate,year),endDate:dateInYear(active.endDate,year),phase:year>active.year?'Upcoming':'Archived',registrationOpen:false,sponsors:[],announcements:[]};
   state.editions.push(edition);
  }
  state.editionCatalogueVersion=1;

@@ -109,7 +109,7 @@ The suite covers the 15 requested QR/security cases plus payment resubmission, t
 
 ### Verification record
 
-Final run: **58 passed, 0 failed, 0 skipped**, including the loopback HTTP smoke check. Typecheck and final build passed; OpenAPI export succeeded. Migrations were applied to development and fresh test databases, with unchanged rerun coverage. Production dependency audit reported **0 known vulnerabilities** on this run. This does not certify the complete system or future dependency state. `AI_HANDOFF.md` records the continuation status and remaining configuration.
+Final run: **58 passed, 0 failed, 0 skipped**, including the loopback HTTP smoke check. Typecheck and final build passed; OpenAPI export succeeded. Migrations were applied to development and fresh test databases, with unchanged rerun coverage. Production dependency audit reported **0 known vulnerabilities** on this run. This does not certify the complete system or future dependency state. Review this setup guide and [the backend architecture](BACKEND_ARCHITECTURE.md) before connecting production services.
 
 ## Before a real edition
 

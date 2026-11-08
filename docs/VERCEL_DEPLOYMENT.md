@@ -1,5 +1,15 @@
 # Vercel visual-preview deployment
 
+## Functional repairs release — 2026-10-18
+
+**LIVE — READY:** https://festronix2k27.vercel.app/
+
+- GitHub `main`: `d703d02dd64d8a595b53e92d082f4e1204c32dbc`; production deployment `dpl_AyhSKrNaa8MWqCdHtPANrF6BXTZF`, matching source SHA. Existing project and both domains retained through the Git integration.
+- **32 automated tests and production build passed.** Core browser-local journeys and 32 responsive layout measurements are recorded in [FUNCTIONAL_QA_2026-10-18.md](FUNCTIONAL_QA_2026-10-18.md), including the remaining device/service limits.
+- Public smoke verification confirmed corrected public sign-in and existing-account Open workspace routes, six-event directory/shared navigation, current 2026 edition and compact readable phone dates. No measured overflow at the live 390px/1280px checks; inspected console error log empty. Admin signed out afterward. Live evidence: `output/full-qa/live-campus-repaired-390.png`.
+- This remains a browser-local prototype. No real authentication/backend/payment/certificate services were connected and no production demo records were reset. Data-changing workflow QA used isolated localhost port 4181.
+- Rollback reference: preceding ready deployment `dpl_88BgjJ2vPreWvz4VBDb7VzvQsVqS`, SHA `768038186c0c9514f55ce4650cd6ae071ca893e5`. No rollback performed. Release-result documentation saved locally after publication.
+
 ## Current release — 2026-10-18
 
 **LIVE — READY:** https://festronix2k27.vercel.app/
@@ -10,7 +20,7 @@
 - Existing aliases `festronix2k27.vercel.app` and `festronix-2k27.vercel.app` both assigned successfully.
 - Includes the 2026 / 2K26 default, editable 2026–2030 presets, shared Campus navigation, F plus small glass-X badge, temporary demo sign-in, individual event passes/attendance and Excel reports. This is the same browser-local prototype; no backend deployment or real authentication/payment service was connected.
 - Verification: release build passed, with the preceding 20 automated checks passed. Public browser confirmed the hero/current date year, Events badge, shared navigation, demo sign-in, all five admin edition options and selecting 2030 without changing the active 2026 edition. Desktop 1280px and phone 390px were inspected with no measured horizontal overflow; console error scan was empty. Admin was signed out afterward.
-- Evidence: `output/vercel-deployment-2026/live-campus-2k26.png`. Broader workflow/WebGL/device QA remains as recorded in `AI_HANDOFF.md` and `EVENTS_DEMO_QA.md`.
+- Evidence: `output/vercel-deployment-2026/live-campus-2k26.png`. Broader workflow/WebGL/device QA is summarized in [EVENTS_DEMO_QA.md](EVENTS_DEMO_QA.md) and [FUNCTIONAL_QA_2026-10-18.md](FUNCTIONAL_QA_2026-10-18.md).
 - Rollback reference: previous ready production deployment `dpl_EcM5AwjJsK5ZmjaZh7ULZ4s6Gwm7`, Git SHA `af9594c3855e34542a4b36e067171444a3041346`. No rollback was performed.
 
 This section supersedes the historical release records below. Release-result documentation is saved locally after publication.
